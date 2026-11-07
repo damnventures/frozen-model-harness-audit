@@ -1,0 +1,34 @@
+--- a/ARC3-Inference/inference/agent/cross_game.py
++++ b/ARC3-Inference/inference/agent/cross_game.py
+@@ render_block: a prose rendering of the same cards (v44 §353, env-gated by ARC3_CROSS_GAME_CARD_FORMAT=prose, byte-identical otherwise) @@
+     header = ("Other games already played in this run (your own record from OTHER games; their mechanics often recur, "
+               "so treat these as hypotheses to check cheaply here, never as facts about this game):")
++    prose = os.environ.get("ARC3_CROSS_GAME_CARD_FORMAT", "").strip().lower() == "prose"
++    if prose:
++        # §353 format control: the SAME cards, same order, same fields, as paragraphs instead of the card lines.
++        header = ("Earlier in this run you played other games. What you recorded about them follows as notes; their "
++                  "mechanics often recur, so treat these as hypotheses to check cheaply here, never as facts about this game.")
+@@ render_block: the per-game line @@
+         cleared = [lv for lv, c in g["levels"].items() if c.get("kind", "cleared") == "cleared"]
+         top = max(cleared) if cleared else 0
+         total = g.get("total")
+         same = bool(mine and g.get("valid") and set(g["valid"]) == set(mine.get("valid") or []))
++        if prose:
++            para = (f"In game {key[:4]}" + (", which has the same controls as this game," if same else "")
++                    + f" you cleared {top} level{'s' if top != 1 else ''}" + (f" of {total}" if total else "") + ".")
++            for lv in sorted(g["levels"]):
++                c = g["levels"][lv]
++                if c.get("kind", "cleared") == "cleared":
++                    para += f" On level {lv}, {c['rule'][:420]}" if c.get("rule") else f" Level {lv} was cleared"
++                    if c.get("actions"):
++                        para += f"; it took {c['n_actions']} actions, {c['actions']}"
++                    para += "."
++                else:
++                    para += f" Level {lv} was not cleared" + (f"; what you saw: {c['rule'][:420]}." if c.get("rule") else ".")
++            if len(para) > 900:
++                para = para[:900] + "..."
++            if used + len(para) + 2 > limit:
++                break
++            lines.append(para); used += len(para) + 2
++            continue
+         line = (f"- game {key[:4]}" + (" (same controls as this game)" if same else "")

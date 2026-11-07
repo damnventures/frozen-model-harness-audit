@@ -1,0 +1,64 @@
+--- a/inference/utils/openai_compat.py	2026-10-17 16:25:43
++++ b/inference/utils/openai_compat.py
+@@ -2,10 +2,14 @@
+ from __future__ import annotations
+ 
+ import json
++import os
++import time
+ 
+ from typing import Any
+ 
++import requests
+ 
++
+ def normalize_provider(value: str | None) -> str:
+     provider = str(value or "").strip().lower()
+     if provider in {"", "openai", "openai-compatible", "compat"}:
+@@ -121,14 +125,32 @@
+     return payload
+ 
+ 
+-def assemble_streamed_chat_response(lines) -> dict[str, Any]:
++def stream_stall_seconds() -> float:
++    """ARC3_STREAM_STALL_SECONDS (default 300): the longest a stream may go without a data line while
++    keep-alive comments keep arriving, before the request is treated as a stalled body (ReadTimeout, the
++    existing yield path). 2026-11-01 01:18Z: four hosted MiMo arms hung for eight hours in a single SSL
++    read; every ": OPENROUTER PROCESSING" comment reset requests' per-read timeout and nothing bounded
++    the whole. The synchronous read sits in the asyncio loop, so the periodic save and the run cap never
++    fired either. 0 disables the deadline (the pre-patch behaviour)."""
++    try:
++        return max(0.0, float(os.environ.get("ARC3_STREAM_STALL_SECONDS", "300") or 0))
++    except ValueError:
++        return 300.0
++
++
++def assemble_streamed_chat_response(lines, *, stall_seconds: float | None = None) -> dict[str, Any]:
+     """Consume an SSE chat-completion stream and rebuild the non-streaming
+     response shape: {"choices": [{"message", "finish_reason"}], "usage"}.
+ 
+     Tolerates keep-alive comments (": ..."), event: lines, usage-only chunks,
+     and mid-stream error events. If an error arrives and no assistant content
+     was produced, returns {"error": ..., "choices": []} so callers surface it.
++    Raises requests.exceptions.ReadTimeout when no data line has arrived for
++    `stall_seconds` (default stream_stall_seconds()) although the connection
++    kept delivering keep-alive or empty lines.
+     """
++    stall = stream_stall_seconds() if stall_seconds is None else float(stall_seconds)
++    last_data = time.monotonic()
+     content_parts: list[str] = []
+     reasoning_parts: list[str] = []
+     tool_calls_by_index: dict[int, dict[str, Any]] = {}
+@@ -143,7 +165,12 @@
+         line = raw_line.decode("utf-8", "replace") if isinstance(raw_line, bytes) else str(raw_line)
+         line = line.strip()
+         if not line or line.startswith(":") or line.startswith("event:"):
++            if stall and time.monotonic() - last_data > stall:
++                raise requests.exceptions.ReadTimeout(
++                    f"stream stalled: no data line for {stall:.0f}s while keep-alives kept arriving"
++                )
+             continue
++        last_data = time.monotonic()
+         if line.startswith("data:"):
+             line = line[5:].strip()
+         if line == "[DONE]":

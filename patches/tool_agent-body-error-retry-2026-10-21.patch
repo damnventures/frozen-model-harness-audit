@@ -1,0 +1,68 @@
+# Applies to runs/field/franzen-milestone2/tree/ARC3-Inference/inference/agent/tool_agent.py (the hosted-read tree; a gitlink without a repo, so the change lives here). §283c. Test: runs/lib/test_body_error_retry.py.
+--- /private/tmp/claude-501/-Users-vanya-work-fieldwork/5fe5123d-6c76-41b6-b003-f7b2a019e311/scratchpad/tool_agent.py.bak	2026-10-21 04:12:47
++++ runs/field/franzen-milestone2/tree/ARC3-Inference/inference/agent/tool_agent.py	2026-10-21 04:12:47
+@@ -532,6 +532,16 @@
+ _CONNECT_TIMEOUT_SECONDS = 10.0
+ 
+ 
++def _body_error_code(payload) -> int | None:
++    """The numeric code of an error carried in a 200 body ({"error": {"code": 429}}), or None."""
++    try:
++        err = payload.get("error") if isinstance(payload, dict) else None
++        code = err.get("code") if isinstance(err, dict) else None
++        return int(code) if code is not None else None
++    except (TypeError, ValueError):
++        return None
++
++
+ def _http_retry_delay_seconds(
+     attempt: int,
+     retry_after: str | None,
+@@ -6190,6 +6200,7 @@
+         if not self._http_initial_grace_used:
+             initial_grace = _env_float("ARC3_HTTP_RETRY_INITIAL_SECONDS", 0.0)
+         _diag(self, "request")
++        request_payload = payload   # kept for the body-error retry below; `payload` is rebound to the response
+         try:
+             response = _post_with_retries(
+                 lambda: post_chat(payload),
+@@ -6230,6 +6241,39 @@
+         else:
+             payload = response.json()
+         choices = payload.get("choices", [])
++        # ARC3_BODY_ERROR_RETRIES=<n> (default 0 = off, the flown form unchanged): an aggregator such as OpenRouter
++        # answers a provider's rate limit as HTTP 200 with {"error": {"code": 429, ...}} and no choices. The HTTP
++        # retry above never sees it, the "no choices" path below counts it as an analyzer failure at once, and eleven
++        # of them in a row - seconds apart at a game start - abandon the game (P3 manuals pair, 2026-10-21: five
++        # games lost at 2 x 4 streams, two more at 2 x 2). With n > 0 a body error whose code is in
++        # _RETRYABLE_HTTP_STATUSES is re-posted in place after a backoff (ARC3_BODY_ERROR_BASE_SECONDS, default 10,
++        # doubling, capped at 60 s), up to n times, before it counts.
++        body_retries = _env_int("ARC3_BODY_ERROR_RETRIES", 0)
++        body_attempt = 0
++        while not choices and body_attempt < body_retries and _body_error_code(payload) in _RETRYABLE_HTTP_STATUSES:
++            body_attempt += 1
++            delay = _http_retry_delay_seconds(
++                body_attempt - 1, None, _env_float("ARC3_BODY_ERROR_BASE_SECONDS", 10.0), 60.0
++            )
++            log.warning(
++                "analyzer body error %s (retryable); body retry %d/%d in %.1fs",
++                _body_error_code(payload), body_attempt, body_retries, delay,
++            )
++            time.sleep(delay)
++            response = _post_with_retries(
++                lambda: post_chat(request_payload),
++                retries=_env_int("ARC3_HTTP_RETRIES", 3),
++                base_seconds=_env_float("ARC3_HTTP_RETRY_BASE_SECONDS", 5.0),
++                max_seconds=_env_float("ARC3_HTTP_RETRY_MAX_SECONDS", 5.0),
++            )
++            if getattr(response, "status_code", 200) >= 400:
++                detail = response.text.strip()
++                raise requests.RequestException(f"{response.status_code} Error | response: {detail}")
++            if request_payload.get("stream"):
++                payload = assemble_streamed_chat_response(response.iter_lines(decode_unicode=False))
++            else:
++                payload = response.json()
++            choices = payload.get("choices", [])
+         if not choices:
+             detail = payload.get("error") or {
+                 k: v for k, v in payload.items() if k not in ("choices",)

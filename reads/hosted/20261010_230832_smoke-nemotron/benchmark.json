@@ -1,0 +1,55 @@
+{
+  "label": "smoke-nemotron",
+  "n_passes": 1,
+  "solver_label": "inference",
+  "start_time": "2026-10-10T23:08:32.655284",
+  "end_time": "2026-10-10T23:12:56.853487",
+  "game_weights": null,
+  "periodic_save_interval_s": 600.0,
+  "game_runs": [
+    {
+      "game_id": "ls20-9607627b",
+      "number_of_levels": 7,
+      "base_actions_per_level": [
+        22,
+        123,
+        73,
+        84,
+        96,
+        192,
+        186
+      ],
+      "hint": null,
+      "state": "gave_up",
+      "history": [
+        {
+          "action": {
+            "id": "ACTION4",
+            "data": {}
+          },
+          "generated_tokens": 6425,
+          "uncached_input_tokens": 0,
+          "wallclock_seconds": 136.96531716687605
+        }
+      ],
+      "record_intermediate_states": true,
+      "actions_per_level": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "levels_completed": 0,
+      "final_score": 0.0,
+      "solver_note": "tokens=9217",
+      "solver_analysis_html": "solver_analysis/ls20-9607627b_p0.html",
+      "final_generated_tokens": 0,
+      "final_uncached_input_tokens": 0,
+      "final_wallclock_seconds": 264.15624916693196,
+      "started_at": "2026-10-10T23:08:32.691652"
+    }
+  ]
+}

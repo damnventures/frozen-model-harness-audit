@@ -1,0 +1,1760 @@
+{
+ "_note": "Curated by the composer; the board (runs/lib/board.py) renders it beside what it computes from run files. One entry per bet. status: running | passed | missed | void | closed | lab | parked | flown.",
+ "target": "Board 40 by the 2026-11-02 code deadline (final two picked 11-01; paper 11-08). Live board 10-24: Tufa 68.91, Chen 68.21, eleven teams at 40+, 20 at 35+, Franzen 38.85; our best draw 30.07, off the first page. The flown form (B1b v2 from 10-25) draws 27 ± 3 per healthy hidden run; two of five draws were 0.0 from a kernel defect (rerun flag dropped), fixed 10-24. READ AND CLOSED: every in-context lever (cards +1 to +3 taken; rulebook lift 1.54 vs bar 2.0; verified rules 0.39 vs null 0.31; context cut −36; FP8 PLE −14% serve; compaction, diet, notices, ledgers null or harmful); training lane two rounds (replay 2/23 at rank 64 with thinking, 0/23 otherwise; play 92 and 83 vs 98 — mechanism moves, board does not); open-teacher screen (no open model deeper than Flash-Next); no stronger open model fits the 96 GB box (market 10-24). NEVER READ, measured elsewhere: lordhansolo's vLLM NVFP4 + MTP-head profile at full context (job-wide 933 vs our 588 tok/s = 1.59x → +3 to +6 hidden at elasticity 0.2–0.36); speculative steps 3/4/5 ($5); the 30-s tool-timeout repair (+1); submission hour (366 vs 616 tok/s by hour, $0). Sum if all land: mean 34–35, best of eight draws ≈ 40 on the board; final (private) ≈ mean + 2. Gold 38+ needs 4x tokens per game or a stronger model.",
+ "spend": {
+  "pod_line_usd": 250,
+  "pod_balance_usd": 57.1,
+  "openrouter_balance_usd": 42.8,
+  "as_of": "2026-10-24 17:50Z. RunPod $57 (round 2 ladders ≈ $22 lost to one quoting defect; training two arms $18); OpenRouter $43. Kaggle: v2 flies daily 18:11Z from 10-25; read25 instrument live on free quota.",
+  "openrouter_usd": 70,
+  "kaggle": "B1b v2 every slot from 10-25 (zero-draw fix); final two selections 11-01; read25 (25 public games on the Kaggle box, free quota) measures tok/s by hour and the pod→Kaggle ratio",
+  "pods_usd_est": 280
+ },
+ "bets": [
+  {
+   "id": "clone",
+   "name": "Franzen's form, unchanged",
+   "status": "flown",
+   "number": "hidden 26.45, 26.64 (sched), 21.85; public 45.4 mean, sd 3.4 over nine runs",
+   "read": "The base. One run of the same form ranges 36.9 to 48.3 on the public 25. Ten swing games carry 83% of that variance; the hard four carry none of it and none of the score.",
+   "where": "runner §95, §117, §140"
+  },
+  {
+   "id": "G",
+   "name": "The clean form (patch v15 + GUIDE-G)",
+   "status": "missed",
+   "number": "two jobs 41.5 and 45.1 (mean 43.3) against two control jobs 46.5 and 44.4 (mean 45.5): effect -2.2, 90% interval [-5.6, +1.3]",
+   "read": "The mechanisms did what they were built for (resets 149 and 175 against 1; deaths 39 and 52 against 80 and 84; force-a-restart levels 31 and 35 against 44 and 55) and the score did not follow. Gains on cd82 +21, m0r0 +14, sp80 +14, su15 +6; losses on tu93 -24 (deaths doubled), re86, s5i5, tn36, r11l, vc33. K4 (no guide) says whether the guide is the cause; transcripts being read.",
+   "where": "DECISION §11; runner §146"
+  },
+  {
+   "id": "R",
+   "name": "The retest note",
+   "status": "missed",
+   "number": "R4 vs the two control jobs +2.7 [-2.0, +7.4] on 8% fewer tokens; 263 lines shown, 23 followed (9%), 6 clears within four turns of a followed line",
+   "read": "The runner's +4.87 was against the clean-form jobs, which sit 2.2 under control. Against control the lift is inside the noise and the games that carried it are not the games where the note fired. Shown often, followed rarely.",
+   "where": "DECISION §12; runner §151"
+  },
+  {
+   "id": "S1",
+   "name": "Bigger state cache",
+   "status": "closed",
+   "number": "own-output cache hit 0.22 against a 0.80 bar",
+   "read": "Hypothesis false: slots in use stay at 40 at pool 60, 120 and 200. The bigger pool shrank the KV cache and thrashed it.",
+   "where": "DECISION §8"
+  },
+  {
+   "id": "S2",
+   "name": "Deeper drain",
+   "status": "closed",
+   "number": "D4 vs C4 +0.18 [-3.5,+3.5]; drains 0.38x, generated +6.6% (bar +8%)",
+   "read": "Efficiency lever, not a score lever: 62% less drain recomputation at a neutral score; first-drain proof confirmed (post-drain prompts 16-29K vs 45-48K). Closed 2026-10-06.",
+   "where": "DECISION §8"
+  },
+  {
+   "id": "tokens",
+   "name": "More tokens (supply side as a whole)",
+   "status": "parked",
+   "number": "+38% tokens gave +8% levels (run H, public 25)",
+   "read": "Upward elasticity about 0.2, not the 0.8 measured downward. Worth about one hidden point. RECONCILED 10-24: run H's 0.2 (+38% → +8%) and §221's curve (1.7x → +25%, 2.6x → +33%) agree on elasticity 0.2–0.36 near 1x; a 1.6x throughput carry is worth +3 to +6 hidden, not 'one point'. §332",
+   "where": "DECISION §8"
+  },
+  {
+   "id": "H8",
+   "name": "Reseed on stall",
+   "status": "closed",
+   "number": "fresh 0.37 against continue 0.41 at 2x",
+   "read": "Tested on our own controls before any pod: a fresh context is no better than continuing. Built, switched off.",
+   "where": "DECISION §7.2"
+  },
+  {
+   "id": "T",
+   "name": "Truth lines (animated verdict, click miss)",
+   "status": "passed",
+   "number": "105 levels, 44.7 (controls 94-107)",
+   "read": "Neutral at levels, harmless; a real defect fixed (animated action reported as a no-op inside a batch). Rides the wall arm.",
+   "where": "DECISION §7.4, §8"
+  },
+  {
+   "id": "W",
+   "name": "Wall arm: facts handed to the model",
+   "status": "missed",
+   "number": "hard four 7 and 9 (bar 11 and 9); totals 116 and 87 levels; scores 54.4 and 38.3",
+   "read": "Bars missed: the walls did not move. The two replicates landed +2.6 and -2.1 sd from the nine-run mean; the second generated 12% fewer tokens than every other run, so it is not a like-for-like replicate. Transcripts: the model follows the untried-action line on level 1 (9 of 10), the indicator note when new (6 of 12), the no-solution note about half the time (it cleared cn04 level 6 for the first time by listing its solver's untested assumption); it ignores the click verdict (9 of 10).",
+   "where": "DECISION §10; runner §141-§142"
+  },
+  {
+   "id": "P",
+   "name": "Live prober: the harness probes, the model reasons",
+   "status": "parked",
+   "number": "23 cards: 10 acted on, 12 cited and re-measured, 1 misread, 0 ignored; fl01 and lw02 still 0 levels",
+   "read": "The model reads measured facts, so the question the test asked is answered yes. It opened no game. Mechanics were not the bottleneck once known: in four of five unseen games the model had a correct action model within ten turns and still could not find the win condition. Stall sweeps did harm: they spend the level's own step budget (14-27 of about 64), scramble a board mid-plan, and state facts without the precondition they were measured under (in lw02 that steered the model away from the winning click). T-B is not run.",
+   "where": "DECISION §10; runner §143-§145"
+  },
+  {
+   "id": "goal",
+   "name": "The measured bottleneck: finding the win condition",
+   "status": "missed",
+   "number": "25 public games read from source: goal drawn in the board in 21, budget bar on an edge in 25 (budget only), progress shown in 6, rule fixed across levels in 22 | K4 (no guide) vs the G jobs: +0.6 [-3.4, +4.5]: the guide adds nothing measurable",
+   "read": "The win conditions and their on-screen tells are now a table (READ-2026-10-05-WIN-CONDITIONS). Nine lines of it are the guide in the clean form (GUIDE-G): the goal is a marker in the board paired by colour or shape; a panel or band is the target or the rules; the edge bar is the step budget; test a goal idea twice before dropping it; the rule stays the same across levels. The guide is dead weight in this form: K4 without it equals G4 with it.",
+   "where": "DECISION §10"
+  },
+  {
+   "id": "reset",
+   "name": "Let the model reset a level (his own switch, off in his config)",
+   "status": "missed",
+   "number": "78 level-instances in seven runs where the model tries to force or wishes for a reset | in the clean form the model issued 149-189 resets a job; deaths halved; the score did not follow (K4 vs control -1.6)",
+   "read": "RESET is not offered to the model. It dies on purpose to restart ('force a RESET by burning the remaining 53 px of budget'), paying scored actions: the 49 such levels later cleared ran at 0.96 of the human action count against 0.69 overall. On a game with no step budget (fl01) a dead board stays dead: 60 turns idled. EXPOSE_RESET=on is one env key in his code; unread. Now on in the clean form; the end-to-end local game confirmed a model-issued RESET executes.",
+   "where": "DECISION §10"
+  },
+  {
+   "id": "power",
+   "name": "The instrument: enough replicates to see an arm",
+   "status": "running",
+   "number": "within-job replicates are roughly independent after all: C4's passes spread 4.7, G4b's 7.2 (his 0.94 was luck); eight against eight gives a 90% interval about ±3.5",
+   "read": "The bar for a form stays: effect >= +3 with 95% of draws above zero. The clean form's interval excludes +3; the verdict is a miss, not 'not readable'.",
+   "where": "DECISION §10"
+  },
+  {
+   "id": "L8-queue",
+   "name": "Queue policy: one guaranteed 2nd slot for a 0-level pass (B2)",
+   "status": "open",
+   "read": "CORRECTED 2026-10-06: the remaining-levels table IS the control (Franzen notebook env). Slot read under it: 0-level passes get a 2nd slot 20%, the rescued ~1.7 levels each. New rule needed (code). Read: slot_read.py 0-level row 2nd-slot share >50%, job total within band. Hidden-shaped job: 14 hard games x 7 passes.",
+   "number": "~+1 hidden upper bound",
+   "where": "L8 queue policy (DIRECTION-2026-10-06)"
+  },
+  {
+   "id": "L9-effort-at-stall",
+   "name": "Reasoning effort down one rung after one reference without a clear",
+   "status": "closed",
+   "number": "coin-flip levels 52% clear (481 attempts); fails 1,392 tok/action vs 815",
+   "read": "Mechanism: tok/action past one reference and thoughts per 60 actions at the 26 coin-flip levels. Outcome: coin-flip clear rate ≥57% on a 4x25 pair, job total within band. Falsifier: tok/action falls, clear rate does not. ~$50, not a draw. | §220: closed before building — low effort halves clears (E1-low); the stall is where the thinking is needed.",
+   "where": "READ-2026-10-06-LEVEL-COIN.md §5"
+  },
+  {
+   "id": "B1-cross-game",
+   "name": "Cross-game memory within the job (B1)",
+   "status": "missed",
+   "number": "+1.43 public [-0.34,+3.12] vs C4/D4; coin 0.468 vs 0.507/0.487 (bar 0.57)",
+   "read": "Thin cards (382, two with rule text). Coin bar missed; gain on tr87/ar25. Found: system-prompt rewrite at level-ups drops the prefix cache (0.02 vs 0.97), +23M uncached. B1b: real cards by side call, block at start and drains only.",
+   "where": "RESEARCH-2026-10-06-BIGGER-BETS §5; cross_game.py"
+  },
+  {
+   "id": "H1-long-context",
+   "name": "200K context, 6 streams (H1)",
+   "status": "closed",
+   "number": "-8.42 [-12.2,-4.6]; generated -26%; 2nd slots 26% vs 87%",
+   "read": "Knob live (drains 108 vs 341, slot-1 turns 43 vs 25); token gate failed; six streams starve the queue. Long context per se unreadable in this box.",
+   "where": "§159/§160"
+  },
+  {
+   "id": "B1b-real-cards",
+   "name": "Cross-game memory with real cards, block in the opener (B1b)",
+   "status": "passed",
+   "number": "+5.44 public [+3.76,+6.97] vs C4/D4; coin 0.624 (85) vs 0.507/0.487; tokens +1%; cache 0.934; HIDDEN DRAW 30.07 (clone 26.45/26.64/21.85) | recomputed 2026-10-28 on the mirrors (4-pass means per game vs mean of C4/D4, 20,000 game-clustered bootstraps): +5.53; 90% [+1.22, +10.10]; 95% [+0.43, +10.96]; 99% [-0.94, +12.90] | hidden: the three healthy B1b draws 30.07/26.54/25.32 (mean 27.3) vs the copies 25.77 = +1.5, s.e. 2.3 (§192 erratum), not established",
+   "read": "PASS on both routes 2026-10-08. 431 levels vs 395/396; gain in levels across seven games. Cards 100% real; citation 4% by name, examples real. Not shown: dose-response (cap shows 3-4 games to every session) and hidden transfer. Earns the hidden draw (§164). | §192: hidden +1.5 ± 2.3 vs the copies 25.77 (sd 3.93): not established on hidden. | §362: the best of five live-card jobs (family +1.78 [−1.61, +5.38]); a high draw, not the family's estimate.",
+   "where": "§161; PLAN-2026-10-06-CROSS-GAME-EXTENSION §2"
+  },
+  {
+   "id": "J2-retest-executor",
+   "name": "The retest executor: the harness re-clicks once-tried cells at the stall (J2)",
+   "status": "open",
+   "number": "built 2026-10-07: patch v19, 43 tests, e2e PASS; grounding read §160(b) pending",
+   "read": "ARC3_LIVE_PROBE=retest. Mechanism: retests per job, share that changed the board, FOLLOWED within two turns (note was 9%; bar 40%). Outcome: coin-flip >=0.57, effect vs C4/D4. Decides the judge question either way.",
+   "where": "§162; RESEARCH-2026-10-07-JUDGE-AT-EVERY-STEP §4-5"
+  },
+  {
+   "id": "B1c-order-cap",
+   "name": "Cross-game: same-controls first, 6,000-char block (B1c)",
+   "status": "missed",
+   "number": "vs B1b -3.95 [-7.11,-0.53]; vs controls +1.49; coin 0.582; block showed 6-10 games",
+   "read": "Bigger ordered block sits between controls and B1b. Parked, not split: the public set has no siblings to order. B1b stays the base.",
+   "where": "§165.2"
+  },
+  {
+   "id": "B1d-seeds",
+   "name": "Cross-game: seeded cards from the 55 recorded games (B1d)",
+   "status": "missed",
+   "number": "vs B1b -8.61 [-12.6,-4.5]; coin 0.416; tokens -11% (gate failed); slot-1 levels 218 vs 219",
+   "read": "Seeds neither helped nor hurt slot 1; the deficit is after slot 1 on a job with 11% fewer turns (throughput confound, pod to be attributed). First-wave all-seed blocks -0.31/pass. No draw. Seeds out of every job until a read earns them back. DISCOUNTED 2026-10-11: stream starvation is host-correlated (host .30), so the -8.6 is the host; the seeds did nothing (slot-1 read).",
+   "where": "§165.3"
+  },
+  {
+   "id": "B1e-mix-select",
+   "name": "Cross-game: selection policy mix (grounded first, seed slot, rotation) (B1e)",
+   "status": "missed",
+   "number": "vs B1b -4.69 [-7.5,-1.9]; coin 0.457; tokens -4.8% (gate inside); levels 399 vs 431",
+   "read": "Grounded-first + rotation reads at the controls. Ordering family 0/2. Card effect re-estimated: live-card jobs mean 47.1 vs controls 44.5 (+2 to +3); B1b a high draw.",
+   "where": "§168; DEEP-DIVE §2"
+  },
+  {
+   "id": "B1f-card-v2",
+   "name": "Cross-game: condition-bearing six-line cards + check-first header (B1f)",
+   "status": "parked",
+   "number": "built 2026-10-08: patch v22 9e7e3e78d7e02b40, 48 tests, e2e PASS; v2 seeds generating",
+   "read": "AutoGuide +9 (conditions), CLIN +6.2 (template + confidence). Our data: a wrong analogy costs ~0 turns; a matching card cut cd82 L1 from 29 to 16 turns. Read: six lines present, LOOKS LIKE/DOES NOT APPLY cited, coin vs best card form, gate +10%.",
+   "where": "§169; RESEARCH-2026-10-08-CARD-PRESENTATION"
+  },
+  {
+   "id": "T1-hypothesis-probe",
+   "name": "Tier 1: the hypothesis probe (card format v1 vs v2 vs none) on hosted Flash-Next",
+   "status": "closed",
+   "number": "goal right none 0.092 / v1 0.083 / v2 0.077; controls ~0.90 all; judge agreement 0.87",
+   "read": "VOID by its sanity bar (v1 not above none): the first hypothesis at level entry is not where cards act (right 1 in 11 in every arm). Format question moves to the notice probe (v2-block arm). B1f not earned.",
+   "where": "§170; PLAN-2026-10-08-CARD-TEST-TIERS"
+  },
+  {
+   "id": "T2-notice-probe",
+   "name": "The notice probe: which harness inputs change the next decision (ablation + placebo; card channels)",
+   "status": "closed",
+   "number": "1,686 samples; 49% truncated at 4,000 tokens (29-71% by condition): first-action read VOID; channel: assistant 0.24 < user 0.38 TVD; v2 0.45 ~ placebo 0.42",
+   "read": "Exploratory: user-turn text changes deliberation 2-3x; assistant-turn and system-prompt text change nothing; placebo not neutral. B1g and B1f parked. Not re-run (3x cost; no decision this month depends on it).",
+   "where": "§173; RESEARCH-2026-10-09-WHAT-GETS-NOTICED"
+  },
+  {
+   "id": "B1g-assistant-channel",
+   "name": "Cross-game: the block as the model's own prior assistant turn (B1g)",
+   "status": "parked",
+   "number": "built 2026-10-09: patch v25 897125eafe1fd99f, 51 tests, e2e PASS",
+   "read": "Self-attribution bias (Khullar 2026): same text weighs more as a prior assistant turn than in the user turn. Gate: the notice probe's channel read (assistant TVD > user by 0.15). Then a split pod job vs no-block control, B1b as the external reference.",
+   "where": "§174; RESEARCH-2026-10-09-WHAT-GETS-NOTICED"
+  },
+  {
+   "id": "B1b-split-replication",
+   "name": "B1b split replication: read vs write-only halves in one pod",
+   "status": "closed",
+   "number": "-1.5 levels/25 games [-10.5,+8.5]; tokens -4.8%; coin 0.457 vs 0.513; levels/M tok 28.2 vs 26.7; whole job on host .30, -10% tokens",
+   "read": "Not resolvable in one job (pre-registered ceiling). Card effect final: +1 to +3 public; hidden draws the cleanest evidence. Pods off.",
+   "where": "§177"
+  },
+  {
+   "id": "B2-reasoning-diet",
+   "name": "Reasoning diet: strip the model's own reasoning older than 4 turns at drain time (split job, control inside)",
+   "status": "held",
+   "number": "-1.0 levels/25 games [-12,+11]; uncached prompt tokens/action -16.9%; levels/M tok +7%; coin 18/24 vs 22/24",
+   "read": "Public: level-neutral, -16.9% tokens/action (carried by the throughput rule). HIDDEN draw 5 (B1b+diet) = 17.53, 3.4 sd under the form mean; held off the Kaggle form; one confirming draw only after a healthy B1b draw and a normal run time (§185).",
+   "where": "§179.A, §180.A, §185"
+  },
+  {
+   "id": "M1-model-screen",
+   "name": "Model screen: Nemotron 3 Super 120B-A12B vs Flash-Next, text-only, hosted",
+   "status": "closed",
+   "number": "25 games one pass: Flash 48 levels / 11.59 public vs Nemotron 1 level / 0.00 at equal tokens",
+   "read": "Two orders below the bar; model question closed; no training.",
+   "where": "§178.A, §180.A"
+  },
+  {
+   "id": "B3-deep-drain",
+   "name": "Deep drain: arm drains 136K to ~36K (ARC3_DRAIN_SPLIT, ARM_TOKENS=100000, FRACTION=0.75), control his drain",
+   "status": "registered",
+   "number": "pre-registered: uncached prompt tokens/action -10% or better with levels within the floor carries; predicted -20%",
+   "read": "Not run yet. Patch v28 fe4a4c00f7507b3a, 54 tests. One pass ≈ $10.",
+   "where": "§180.C"
+  },
+  {
+   "id": "S3-streams",
+   "name": "Streams: MAXREQ 16 and 20 vs 10 on the flown form (serving arm; the only lever that converts prompt savings into budget)",
+   "status": "closed",
+   "number": "R4 2026-10-14 (rellik13 recipe 16 streams @ 69,632 ctx vs flown 10 @ 139,264): tokens/wall-hour +52.2% (bar PASSED) but levels 107 vs 143, paired -36 [-49,-24], 1 up/16 down; official 39.09 vs 62.81; levels/M 4.71 vs 9.57",
+   "read": "Not run yet. §181.B.1. Two pods ~$25. | §197: parked under the programme (knob search, not a theory). | §225: MISS; cause = the context cut (arm drains 63/session at ~46K, control 15 at ~116K). Streams and context trade inside one KV pool; Franzen's point wins.",
+   "where": "§181"
+  },
+  {
+   "id": "B4-compaction-split",
+   "name": "Compaction: his rolling summaries (interval 50000, drain stops at summaries, append-only) in the arm half only (ARC3_SUMMARY_SPLIT)",
+   "status": "closed",
+   "number": "killed at hour 1: arm 4,928 vs control 3,211 uncached tokens/action (+53.5%); 20 arm turns with cached_tokens=0 after summaries = 1.57M of 3.43M uncached",
+   "read": "His summary request (thinking off) moves the prefix on this template; on the hybrid model the next turn re-prefills the whole context. Not servable at any interval. §189.",
+   "where": "§182.C, §188.2, §189"
+  },
+  {
+   "id": "WM-simulator-door",
+   "name": "World-model / simulator beside the model (wm lane, EWM family)",
+   "status": "closed",
+   "number": "literature: capability dominates, executable hurts below GPT-5.5, frontier-only, $100-300/game; ours: Flash-Next textual agent 3.06 vs Duck 8.69, check_model 0/8087 calls",
+   "read": "Closed for this model and box. §182.A",
+   "where": "§182.A"
+  },
+  {
+   "id": "B5-drain-notice",
+   "name": "History-first drain notice: one user-turn line after each drain pointing at the lossless sandbox record (ARC3_DRAIN_NOTICE, split-gated)",
+   "status": "closed",
+   "number": "probe 545 samples: history refs 0.27 vs 0.12 (placebo 0.08) = 2.2x PASS; deliberation 2,748 vs 4,158; acts on the first post-drain turn 0.36 vs 0.50",
+   "read": "Joins L1 arm. §198.A | §210: inside L1, levels per token unchanged; closed with the lane",
+   "where": "§183.1"
+  },
+  {
+   "id": "S4-serving-fp8-dense",
+   "name": "Serving rung 1: online FP8 dense stack on (ONLINE_MXFP8=1), the kernel's own switch (off); rung 2 Pennyroyal 3.0.1",
+   "status": "closed",
+   "number": "S4 vs B3 (same shape/host): tokens per wall hour 1.42M vs 1.65M (-13.8%); levels 131 vs 137; levels/M +10.9%; accept 2.77-3.33",
+   "read": "FP8 dense is slower at 10 streams on this stack; bar +15% missed. Rung 2 (Pennyroyal 3.0.1) not warranted. §205",
+   "where": "§184.D"
+  },
+  {
+   "id": "B7-temperature",
+   "name": "Sampling temperature 1.0 (the card's thinking-mode recommendation) vs the kernel's 0.7, split in-pod",
+   "status": "parked",
+   "number": "pre-registered: +8 levels/25 games; mechanism tokens per action and stall-level action count",
+   "read": "Built, patch v31 0af278d1d52ccc5e, 57 tests. Odds 1 in 3. One pass $10. | §197: parked under the programme (knob search, not a theory).",
+   "where": "§184.C.1"
+  },
+  {
+   "id": "Q1-quantization",
+   "name": "Model weights format (NVFP4 / AWQ / RTN vs the Intel INT4 AutoRound the kernel serves)",
+   "status": "closed",
+   "number": "seven 4-bit builds on one RTX PRO 6000: ~82 tok/s C=1, ~480 C=32 for all; quality within ±1.5; Intel INT4 top on tool calling; official NVFP4 slowest",
+   "read": "Closed by the published measurements; no newer Qwen model exists (listing read 2026-10-12).",
+   "where": "§184.B"
+  },
+  {
+   "id": "B8-predict-then-check",
+   "name": "Expect required: past the level reference, action() must state expect=... (the sandbox checks it; refusals otherwise)",
+   "status": "closed",
+   "number": "pre-registered: +8 levels/25 games; mechanism = prediction share, mismatch rate (ref 20%), plan change within 2 turns after a mismatch; guard tokens/action <= control +5%",
+   "read": "Built in patch v32 (75d10bd49770a4fd); flies inside L1. §190.A.2 | §210: inside L1, levels per token unchanged; closed with the lane",
+   "where": "§186, §190"
+  },
+  {
+   "id": "WA-worldabduct",
+   "name": "WorldAbduct-style between-episode rule abduction (E-Ledger, arXiv 2610.11552)",
+   "status": "closed",
+   "number": "needs repeated episodes of the same world and spare actions; hidden set = one make per unseen game; cross-game cousin = seeds -8.6, family hints no transfer",
+   "read": "Closed for the hidden set; the runtime ledger idea transfers as the mechanical effect ledger and B8.",
+   "where": "§186.B"
+  },
+  {
+   "id": "S5-slot-priority-dprime",
+   "name": "Scheduler slot priority D' (shiiin9): priced slots over equal shares",
+   "status": "parked",
+   "number": "community claim 31.54 vs 27.6 on one submission (noise-level by the author's own account); read = tokens per hour and levels/M tokens on one pod",
+   "read": "Not run. After S4. $10. | §197: parked under the programme (knob search, not a theory).",
+   "where": "§187"
+  },
+  {
+   "id": "B6-stall-card-compaction",
+   "name": "Our side-call card as within-game compaction at the drain",
+   "status": "withdrawn",
+   "number": "same thinking-off side call at the same moment as B4 = the same re-prefill",
+   "read": "Withdrawn before build. §189.2",
+   "where": "§189"
+  },
+  {
+   "id": "B9-effect-ledger",
+   "name": "The effect ledger: harness-counted (action, colour) -> outcomes on the current level, MIXED rows named; shown after drains and at stalls",
+   "status": "closed",
+   "number": "pre-registered inside L1: +8 levels/25 games; offline read first: non-trivial rows on >= half of B2's 29 stalled sessions",
+   "read": "§195 audit: H1 probe = actions/request +30% (pass), inspect-only unchanged (fail), NO level read; E-OBS = per-step diff line, one pair +3 levels inside noise, hidden 4.73 in band. Unread on levels; flies inside L1. | §210: inside L1, levels per token unchanged; closed with the lane",
+   "where": "§190"
+  },
+  {
+   "id": "L1-harness-ledger-job",
+   "name": "L1 = effect ledger + enforced expectation (+ drain notice if §196 PASS) vs B1b, split in-pod, 2 passes",
+   "status": "missed",
+   "number": "arm 118 vs control 127 levels (-9, 90% [-23,+4]); generated -6.9%; actions -12%; levels/M generated 15.13 vs 15.14 (aggregate); FAILED 271, 37% changed course",
+   "read": "MISS; mechanism alive; cost result: the record is read and acted on and clears the same levels per token. Memory lane closed. §210",
+   "where": "§190"
+  },
+  {
+   "id": "E1-effort-medium",
+   "name": "Reasoning effort medium vs the kernel's xhigh default, per-session split in-pod, 2 passes",
+   "status": "closed",
+   "number": "pod hour-1: knob on 1,299/1,299 arm requests; gen tokens/request median 1,111 vs 1,119 (-0.7%), mean -6.5%, p90 -8.7%; bar -25%",
+   "read": "Closed at medium. §206",
+   "where": "§196"
+  },
+  {
+   "id": "M1-memory-sections-on",
+   "name": "The Duck's memory sections ON (his default) vs the kernel's off, per-session split, 2 passes",
+   "status": "dropped",
+   "number": "hosted: sections written in 0.08 of replies with the guidance (0.00 without); tokens and acting unchanged",
+   "read": "§200.B: the model does not write the sections; dropped at $4; L2 parked behind T3.b",
+   "where": "§196"
+  },
+  {
+   "id": "L2-goal-ledger-switch",
+   "name": "Goal ledger with an enforced switch: action(goal=...) required past the reference; refusal until the goal string changes at 1.5x with no progress",
+   "status": "parked",
+   "number": "pre-registered: +8 levels/25; mechanism = goal changes per stalled level, levels cleared after a forced switch; Rodionov trouble prompt +7 at frontier",
+   "read": "§210: parked for good; same channel, adds cost",
+   "where": "§196"
+  },
+  {
+   "id": "W1-the-wall",
+   "name": "The hidden run's wall: does the scheduler stop games before Kaggle's 9 h?",
+   "status": "closed",
+   "number": "scheduler assumes the full 9 h in submission mode: 532 min/game from t0, all 110 games admitted, no cutoff; give-ups are the only early exits",
+   "read": "No unused wall. §199.2",
+   "where": "§196"
+  },
+  {
+   "id": "T3b-stall-trouble-line",
+   "name": "The stall trouble line: at 1.5x reference, a user-turn paragraph naming the held goal, the action count and the ledger contradictions, asking for a different goal",
+   "status": "closed",
+   "number": "probe 546: new action types 0.18 vs 0.20/0.20; acts 0.38 vs ~0.5; TVD 0.16 vs placebo 0.14; reasoning doubled (8,186 vs 4,121)",
+   "read": "MISS, harmful direction (deliberation displaces action). §202",
+   "where": "§197"
+  },
+  {
+   "id": "E1-low",
+   "name": "Reasoning effort LOW vs the default, pod hour-1 stop read (the last budget-lane question)",
+   "status": "closed",
+   "number": "CLOSED 2026-10-14: arm 64 vs control 134 levels/25 (−70 paired, 90% [−86,−54]); gen tokens −47.5%; levels/M 15.59 vs 24.43; coin 0.273 vs 0.783; knob on 4,380/4,380 arm requests",
+   "read": "On the lead's word after L1 reads. §206 | §220: composer-validated on the same mirror; machinery clean (same wall, more actions, 0 errors, 0 truncations, cache 0.96); downward token elasticity ≈ 1.1.",
+   "where": "§206"
+  },
+  {
+   "id": "JV-jev-offline-reads",
+   "name": "Jev as an offline calibrated reader (J-A plan change after FAILED; J-B false-fact class at the stall)",
+   "status": "closed",
+   "number": "J-A per-window agreement with the heuristic 0.58 (band 0.75); J-B fixture 0.42 (band 0.80), two-class 0.74",
+   "read": "Both miss their bands; Jev stays a reported second opinion. §209a/§209b",
+   "where": "§209b"
+  },
+  {
+   "id": "T-lane",
+   "name": "Training on Flash-Next: expert iteration (self-play STaR) over the 224 local game families (25 public + 199 community), merged into attention, served on the flown W4A16 + MTP form",
+   "status": "closed-at-proof",
+   "number": "T0c PASS (§233): documented recipe on one B300 — table on cpu 95.4 GB, cuda 73.1 GiB, experts quantised; 50/50 steps, loss 1.264 → 0.752 → 0.638; adapter sha 8630c60a…; the round not run (no read says it pays).",
+   "read": "Not run yet. Data: v3 set built 2026-10-13 (5,632 step units, levels 5+ = 32%, ~46M tokens, sha256 631fc75f37178895; holdout 1,709). Cost ~ $120 per epoch on a B200 at 715 tok/s. inference.net dedicated route blocked on their beta switch (§217b note). §218a | §219 (lead, 2026-10-14): machinery proof only (R2 train probe, R3 merge+serve gate); NO training round; the lane's gain stays unread by decision, not by budget. | 2026-10-14 §229: T0c = the 2-GPU train-environment proof (FSDP2 over 2×RTX PRO 6000, the 8th place's shape; $12 cap; bars (1)-(5): box, wrap class, step-1 loss, loss50<loss1 + tok/s + peaks, adapter targets ⊂ R3a 232). T1 round 1 pre-registered behind it (+6 levels public paired, holdout families within the floor; ~$140). The decision point of the campaign. | 2026-10-14 §229b: T0c attempt 1 (2×RTX PRO 6000, FSDP2) died at config validation — axolotl refuses ple_cpu_offload with FSDP (both releases); $0.87. The B200 OOM (§219i) was caused by our yaml's device_map {\"\":0}: transformers honours _no_placement_params only for a string map, so the 95 GiB table went onto the GPU. Attempt 2 registered: the recipe with device_map auto, one process, one B300 ($8.99/h, cap $25); fallback 2×6000 single process. | 2026-10-15 §230: attempt 2 (B300, device_map auto) OOMed at 266 GiB with the load complete. ROOT CAUSE of every training OOM: no `quantize_moe_experts: true` — the documented recipe (axolotl v0.19.0 examples/qwen3.8-flash-next/qlora.yaml) marks it REQUIRED (\"without this ~96% of the model stays in bf16\"); README: 1x B300 ≈ 120 GiB with the PLE offload. Attempt 3 registered = the example byte for byte + dataset/paths/50 steps; rung ladder (validate → load → train) and local rung 0 (validate_cfg.py) are law. | 2026-10-15 §231: the lead refocuses on the paper direction; the lane closes at the environment proof (no T1). Evidence: the field's SFT/RL attempts on Flash-Next report no gain (thread 742835); our arithmetic 0 to +1 hidden a round (§230b).",
+   "where": "§214, §229, §229b, §230, §231, §233"
+  },
+  {
+   "id": "S6-reap",
+   "name": "REAP expert-pruned Flash-Next (288/320 of 512 experts) on the flown serving form: more tokens per wall hour",
+   "status": "registered",
+   "number": "pre-registered §214.5: serving_read tokens per wall hour vs the same-shape control; levels per million generated within the floor; levels per 25 games paired",
+   "read": "Not run yet. Son Pham's hint (M2 comparison thread); public HF prunes sh0wie/MidnightPhreaker; pod-side only, no draw",
+   "where": "§214"
+  },
+  {
+   "id": "D4-compaction-at-drain",
+   "name": "Compaction at the drain: a summary of the dropped history as a user-turn block, side-call with thinking off, at the drain only (B4 where it can be served; the Provider-Adapter lever of arcprize.org/leaderboard)",
+   "status": "closed",
+   "number": "P0 gate MISS 2026-10-13: paired same-game same-level after/before actions ratio 1.08 (L>=2, n=38 game-levels, share >=1.3 0.24) and 1.12 (L>=3, n=35) — corrected 2026-10-14 after the action-units fix (§221c.3); was 1.03/1.07 in request units; unpaired doubling (L2 29->58, L3 19->55, L4 16->52) was the session-speed confound; clear share after lower (0.89->0.82) = depth/budget, not the drain",
+   "read": "runs/lib/drain_cost_read.py on c4+d4+b1b+l1 (350 sessions, 341 drained); fixture PASS at 2.00 before the read. Not built: the drain costs ~0 actions at equal game and level on this form, which already keeps reasoning in context. §217.P0",
+   "where": "§217a"
+  },
+  {
+   "id": "B4-card-dose",
+   "name": "Dose-response of the cross-game cards: levels per session vs cards shown at session start (within game, pass order controlled)",
+   "status": "closed",
+   "number": "FLAT 2026-10-14: cards per session median 3 max 4; within-game slope -0.25 levels/card (n 25, Spearman -0.29); demeaned Spearman -0.13 (n 100); control dLevels +0.14 (n 50)",
+   "read": "runs/lib/card_dose_read.py on b1b + l1(control half) vs c4 + d4; fixture slope 0.56 POSITIVE first. The wider band is B1c (-3.95). No headroom in delivery. §219a",
+   "where": "§219a"
+  },
+  {
+   "id": "T1-tool-timeout-partials",
+   "name": "Tool-timeout partial results: on a python-tool timeout, return the actions already executed and the resulting frame to the model instead of a bare timeout; raise the 30 s code cap (harness defect sized by the §221b audit)",
+   "status": "closed",
+   "number": "premise: 766 timeouts in 204/400 sessions; 7,775 actions (8.4%; 12-14% on 2x-budget sessions) executed blind; 9 deaths inside timed-out calls; retained functions wiped; timeouts rise with depth (L5-7: 174 of 297)",
+   "read": "pre-registered §221d: timeout_read.py (fixture first) — blind actions share by arm (bar arm < 1%), deaths inside timed-out calls (arm 0), paired levels (floor ±10; +8 → draw); e1 transcripts: 291 timed-out results, 0 list executed actions (the sandbox returns action_results; the agent renders only the error) | §221f CLOSED at the pre-proof: the next user prompt already reports the executed count and first ten names (264/291); next-turn code similarity after a timeout 0.31 vs 0.32 normal, near-copies 1% vs 6%: no re-work signal. Not built.",
+   "where": "§221b.5"
+  },
+  {
+   "id": "WM-replay-probe",
+   "name": "Memento-3 loop in miniature: can Flash-Next reach an exact-replay world model from 20 recorded transitions with counterexample feedback (4 rounds), scored on 20 held-out transitions vs nothing-changes and last-diff; Opus 5 as the capability reference on 5 cells",
+   "status": "closed",
+   "number": "MISS both Flash-Next regimes: with thinking 0/23 cells beat nothing-changes by 20 pts (no content in 21/23 cells, 16K reasoning cap hit every iteration; code in 2 cells = baseline); without thinking 1/23 (ft09 L2 4/6 held-out, n=6), code in 18/23, median held-out exact 0%. GPT-6.1 Sol on 5 shared cells: 4/5 beat, median held-out 45% (ar25 L2 20/20 one shot). Verdict: MODEL, not mechanism. Branch B: no verified-simulator arm for Flash-Next. FULL SOL TABLE (§233): GPT-6.1 Sol 16/23 cells beat nothing-changes by ≥20 pts, median held-out 45% vs 0%, 4 cells one-shot exact; higher than the best Flash-Next arm on 19/23, tied at 0 on 3, lower on 1 (dc22 L5, both at the 40% floor). Flash-Next 0/23 (thinking), 1/23 (no thinking). | Sol full 23-cell read: 16/23 beats, 90% game-bootstrap [12, 20] (wm-replay-sol.jsonl; F4b)",
+   "read": "§227b (first 12 cells + regime check), §227c (full table). Spend ≈ $7. Fixture 20/20 PASS before judging.",
+   "where": "§224.F, §227a, §227b, §227c, §233",
+   "closed": "2026-10-14"
+  },
+  {
+   "id": "S7a-fp8-ple-numerics",
+   "name": "FP8 n-gram PLE table on GPU as the ONLY change to the flown form (10 streams, 139,264 ctx, albucino draft)",
+   "status": "closed",
+   "number": "§236.A: levels +4 paired (6 up/6 down, within the floor); tokens/hour −15.6%, per-action decode 43.7 vs 49.6 tok/s (−12%): the FP8 table in host RAM serves slower; no carry at the Kaggle budget point; the form keeps BF16. ≈ $72 incl. the $10 void.",
+   "read": "Not run. Isolates R4's numerics change from its context cut.",
+   "where": "§225a, §236"
+  },
+  {
+   "id": "S7b-streams-at-context",
+   "name": "13 streams at 100K context (trims 85K→60K), BF16 PLE in host RAM, albucino draft, vs the flown 10 x 139K",
+   "status": "not-launched",
+   "number": "pre-registered §225a: serving tokens/wall-hour >= 1.15 AND levels within the floor; ~$40",
+   "read": "Not run. The separable stream/context trade. | §236.A: not launched — its serving premise (FP8 table frees the pool) does not hold on this card (S7a serves −14%).",
+   "where": "§225a"
+  },
+  {
+   "id": "D5-attempt-notice",
+   "name": "Attempt-level death notice ('attempts 1-2 died after N actions doing X') at the start of each new attempt",
+   "status": "closed",
+   "number": "pre-proof 2026-10-14: 394 deaths; next attempt died again 60%; exact repeats (same length ±2 and same final action) 20 of 171 = 12% of repeat deaths ≈ 3% of deaths",
+   "read": "§226a: closed at $0 before building; the model already varies its line; deaths are the hazards meeting the model's planning",
+   "where": "§226a"
+  },
+  {
+   "id": "O1-rulebook",
+   "name": "The within-game rulebook (Memento 3's language half): a side call writes GOAL/THINGS/RULES/UNTESTED/NEXT TEST after 6 turns and at every level clear and stall card; shown at the top of every opener (user turn, early); split arm vs the flown form",
+   "status": "missed (read §235 B)",
+   "number": "§236a MISS both bars, corrected: adoption followed 418/867 (0.48) vs mixture chance 0.31, LIFT 1.54 (bar 2.0) — adopted partly, \"at chance\" withdrawn; content paired −8 [−24,+7]. Rulebooks substantive (1–8 versions/session); sb26 lost 7 levels defending a written goal guess. $22.",
+   "read": "Not run yet. Hosted pair via run-hosted-pair.sh, N_PASSES=2, ~$22, ~9 h. Patch v39. | READ (§235 B, 2026-10-15; row text completed 2026-10-29): hosted pair 50 sessions × 2 passes: rulebooks shown 892, next test named 867, followed 418 (0.48) vs control base rate 0.51, lift 0.95 (adoption MISS); paired levels −8.0 per 25 games [−24, +7], public 32.97 vs 31.78, tokens −1.0% (content MISS). §236a: chance level corrected to 0.31, lift 1.54, still under the 2.0 bar. CLOSED at $22.",
+   "where": "§229a, §236, §236a"
+  },
+  {
+   "id": "TD-screen",
+   "name": "Open-teacher screen: does a larger OPEN model play better than Flash-Next in our harness (hosted, 5 games, run-hosted-pair.sh with another OpenRouter model id)? Decides whether open-teacher distillation data is worth building",
+   "status": "closed",
+   "number": "kimi-k3 13 / deepseek-v4.1-flash 5 / glm-5.3-flash 4 levels vs the flown control 23 on sp80+wa30+lf52+ka59+cn04 (bar: >= +4 AND a level the control never clears); glm-5.3 VOID (no vision endpoint) | 10-19: deepseek-v4.1-flash-1017 10 levels at full budget (MISS)",
+   "read": "MISS 2026-10-16: no open model on the endpoint plays deeper than Flash-Next in our harness; Kimi wall-cut but spent its budget on the three games with uncleared levels and stopped at 1/2/3. Open-teacher harvest not launched; closed-teacher route needs the lead's risk word; cards v3 have no teacher play. §245",
+   "where": "§245"
+  },
+  {
+   "id": "WM-objects-I9",
+   "name": "WM-objects-I9",
+   "status": "closed",
+   "number": "§236.C MISS: no-thinking 1/5 (ft09 L2 100% vs 0%; the rest at or below baseline), thinking 0/5 (18/20 iterations no content at 16K). The representation is not the floor; no build. $1.",
+   "read": "",
+   "where": "§236"
+  },
+  {
+   "id": "WM-context-grid",
+   "name": "The context grid: reasoning budget x state representation on the five easy cells; Bar 2 = the winner with best-of-4 on all 23 cells",
+   "status": "closed",
+   "number": "§237b–d, §240e: Bar 1 passed once (objects-only + 2K: 3/5), replicated 1/5, met under best-of-4 (3/5); Bar 2 on 23 cells: 6/23 (bar 12) MISS. Pooled: structured input lifts one-object cells (29% vs 8% per cell-run), two-object cells 0/16 at every setting.",
+   "read": "",
+   "where": "§237b, §237c, §237d, §240e"
+  },
+  {
+   "id": "WM-open-model-screen",
+   "name": "Bet 1: can any open model on the endpoint reach exact replay on the five easy cells (Sol 5/5)?",
+   "status": "closed",
+   "number": "§240c–d: 11 models, two conditions; best 1/5; reasoning models burn the cap, instruct models write wrong code; none fits the card AND clears the floor. The floor is the open-weight class's. ≈ $12.",
+   "read": "",
+   "where": "§240c, §240d"
+  },
+  {
+   "id": "WM-per-object",
+   "name": "Bet 2: the harness compiles object by object (per-colour predictors verified per colour, composed)",
+   "status": "closed",
+   "number": "§240b, §240e: no-thinking N=4 0/4, 2K N=4 0/2 (bar 3/5) MISS. Per-colour bests 11–20/20, composed ≤ the weakest colour (counters/markers): the interaction hole has a shape. ≈ $5.",
+   "read": "",
+   "where": "§240b, §240e"
+  },
+  {
+   "id": "Sol-play-screen",
+   "name": "Closed-teacher PLAY screen: GPT-6.1 Sol in our harness on five games vs the flown control (depth in play, not replay)",
+   "status": "passed-clause-2",
+   "number": "24 levels vs control 23 on 12% of the budget (cut by a local DNS blip at 22 min): FOUR control-never levels cleared (lf52 L4-L6, ka59 L7 won); sp80 -1, cn04 -2; ~$14",
+   "read": "First arm on the register to clear levels the control never clears. +4 total unread (machinery cut). Confirming full-budget run pre-registered (~$35-50, key top-up needed); distillation priced $300-450 (40 deep families) to $1.6-2.2K (224), + T1 round $200; lead's risk word (§244.C.i) required. §246b",
+   "where": "§246b"
+  },
+  {
+   "id": "DP-scheduler-checks",
+   "name": "DP pod: D' priority scheduler (pod-global) + check-prompts split, Kaggle-style (§242)",
+   "status": "missed",
+   "number": "check-prompts +7.0 levels/25 [-10,+24]; D' +0.6 cross-time (suggestive); $33.4",
+   "read": "No form change (§185.5). Closed 10-17.",
+   "where": "§242, runner journal 10-17"
+  },
+  {
+   "id": "T1-round1-selfplay",
+   "name": "T1 round 1: QLoRA on 5,632 own-play units (seq 16K, packing on, alpha 32), merged into W4A16, paired vs stock",
+   "status": "void-as-recorded",
+   "number": "recorded 66 vs 146 (−80) is a CRASHED arm (23/25 games ENOSPC at ~1.9 h) vs a full 8.1-h control; same-wall read 66 vs 103 (−37; up 2 / tied 6 / down 17); thinking longer (3,213 vs 2,462 chars)",
+   "read": "Own-play SFT is behind at equal wall, by half the recorded number; depth past 2 h never read; packing untested on this data. §287",
+   "where": "§246(b), §249, §250 §287"
+  },
+  {
+   "id": "knob-tool-choice-required",
+   "name": "tool_choice=required on the stock form (the format safety net) vs auto, paired by game",
+   "status": "closed",
+   "number": "auto 145 vs required 141 levels/25 (diff -4, inside the +-10 floor); the 67.78 control was day noise",
+   "read": "Not a lever; stays in the trained form as the format net.",
+   "where": "runner journal 10-18"
+  },
+  {
+   "id": "Sol-mini-conversion-gate",
+   "name": "Sol-mini: 241 Sol screen units x 3 epochs (66 steps, same recipe as r1) merged, 5-game pair vs stock+required",
+   "status": "missed",
+   "number": "sola 4 vs solc 29 (-25; bar +4); interface clean 99.5% tool calls; tokens/response 1,805 vs 998",
+   "read": "VOID as a read of the data (§250: same contaminated objective). The gate is re-run as E.3 with packing off at the Kaggle cap.",
+   "where": "§249, §250, §254"
+  },
+  {
+   "id": "null-pipeline",
+   "name": "Null-pipeline test: lr 1e-6 x 20 steps through the identical ladder, merged, 5-game pair vs solc",
+   "status": "passed",
+   "number": "nulla 22 vs solc 29: sp80/ka59/cn04 exact; wa30 2 vs 7 and lf52 4 vs 6 (stock swings 2-7 on wa30); tokens/response 1,037 vs 998; accept len 2.53",
+   "read": "Merge + serve path clean within the instrument's resolution. No tiebreak rerun (§251).",
+   "where": "§249, §251"
+  },
+  {
+   "id": "training-mechanism-packing",
+   "name": "The mechanism: axolotl sdpa packing isolates documents only in the 12 softmax layers; the 36 Gated-DeltaNet layers get no cu_seqlens -> ~half the units train under a foreign recurrent state at seq 16K",
+   "status": "registered",
+   "number": "code read (modeling_qwen4_exp.py 457/535/548; axolotl config.py 1506, causal.py 276; README sdpa_varlen unsupported); EXPERIMENT PENDING = E.3 packing off + PPL gate",
+   "read": "Also: alpha 32 vs the documented 8 (4x update scale). E.3a/E.3b in parallel; PPL gate before any merge.",
+   "where": "§250, §254"
+  },
+  {
+   "id": "Sol-economy",
+   "name": "Sol's token economy as the transferable half: 31 levels on 126K generated (24.5 per 100K) vs Flash-Next 23 on 2.75M (0.84) on the same five games",
+   "status": "registered",
+   "number": "the budget curve pays +15-30% levels for 2x turns; a student at half the tokens per turn ~ +4 to +8 hidden-equivalent IF competence holds",
+   "read": "Read by the pair at the Kaggle cap (pair_cap_read.py: tokens per level). Two slope measurements disagree (Franzen 0.45 vs run H 0.2).",
+   "where": "§252, §254"
+  },
+  {
+   "id": "teacher-comparison-astra",
+   "name": "Teacher comparison (inference.net credit): GPT-6 Astra on the five games",
+   "status": "passed",
+   "number": "37/38 levels: sp80 5/6, wa30 9/9 WON, lf52 10/10 WON, ka59 7/7 WON, cn04 6/6 WON; 292K completion tokens total (58K/game); control 23, Sol-6.1 31",
+   "read": "The first run to finish wa30 and lf52. Teacher unless Gemini 4 Argon matches at a fifth of the price. Luna 6, DeepSeek-1017 10 (missed). §259e",
+   "where": "§259e"
+  },
+  {
+   "id": "teacher-comparison-rest",
+   "name": "Teacher comparison, the rest (inference.net credit): Gemini 3.7 Flash, GPT-5.6 Sol, Grok 4.6, GPT-5.6 Terra, Gemini 3.1 Pro, Luna, DeepSeek-1017 on the five games",
+   "status": "closed",
+   "number": "17 / 14 / 12 / 9 / 4 / 6 / 10 levels vs control 23, Sol-6.1 31, Astra 37 (55-min cap; floors within a level or two); $270 by usage.cost",
+   "read": "All below the control; matches ARC Prize's verified cliff (GPT-6 family, Argon, 6.1 Sol above it; everything else 2–35%). Only the three are teachers. §259d–§259e",
+   "where": "§259e"
+  },
+  {
+   "id": "teacher-argon",
+   "name": "Gemini 4 Argon on the five games (OpenRouter, $2/M)",
+   "status": "passed-floor",
+   "number": "28 levels (wa30 8/9, lf52 8/10, ka59 7/7 won, cn04 4/6, sp80 1/6); cut by the OpenRouter balance in four games; $27.91",
+   "read": "Astra-class depth on wa30/lf52 at a fifth of Astra's price; weak on sp80. Takes the bulk harvest tranches; Astra keeps the walls. §263 addendum",
+   "where": "§263"
+  },
+  {
+   "id": "cardfit-27b",
+   "name": "qwen3.8-27b in image mode on the five games (card-fitting screen)",
+   "status": "miss",
+   "number": "3 levels vs s7ac 23 (sp80 1, wa30 1, lf52 1, ka59 0, cn04 0); 499 actions; 55-min cap",
+   "read": "A fifth of Flash-Next in the same harness; not a student for the cards.",
+   "where": "§284"
+  },
+  {
+   "id": "cardfit-gptoss",
+   "name": "gpt-oss-120b text-only on the five games at the 10-10 control's cap",
+   "status": "miss",
+   "number": "0 levels vs Flash-Next text-only 6; 2,815 actions; all five at the 45-min wall",
+   "read": "Plays but clears nothing; the text-only knob does not open a cheaper student.",
+   "where": "§284"
+  },
+  {
+   "id": "cardfit-glm",
+   "name": "GLM-4.5-Air text-only on the five games at the 10-10 control's cap",
+   "status": "miss",
+   "number": "0 levels vs Flash-Next text-only 6; 1,853 actions; three at the wall, two gave up",
+   "read": "Same as gpt-oss: nothing cleared.",
+   "where": "§284"
+  },
+  {
+   "id": "step0-nopacka",
+   "name": "Step 0 of the climb: packing off (nopacka) vs stock+required (solc), five Sol screen games, uncapped",
+   "status": "miss",
+   "number": "3 levels vs 29 (nopacka vs solc: wa30 0 vs 7, sp80 1 vs 4, lf52 0 vs 6, ka59 1 vs 6, cn04 1 vs 6); same 8.1-h wall on every game; ≈$21",
+   "read": "Packing off does not rescue the adapter; the §250 mechanism is not the whole damage. Lane closes unless the lead says the word for §282 (documented recipe, no deviations, NVFP4, ~$60).",
+   "where": "§285"
+  },
+  {
+   "id": "thinking-collapse",
+   "name": "Why the Sol-trained students lose: the targets carry no reasoning, the student stops thinking ($0 read of the mirrors)",
+   "status": "found",
+   "number": "thinking chars median solc 1,766 / nulla 1,660 vs sola 171 / nopacka 222 (68–76% of turns under 300 chars); Sol-mini set: reasoning_content in 0/343 assistant turns, content median 215 chars",
+   "read": "Acquits merge, serving, packing; convicts the target shape. §282 withdrawn; next tranche = rationalised targets at the student's length, signature read first (§286 E).",
+   "where": "§286"
+  },
+  {
+   "id": "rationaliser-v2",
+   "name": "Rationalised Sol targets: the student's own analysis as reasoning_content, Sol's content + call verbatim",
+   "status": "built",
+   "number": "v1 hint → 58-char compliance; v2 analysis prompt → 305/9,514/14,481/2,130/784 chars (median 2,130); full 241-unit run <$1",
+   "read": "The target shape the §286 mechanism asks for; E1/E2 arms pre-registered in §287 D on the lead's word.",
+   "where": "§287"
+  },
+  {
+   "id": "P3-manuals",
+   "name": "P3: five Astra manuals as seed cards on the 20 unseen public games (strong writer x unseen game)",
+   "status": "missed",
+   "number": "arm 149 vs control 155 over 20 games x 2 passes (−6; up 8 / down 9 / tied 3); states identical; citation 0/1,236 arm turns; ≈$41",
+   "read": "Null. Knowledge about other games does not transfer to this student on unseen games, whoever writes it; the cross-game path closes with a clean read. Paper Appendix C row.",
+   "where": "§291"
+  },
+  {
+   "id": "capc",
+   "name": "Stock control at the Kaggle operating point: 25 public games at the 158K cap (the banked control for every capped pair)",
+   "status": "banked",
+   "number": "98 levels (5 won, 20 gave up at the cap; tokens/game median 158,799, 0/25 over, 20/25 binding); vs uncapped stock 133/145/146 = −35/−47/−48",
+   "read": "The budget bite: the stock player keeps ~2/3 of its levels at Kaggle's budget. Parity bar for a trained arm = ≥ 95. Arm-only pairs from here (≈$8).",
+   "where": "§292"
+  },
+  {
+   "id": "R1-E2-masked",
+   "name": "R1 E2: Sol content + call in the loss, the student's reasoning in context but masked",
+   "status": "missed",
+   "number": "signature: 491 turns, thinking median 194 chars, 88% under 300 (bar ≥1,000 / ≤25%); no pair",
+   "read": "Masking reasoning out of the loss does not preserve thinking; the brevity shortcut runs through the shared weights. Theory falsified. §296",
+   "where": "§296"
+  },
+  {
+   "id": "R1-E1-trained-reasoning",
+   "name": "R1 E1: the student's own length-matched reasoning + Sol content + call, all in the loss",
+   "status": "missed",
+   "number": "187 turns, thinking p25 1,102 / median 3,955 / p75 8,111, 9% under 300 → PASS; pair vs capc (98) pending ~10:00Z | PAIR 25 vs capc 98 = −73 (up 0 / down 23 / tied 2); tokens/level 155,760 vs 38,728; signature still PASS (median 4,633)",
+   "read": "Thinking kept, play gone: length is not competence. Closes action imitation on this student (four shapes). §306",
+   "where": "§301"
+  },
+  {
+   "id": "A0-card-split",
+   "name": "A0: the card effect in one split job (reading half vs non-reading half, 100 sessions, v39)",
+   "status": "read",
+   "number": "levels/25 arm 101.5 vs control 98.5 = +3.0 [−11, +16.5]; public 47.04 vs 43.95; gen tokens −5.8%; levels per 1M tokens 30.45 vs 25.89 (+18%); coin 0.600 vs 0.634; up 13 / down 8 / tied 4",
+   "read": "Small-positive, more economy than levels; consistent with +5.4 between jobs and +2.3 hidden. §317",
+   "where": "§317"
+  },
+  {
+   "id": "A1-cardv2",
+   "name": "A1: verified-claim cards (CARD_FORMAT=v2), 4×25 pod",
+   "status": "null",
+   "number": "RERUN (complete, 14:04Z snapshot): 102.8 vs A0 reading half 101.5 = +1.2 [−9.2, +11.8]; vs non-reading half +4.2; coin 0.512 vs 0.617; up 9 / down 10 / tied 6",
+   "read": "v2 cards = v1 cards; the card effect itself re-confirmed at +3–4 per 25. Partial reads (+52.5 / −2.7) both wrong: law — no partial of a running job is a signal. §320",
+   "where": "§317"
+  },
+  {
+   "id": "A2-assistant-channel",
+   "name": "A2: the record as the model's own prior turn (B1g), 4×25",
+   "status": "null",
+   "number": "101.8 vs A0 reading half 101.5 = +0.2 [−11.5, +12.0]; coin 0.593 vs 0.617",
+   "read": "§321: the stack is empty; cards' +3 is the only in-context positive.",
+   "where": "§321"
+  },
+  {
+   "id": "A3-temperature-split",
+   "name": "A3: per-session temperature 1.0 (B7), split job",
+   "status": "missed",
+   "number": "97.5 vs 99.0 = −1.5 [−13.5, +10.0]; prompt tokens/action +11.9%; coin 0.488 vs 0.512",
+   "read": "§321: the stack is empty; cards' +3 is the only in-context positive.",
+   "where": "§321"
+  },
+  {
+   "id": "A4-goal-gate-split",
+   "name": "A4: forced goal switch after a stall (L2), split job",
+   "status": "missed",
+   "number": "102.0 vs 102.5 = −0.5 [−11, +10]; generated +10.8%; levels/1M 25.7 vs 30.1; coin 0.571 vs 0.667",
+   "read": "§321: the stack is empty; cards' +3 is the only in-context positive.",
+   "where": "§321"
+  },
+  {
+   "id": "A5-deep-drain-split",
+   "name": "A5: deep drain 100K/0.75 (B3), split job",
+   "status": "missed",
+   "number": "95.0 vs 99.0 = −4.0 [−15.5, +8]; prompt tokens/action −27.9% (bar met); levels/1M 23.2 vs 25.0; coin 0.436 vs 0.590",
+   "read": "§321: the stack is empty; cards' +3 is the only in-context positive.",
+   "where": "§321"
+  },
+  {
+   "id": "A6-drain-notice-split",
+   "name": "A6: history-first drain notice (B5), split job",
+   "status": "missed",
+   "number": "98.0 vs 108.0 = −10.0 [−20, 0]; generated −10.6%; up 6 / down 12",
+   "read": "§321: the stack is empty; cards' +3 is the only in-context positive.",
+   "where": "§321"
+  },
+  {
+   "id": "laneD-e1-round1",
+   "name": "Lane D round 1: E1-form adapter on 21 verified executable-synthesis units (32 of 53 dropped at 16K)",
+   "status": "missed-replay / parity-play (final)",
+   "number": "replay 0/16 clean cells (final; 6 errored at the pod stop) beat nothing-changes (bar ≥8/23); play pair 92 vs capc 98 (−6; held-out 16 vs 13); signature PASS median 2,059",
+   "read": "No synthesis learned on 21 units; play preserved — the first non-damaging adapter. Retrain on fit16k (51) / s24k (57). §328",
+   "where": "§328"
+  },
+  {
+   "id": "laneD-r2-r16",
+   "name": "Lane D round 2, rank 16: E1-form adapter on 57 fit24k verified executable-synthesis units (seq 24,576)",
+   "status": "FINAL: replay no-thinking 0/23 MISS; replay thinking 0/18 clean (+5 void at the stop; 70/72 iterations cap-hit) MISS; pair 83 vs 98 MISS (-15; timeout confound flagged)",
+   "number": "replay no-thinking 0/23 beat nothing-changes (bar >=8/23; 23/23 wrote code, 3 replay >=8/20 shown); thinking regime: 23 of first 24 iterations hit the 32K cap with no content; signature PASS median 2,505; pair 83 vs capc 98 (-15; up 4/down 12/tied 9; held-out 14 vs 13; economy 1.20; signature median 2,511); tool timeouts 41 vs control 2 (probe rode the pair pod)",
+   "read": "More data at rank 16 (21 -> 57 units) taught the FORM of the deliverable (23/23 programs) and nothing held-out; play 83 vs 98 is a miss of uncertain depth (the probe rode the pair pod: 41 tool timeouts vs 2 on the control). §331",
+   "where": "§331"
+  },
+  {
+   "id": "laneD-r2-r64",
+   "name": "Lane D round 2, rank 64 / alpha 128: same 57 fit24k units, four times the adapter capacity",
+   "status": "FINAL: replay thinking 2/23 MISS (first held-out beats ever), no-thinking 0/23 MISS; pair 92 vs 98 parity (MISS)",
+   "number": "replay thinking 2/23 beat nothing-changes by >=20 (tn36:L2 9/20 vs 0, lp85:L2 5/20 vs 0; bar >=8/23; stock 0/23, Sol 16/23, round 1 0/16); 13/23 wrote a final program, 5 replay >=8/20 shown; no-thinking 0/23 (23/23 programs, none generalise); signature PASS median 1,970; pair 92 vs capc 98 (-6; up 7/down 11/tied 7; held-out 18 vs 13; economy 1.06; full-run signature median 2,217)",
+   "read": "Capacity x4 on the same 57 units: replay 0 -> 2 held-out beats, programs 0 -> 13, play unchanged at parity (92 vs 98, identical to round 1). The mechanism moves; the board does not. §331",
+   "where": "§331"
+  },
+  {
+   "id": "serve-lordhansolo-vllm",
+   "name": "Serving: lordhansolo's vLLM e975732 + primitive-ai NVFP4/FP8 mixed + built-in MTP head at full context (147K, 14 streams) under Franzen's harness",
+   "status": "MISS, anti-converts (final 10-27, same-day pair)",
+   "number": "rung2arm (vLLM main@e975732 + NVFP4/FP8 mixed + MTP head, his 25-key env, 10 streams, capped shape) vs same-day stock control: RHAE 30.35 vs 38.29 = −7.9 ± 5.8 (up 6/down 12/tied 7); levels 83 vs 97; tokens per wall-hour ≈ 1.07× (the cap compresses the throughput separation); MTP acceptance 2.7–2.8, prefix hit 88–91%; ≈ $60",
+   "read": "His 23.84 vs Franzen's 27.89 replicates on our stack: the profile's throughput does not convert to levels under the harness, and the mixed quantisation costs play. The serving ladder is closed; only the rung-1cq deltas survive, and those are held out of the Kaggle form until read at 110-game load. §346",
+   "where": "§332"
+  },
+  {
+   "id": "spec-steps-cell",
+   "name": "Speculative decoding depth 3 / 4 / 5 (NEXTN steps) on the flown serve",
+   "status": "NEVER RUN (designed 10-05)",
+   "number": "±20% decode plausible; ten games × 25 min per value, $3–10",
+   "read": "Tokens-per-game lever at zero form risk. §332",
+   "where": "§332"
+  },
+  {
+   "id": "t1-tool-timeout-repair",
+   "name": "T1: the 30-s python tool timeout repair (blind actions 8.4%; 41/29 timeouts in the round-2 pairs vs 2 on the control)",
+   "status": "CLOSED (§221f, 2026-10-14) — the register row of 10-24 missed the closure; the v40 chunk is not a lever",
+   "number": "§221: +1 hidden near-certain on its primary",
+   "read": "§221f: the next user prompt already carries the executed count and first ten action names after 264 of 291 timeouts; next-turn code similarity after a timeout 0.31 vs 0.32 normal — no re-work signal; the blind actions are the model's own loops running to the cap. Not built then; the 10-24 v40 chunk is withdrawn from v3.1. §334",
+   "where": "§332"
+  },
+  {
+   "id": "submission-hour",
+   "name": "Submission hour: box throughput varies by hour (366 vs 616 tok/s on the same code an hour apart; two zero draws at slot-open)",
+   "status": "NEVER READ ($0). Note 2026-11-01T20:59Z (composer): three hour-probe saves were pushed by the runner 11-01 (A ~02Z kernel v11, B 05Z v12, C 08Z), none read; no tok/s table exists. The 11-02 fire hour 07:13Z was fixed 10-31 19:49Z, BEFORE the probes, by the slot plan (a 9.5-h run must land before the 23:59Z close), not by this row. No text may say the hour was chosen on tok/s.",
+   "number": "1.7x throughput spread observed; the 8.87-h rerun averages a third of a day → realistic +1 to +3 hidden",
+   "read": "read25 free-quota saves at four hours of day measure tok/s by hour; pick the slot. §332",
+   "where": "§332"
+  },
+  {
+   "id": "rung1b-pool-10streams",
+   "name": "Serving rung 1b: KV pool +15% (MEMFRAC 0.97, Mamba cache 40) at the flown 10 streams, stock model, capped 25 vs banked capc",
+   "status": "MISS (final): levels parity, serving -17%",
+   "number": "levels 98 vs 98 (up 5/down 9/tied 11); tokens 0.98x; tokens per wall-hour 1.77M vs 2.13M (-16.9%, bar +15%); levels/M +2%; signature PASS 2,465; timeouts 0 vs 2",
+   "read": "A bigger pool at equal streams buys nothing: the pool is not binding at 10 streams. The streams lever (rung 1c, 13 streams) is the read that matters; serving reads need a same-day control pod (wall is not comparable across days). §332",
+   "where": "§332"
+  },
+  {
+   "id": "rung1cq2-mamba66-12streams",
+   "name": "Serving rung 1cq: MEMFRAC 0.97 + Mamba cache 66 + 12 streams allowed (runs 9–10), stock model, vs a SAME-DAY stock control",
+   "status": "CONVERTS on the pre-registered bar (+10 one pass); confirming draw = v3",
+   "number": "levels 97 vs same-day control 87 = +10 (up 10/down 4/tied 11); held-out 15 vs 13; throughput 2.13M vs 2.18M tok/h (identical); streams 9–10 both; signatures PASS 2,341 / 3,062; timeouts 5 vs 4. Against the BANKED capc the arm reads −1 (97 vs 98) and the control −11 (87 vs 98).",
+   "read": "The arm sits at the bank's level; the same-day control had a bad day. Read as: deltas are safe (parity vs bank twice: 1b, 1cq2) and possibly +10 against day noise. Not streams (identical), not throughput (identical): cache retention under concurrency is the only live mechanism. §185.5: the v3 draw is the confirming read. §333",
+   "where": "§333"
+  },
+  {
+   "id": "day-effect-controls",
+   "name": "Same-form control drift: stock on 10-25 (87) vs banked stock on 10-21 (98)",
+   "status": "LAW",
+   "number": "−11 levels between two stock controls four days apart (same card class, same cap); 3/25 control games over the cap | the five single-pass stock reads (§333, F4a): c11 94, c12 106, c13 103 (all 2026-10-04), capc 98 (10-21), ctl 87 (10-25): spread 87–106, sd 7.5",
+   "read": "Every cross-day pair read carries about ±10 of day noise. Lane D round 2's pairs (92, 92, 83 vs the 10-21 bank) are unreadable at the ±6 bar; rung 1c's −10 vs the bank is +1 vs its same-day control. From here every pair runs with a same-day control pod. §333",
+   "where": "§333"
+  },
+  {
+   "id": "draw6-v2-zero",
+   "name": "Kaggle draw 6 (v2, scriptVersionId 361745208, ref 57626126): the §330 rerun-detection fix",
+   "status": "MISS: 0.00 — three zeros in six draws",
+   "number": "zeros: draw3 v1, draw5 v1, draw6 v2; healthy 30.07/26.54/25.32",
+   "read": "The gateway-DNS detection did not hold, or the serve died on the rerun box (dead-after-load class seen 2 of 3 saves). The distinguishing number is draw 6's runtime on the submissions page (≈35 min = placeholder path; ≈9 h = dead serve). §333 | RESOLVED §336/§344: the zeros were the placeholder branch (a one-shot DNS decision before the gateway existed); fixed by polling the gateway after the serve; draw 8 ran the competition branch.",
+   "where": "§333"
+  },
+  {
+   "id": "rhae-budget-curve",
+   "name": "The budget curve in RHAE (the score Kaggle computes): capped 159K/game vs uncapped 446–600K/game stock reads",
+   "status": "LAW (read from seven stock mirrors)",
+   "number": "1x: 39.8 (10-21), 33.4 (10-25); 3–3.8x: 62.0 / 62.8 / 64.2 / 65.5 / 67.8; log-elasticity 0.4–0.5 (levels gave 0.2–0.36); hidden/public 0.69",
+   "read": "Depth is quadratic in RHAE, so budget buys more score than levels showed; 40 hidden ≈ 58 public ≈ 2.3x tokens per progressing game. RHAE paired (rhae_pair_read.py) is the primary read of every pair from 10-26. §335",
+   "where": "§335"
+  },
+  {
+   "id": "allocation-stuck-cutoff",
+   "name": "Allocation: stuck cutoff (park a game with no level after 80K tokens at depth ≤ 2) + deep-first priority weight (k+1), pooled competition shape",
+   "status": "MISS / mechanism VOID (final 10-27)",
+   "number": "pooled pair alloca vs allocc: RHAE +2.36 ± 5.73 (97 vs 95 levels); parked games 2 (bar 3); token share to depth ≥3 71% vs 71% (bar +10 points); ≈ $24",
+   "read": "In the pooled shape Franzen's gate already starves stuck games; the shallow third takes 29% of tokens either way. The capped-shape headroom (§335) does not exist in the pool. L6 ≈ +1; dropped. §340",
+   "where": "§335"
+  },
+  {
+   "id": "mercury3-replay",
+   "name": "Mercury 3 (Inception diffusion LLM) on the 23-cell replay probe, three reasoning regimes, via OpenRouter",
+   "status": "MISS vs 8/23 (final, four regimes: on 0, low 0, bounded 1, off 3)",
+   "number": "reasoning on @32K: 0 programs; reasoning LOW @16K: 0/23 programs-with-beats (0 beats), cap on every iteration; reasoning ~16K (budget ignored): 8/23 programs, 1 beat; reasoning OFF @16K: 18/23 programs, 3 beats (sp80:L2 4/20, ft09:L2 5/20, ar25:L1 15/20 vs 0); Flash-Next 0 / 1, best student 2, Sol 16; ≈ $3 | PARAMETERS (logged 10-28): \"on\" = no reasoning field sent (the route's provider default; OpenRouter exposes no default_parameters for inception/mercury-3, so the default effort is unverified by us); \"low\" = reasoning.effort=low explicit; \"bounded\" = reasoning.max_tokens=16384; \"off\" = reasoning.enabled=false; max_tokens as stated per regime",
+   "read": "Second architecture, same boundary: reasons to the cap when allowed; writes programs that replay the shown transitions when not (su15 18–20/20) and generalises on three cells. The paper's Universality row. §338",
+   "where": "§338"
+  },
+  {
+   "id": "mercury3-play-textonly",
+   "name": "Mercury 3 in our harness, five games text-only, 55-min cap, cards on (hosted via OpenRouter)",
+   "status": "MISS (bar ≥ 10)",
+   "number": "3 levels (wa30 1, lf52 1, ka59 1, sp80 0, cn04 0) vs Flash-Next text-only 6; all five gave up at the 158K cap; ≈ $2",
+   "read": "Below our open model in play on the same text-only shape. Third architecture in the model-to-model table. §338",
+   "where": "§338"
+  },
+  {
+   "id": "r1-samegame-seeding-below-floor",
+   "name": "Agno's cell below the floor: each of five games seeded with its OWN Astra manual (vision form, 55-min cap) vs a same-day control, hosted Flash-Next",
+   "status": "NULL (final)",
+   "number": "10 vs 10 levels; RHAE 11.6 vs 9.4; per game 1/0, 2/3, 1/3, 5/2, 1/2; ≈ $6",
+   "read": "Same-game seeding, which lifts models above the floor far above their cold runs, does nothing to a model below it. The cleanest answer to 'make a weak model perform well'. §339",
+   "where": "§339"
+  },
+  {
+   "id": "r2-rules-handed",
+   "name": "Hand-the-rules replay probe: Astra's rulebook for the cell given, predictor only asked, reasoning off, 23 cells, Flash-Next and Mercury 3",
+   "status": "MISS both (final)",
+   "number": "Flash-Next 19/23 programs, 1/23 beats (1/23 without rules); Mercury 3 18/23 programs, 2/23 beats (3/23 without); ≈ $4",
+   "read": "The floor is executable-writing, not rule inference: given the rules, the open models still cannot write the predictor that generalises. §339",
+   "where": "§339"
+  },
+  {
+   "id": "screen23-open-models-noreason",
+   "name": "23-cell replay screen, reasoning off, five more open models via OpenRouter",
+   "status": "READ (final)",
+   "number": "DeepSeek V4.1 Flash 3/23, MiMo V2.6 Flash 4/23, Nemotron 3.5 Super 1/23, Qwen3.8-27B 0/23, GLM-5.3 Flash (reasoning low) 0/23; Mercury 3 3/23; Flash-Next 0–1; Sol 16; bar 8; ≈ $8 | programs written (of 23): DeepSeek 23, MiMo 22, Nemotron 22, Qwen3.8-27B 23, GLM-low 1, Mercury-off 18, Flash-Next no-think 19 (recomputed 10-27 from the jsonl)",
+   "read": "The open class spans 0–4 of 23 with every endpoint writing programs; the discriminator column of the model-to-model table. §339",
+   "where": "§339"
+  },
+  {
+   "id": "mercury3-cards",
+   "name": "Mercury 3 cards-on vs cards-off, five games text-only",
+   "status": "NULL (final)",
+   "number": "3 vs 4 levels; ≈ $2",
+   "read": "The one converting channel does not convert on a second architecture sitting at the floor. §339",
+   "where": "§339"
+  },
+  {
+   "id": "mercury3-economy-bo10",
+   "name": "Economy of the floor: Mercury 3 reasoning off, best-of-10 samples per iteration selected on shown-transition replay, scored held-out (23 cells)",
+   "status": "READ 2026-10-27 22:50Z: PARTIAL by the filed bar (8 of 23, between 8 and 16)",
+   "number": "best-of-10 (selected on shown-transition replay, scored held-out): 8/23 beats vs 3/23 single-sample (same cells; 3 of the single beats kept, 5 new); mean held-out 21.2% vs 11.0%; mean shown 35.9% vs 16.3% (selection overfits shown by ~2:1); output tokens 10.3M vs 0.72M = 14.4x; 23/23 programs; ≈ $5 OpenRouter",
+   "read": "Sampling buys part of the floor and not the floor: ten draws take Mercury from 3 to 8 of 23 at 14x the tokens, still half of Sol's single sample (16). The floor is capability with an economic component; the paper's §5 line. §347a",
+   "where": "§347a"
+  },
+  {
+   "id": "mercury3-bo30-curve",
+   "name": "Sampling curve on Mercury 3 (reasoning off): best-of-30 per iteration, 23 cells, with wall-clock per call and per cell; points N=1 (3/23), N=10 (8/23), N=30 (?)",
+   "status": "STOPPED 2026-10-27 23:23Z by the composer after 14 min, 0 cells (budget: OpenRouter balance $75; the $20 point competes with the paper's harness pair). Not read.",
+   "number": "bars: beats at N=30 >= 12/23 = sampling approaches the frontier (Sol single 16) at equal dollars (~$20); <= 9 = the curve is flat past N=10 (sampling bounded); log-linear fit beats vs log N reported with the N at which 16 would be reached and its dollar cost. Timing: seconds per cell -> equal-wall-clock comparison against sol-timing-5.",
+   "read": "Not read. The N=30 point is a nice-to-have on a curve already read as partial at N=10; re-file only with the lead's word and a balance above $150.",
+   "where": "§347h when read"
+  },
+  {
+   "id": "sol-timing-5",
+   "name": "GPT-6.1 Sol single-sample timing on 5 cells (sp80:L2, ar25:L1, tn36:L2, bp35:L2, ka59:L6) to convert the sampling curve to equal wall-clock",
+   "status": "READ 2026-10-27 23:57Z",
+   "number": "Sol per cell 115–1,419 s (median call 27–378 s); held-out 15/20, 20/20, 4/20, 17/20, 12/20 (consistent with wm-replay-sol); ≈ $3",
+   "read": "Timing only. One Sol answer costs 1–6 minutes of wall; the five cells 46 min in all. §347h",
+   "where": "§347h"
+  },
+  {
+   "id": "mercury-decide-typed-134",
+   "name": "Mercury Decide (Inception's decision model, text+image->decisions, OpenRouter decisions API) zero-shot on the SAME 134 branch rows Jev (0.1716) and Laya were asked, plus the 134 no-prev rows; next-action choice vs gold",
+   "status": "READ 2026-10-27 23:18Z: MISS, at Jev-class zero-shot",
+   "number": "branch-134: top-1 0.1493 vs uniform 0.2356, majority 0.4701 (Jev 0.1716); no-prev-134: 0.1791 vs uniform 0.3096; 0 errors; probabilities near-uniform (confidence 0.04 on row 1); median 0.34 s per call; 268 calls = $0.002",
+   "read": "Mercury Decide has no prior for ARC next-action choice, like Jev and Laya zero-shot (09-20). Not an ARC instrument; its test is the fieldwork detector lane (text+image, $0.02/M, 0.3 s), on the 1,259-row shadow set against the house reader with Jev beside it. §347c",
+   "where": "§347c"
+  },
+  {
+   "id": "mercury-timing-5",
+   "name": "Mercury 3 (reasoning off) single-sample timing on the same five cells as sol-timing-5, for the seconds-per-cell ratio",
+   "status": "READ 2026-10-27 23:57Z",
+   "number": "Mercury 3 reasoning off per cell 13–65 s (median call 3–19 s); held-out 0,0,4,0,0 of 20 (consistent with the single-sample read); ≈ $0.30",
+   "read": "Per cell Mercury is 1.8–65× faster than Sol, median 20× on the same five cells; at equal wall-clock Mercury affords about twenty samples per Sol answer, and best-of-10 reaches 8/23 against Sol's single-sample 16. The Inception sentence, measured. §347h",
+   "where": "§347h"
+  },
+  {
+   "id": "mimo-cards-pair-25",
+   "name": "Universality: a second open model family in the FULL harness with images (MiMo V2.6 Flash, 4/23 on the probe, the best open model on the screen): own-run cards ON vs OFF, 25 public games, one pass each, hosted via OpenRouter, launched the same hour",
+   "status": "RE-FILED 2026-10-31 17:03Z for launch (re-priced from the measured MiMo 5-game run: ≈ $20 for the pair, not $86); runner, hosted on OpenRouter, text+vision form as played; bar unchanged (B1b's: ≥ +4 and > 1 s.e.; within ±4 = the second-family null at the floor); LAUNCHED by the runner 2026-11-01 00:35Z (four arms, hosted, 55-min cap). HUNG at 01:17–01:18Z in all four processes: the OpenRouter stream stalled (synchronous requests.post(stream) blocked in an SSL read for 8 h; keep-alive comments reset the per-read timeout; the assembler has no stall deadline; the blocked call sits in the asyncio loop, so the periodic save and the 55-minute cap never fired). benchmark.json frozen at 01:15Z with 10–12 games still 'playing' per arm. VOID by the crashed-pair law (a 43-minute cut is not the filed 55-minute pair); no partial read taken. Composer diagnosis 2026-11-01T09:23Z; relaunch after the stream-stall patch, on the lead's word (≈ $50 for both pairs again; balance 09:17Z $106.5).; RELAUNCHED by the runner (attempt 3) 11:06Z–14:12Z with the stall patch in the tree; READ by the composer 2026-11-01T19:11Z (rhae_pair_read.py on the two mirrors).",
+   "number": "bar (B1b's): RHAE paired >= +4 AND > 1 s.e. (rhae_pair_read) = the channel converts on a second family; within +-4 = null at the floor (the thesis's prediction when play is too shallow to write cards: levels per arm reported); states column read before levels; signature before levels; a crashed game on either side voids the pair. Cost cap $35 OpenRouter (balance $75). || RESULT: cards-on 9.59 vs cards-off 9.73 = −0.14 ± 2.06 RHAE over 25 games (up 9 / down 6 / tied 10); levels 39 vs 40. Delivery: 54 cards written, 221 opener lines carrying other games' cards.",
+   "read": "MISS on the bar (+4): the fourth family's null at the floor, delivery verified. Enters the pooled below-the-line read as a fourth family (MiMo V2.6 Flash, text+vision).",
+   "where": "§347e when read"
+  },
+  {
+   "id": "board-forecast-private",
+   "name": "The public board is best-of-N: implied form means from entry counts and a private-board forecast for the top 20 and us, filed before the reveal (runs/ledger/board-forecast-2026-10-28.md)",
+   "status": "FILED 2026-10-28 00:04Z (pre-registered; read at the private reveal, 11-02 23:59Z close)",
+   "number": "six falsifiable predictions in the file: top-3 order unchanged; rows 4–20 land 5–11 below public best; gold line 38.2 -> ~31–34; Franzen ~30; us 26–31; private−public negative in >= 15 of 17 rows; >=100-entry teams drop ~2 more than <=30-entry teams",
+   "read": "pending the reveal",
+   "where": "§347i"
+  },
+  {
+   "id": "w2-two-wave-cards",
+   "name": "Two-wave form as ONE run (v43 stagger, §348a): all 25 games admitted at t0; the 12 wave-B games sleep 3,000 s after their wall timer starts, then play with the cards wave A wrote. Control = the same pooled run without the delay, same day, second pod. Same wall, same total GPU time, no second tail, no seed env.",
+   "status": "READ 2026-10-28 18:12Z: MISS (v9 dead)",
+   "number": "same-day pooled pair (w2arm vs w2ctl, 25/25 both, 20 cancelled by the shared wall + 5 won on each side): RHAE 41.58 vs 41.72 = −0.14 ± 5.18 (up 8 / down 10 / tied 7); levels 96 vs 98; tokens/game 143K vs 144K; the 12 delayed games 42 vs 52 levels (they lost wall and the cards did not pay it back), the 13 undelayed 54 vs 46; stagger lines 12/12 in stdout; ≈ $24",
+   "read": "Starting half the games with the other half's cards buys nothing at the pool's scale: the delayed half loses more to the lost wall than the cards return. The one converting channel does not convert by being moved to session start. v9 is dead; the hidden form stays one wave.",
+   "where": "§348 §348a §350"
+  },
+  {
+   "id": "open-frontier-play-5",
+   "name": "Better base model, the one axis the leaders name: MiMo V2.6 Flash (4/23 on the probe, best of the open screen) and DeepSeek V4.1 Flash (3/23) played in OUR harness, vision form, the five screen games (cn04, ka59, lf52, sp80, wa30), 55-min/158K cap, cards on, hosted via OpenRouter — against Flash-Next's 23 levels on the same five in the same form (Sol 31, Astra 37)",
+   "status": "READ 2026-10-28 09:16Z: MISS (MiMo 6 levels vs bar 28; Flash-Next 23). DeepSeek V4.1 Flash not run: no longer informative.",
+   "number": "MiMo V2.6 Flash, vision form, five games, cards on: 6 levels (cn04 1/6, ka59 2/7, lf52 1/10, sp80 1/6, wa30 1/9); all five gave up at the 158K cap; 325 requests, 11.2M prompt / 0.69M completion tokens ≈ $1.8; mirror runs/field/local-reads/20261028_005629_mimo-play-5g",
+   "read": "The best open model on the replay screen plays a quarter of Flash-Next in the same harness at the same budget. The \"better base model\" axis is closed for this campaign with a number: no open model we can serve on one 96 GB card beats Flash-Next in play. §349",
+   "where": "§349"
+  },
+  {
+   "id": "budget-pair-same-day",
+   "name": "Same-day budget pair (§343): capped 158K stock (budgA) vs the uncapped 8.1-h-wall stock (budgB), two pods, one day — the slope of the budget curve with an interval",
+   "status": "READ 2026-10-28 18:12Z: CONVERTS (bar filed in §343 before the launch; prereg log)",
+   "number": "RHAE 71.46 vs 35.72 = +35.74 ± 5.75 (up 21 / down 1 / tied 3); levels 152 vs 92; completion tokens 3.68× (median per game 543K vs 159K); elasticity in RHAE 0.53 [90% game-clustered bootstrap 0.37, 0.75], in levels 0.39 [0.31, 0.49]; states: budgB 14 won / 11 cancelled by the wall, budgA 5 won / 20 gave up at the cap; 152 levels is the deepest stock read on record; ≈ $25",
+   "read": "The cross-day curve's slope (0.47) is confirmed on one day with an interval that excludes both 0.3 and 0.8: tokens per progressing game are the elastic lever below the floor, at about half-elasticity in the score's units. §4's number. §350",
+   "where": "§343 §350"
+  },
+  {
+   "id": "provenance-pair",
+   "name": "Provenance pair (§342, patch v42): the same own-run cards with a header saying they were written by a different agent in a previous run, vs the B1b control, same day",
+   "status": "READ 2026-10-28 18:12Z: the channel is authorship-insensitive (bar filed in §342 before the launch)",
+   "number": "RHAE 41.42 vs 40.55 = +0.88 ± 5.06 (up 7 / down 11 / tied 7); levels 98 vs 97; tokens/game 159K vs 160K; the foreign header present in all 25 arm openers and in none of the control's; ≈ $50",
+   "read": "Telling the model its cards were another agent's from an earlier run changes nothing. Of the two pre-registered readings, authorship is refuted; what remains is recency and form: the cards convert because they are minutes old, in the harness's own card format, about games of the same run — not because the model believes it wrote them. The regeneration reading narrows to 'structure in the model's own current format and recency', and the B1d null (older seeds) is the recency half. §350",
+   "where": "§342 §350"
+  },
+  {
+   "id": "v8-longcap-box-read",
+   "name": "Flight-law gate for v8 (v7 + the serve deltas): one clean 25-game long-cap read on the Kaggle box in save shape",
+   "status": "READ 2026-10-28 18:12Z: CLEAN (runner, kernel v9 output pulled)",
+   "number": "25/25 games, 89 levels, per-game walls median 7,017 s, max 7,305 s, min 2,550 s, no truncated game; the deltas' serve stable ≈ 5 h on the box; Kaggle quota ≈ 3 h",
+   "read": "The deltas do not kill the serve on the box at pod-depth budgets in save shape. With draw 9 (v7 stock) the truncation class is decided tonight: v7 healthy → the deltas truncated draw 8 under 110-game load is still possible but the gate is passed as filed; v8 flies 10-29 on the lead's chain. §350",
+   "where": "§345 §350"
+  },
+  {
+   "id": "mamba96-pair",
+   "name": "Mamba cache 96 on top of the v8 deltas (m96a: MEMFRAC .97 / MAXREQ 12 / CG 12 / MAMBA 96) vs the v8 deltas exactly (m96c, MAMBA 66), capped 25×158K, same day (runner, launched 18:35Z 10-28 with the bar in the journal before the read)",
+   "status": "READ 2026-10-28 20:58Z: MISS (validated on the mirrors by the composer)",
+   "number": "RHAE 34.32 vs 37.96 = −3.64 ± 5.53 (up 7 / down 15 / tied 3); levels 83 vs 97; 22 gave up / 3 won on both sides; the KV pool shrank 1.01M → 931K to hold the larger Mamba cache",
+   "read": "The Mamba-cache axis has three points: 60 (stock) < 66 (the flown deltas) > 96. v8.1 is dead; v8 flies as the peak of the measured axis. §353a",
+   "where": "§353a"
+  },
+  {
+   "id": "draw9-v7-stock",
+   "name": "Draw 9: v7 (stock serve, poll detection) on the hidden 110, fired 10:13Z 10-28 (ref 57733343)",
+   "status": "READ 2026-10-28 20:15Z (runner 19:43Z; on Kaggle's list)",
+   "number": "24.95 public, COMPLETE, full-length ≈ 9.5 h; the fourth healthy stock draw (30.07, 26.54, 25.32, 24.95: mean 26.7, sd 2.4)",
+   "read": "The stock serve ran full-length in the healthy window. Draw 8 (deltas, fired 00:07Z, the US-evening mortality window) truncated: the deltas are the prime suspect but the window is a confound — the two draws differ in both. The 25-game long-cap box read is clean but does not reproduce 110-game load. v8's first hidden draw is therefore the test, with the switch rule. §352",
+   "where": "§352"
+  },
+  {
+   "id": "w3-prose-format",
+   "name": "Format control (§353): the model's own same-run cards rendered as prose paragraphs with the same rules, counts and actions (patch v44-prose, ARC3_CROSS_GAME_CARD_FORMAT=prose) vs the B1b card format, same day, two pods, 25 games, capped 158K",
+   "status": "READ 2026-10-29 00:07Z: INCONCLUSIVE on the primary bar (point beyond −4, 0.76 s.e.)",
+   "number": "same day, capped 25: prose (fmta) RHAE 37.83 vs cards (fmtc) 42.56 = −4.73 ± 6.24 (up 10 / down 12 / tied 3); levels 92 vs 97; tokens/game 159K both; the prose header in all 25 arm openers, the card header in all 25 control openers; ≈ $24",
+   "read": "Rendering the same notes as prose instead of cards reads −4.7 RHAE, the sign the format clause predicts, at 0.76 s.e.: a direction, not a resolution. The clause stays an inference with a measured lean; a second same-day pair would resolve it. For the lab: compilation per model has a measured lean in its favour, not a proof. §359",
+   "where": "§359"
+  },
+  {
+   "id": "laned-r64-same-day",
+   "name": "Readability repair for the training chapter: the lane D rank-64 adapter (replay-verified executable targets) vs stock, SAME DAY, two pods, 25 games capped 158K — the 10-24 pair read 92 vs a four-day-old 98 and is unreadable at ±6",
+   "status": "READ 2026-10-28 23:52Z: the adapter COSTS play (validated on the mirrors by the composer)",
+   "number": "same day, capped 25: RHAE 28.26 vs 37.31 = −9.05 ± 6.68 (1.35 s.e.; up 9 / down 13 / tied 3); levels 81 vs 93 (−12); states 22 gave up / 3 won vs 20 / 5; thinking signature PASS (median 2,382 chars, 10% under 300); ≈ $24",
+   "read": "The 10-24 \"parity\" (92 and 83 vs a four-day-old 98) was the day effect. Read the same day, the best training shape loses a visible band of play while keeping its thinking. Every trained adapter damaged play; the least damaging still costs about nine RHAE. The training chapter's claim reverses from \"preserves play\" to \"keeps thinking, costs play\"; a claim that would have been wrong in print, caught by the same-day law. §356",
+   "where": "§356"
+  },
+  {
+   "id": "mercury3-cards-25",
+   "name": "Power repair for the second-architecture row: Mercury 3 text-only, own-run cards on vs off, 25 games, hosted via OpenRouter, same hour (the 10-26 read was five games, 3 vs 4 levels)",
+   "status": "READ 2026-10-28 22:06Z: NULL with a tight interval (MISS on the bar)",
+   "number": "25 games text-only, cards on vs off, same hour: RHAE 3.31 vs 2.70 = +0.61 ± 1.16 (up 6 / down 10 / tied 9); levels 25 vs 25 (one per game on both sides; every game gave up at the 158K cap); cards shown in 479 openers of the arm; tokens/game 160K both; ≈ $30",
+   "read": "On a second architecture sitting deep below the floor (one level per game), the one converting channel reads null with an interval of ±1.2 RHAE: the channel needs play deep enough to write cards worth reading, and Mercury text-only never gets there. The second-architecture row now carries a 25-game interval instead of five games. §354",
+   "where": "§354"
+  },
+  {
+   "id": "mercury3-equal-wall-5",
+   "name": "Equal-wall-clock read for the partner (§354): Mercury 3 text-only, cards on, the five screen games, per-game cap 474K tokens (3x Flash-Next's 158K, the budget curve's measured range; Mercury's 20x per-call speed affords it inside the same 60-min wall)",
+   "status": "READ 2026-10-28 22:28Z: MISS, capability (4 levels vs bar 12; 3 at the 158K cap)",
+   "number": "five games, text-only, cards on, cap 474K: 4 levels (cn04 1, ka59 2, lf52 0, sp80 0, wa30 1); every game gave up at the cap; actions 210–1,089 per game; 87.6M prompt / 2.28M completion tokens ≈ $9.6; vs 3 levels at 158K and Flash-Next 23 at 158K",
+   "read": "Three times the tokens its speed affords inside the same wall buy one level. Mercury 3's gap in play is capability, not economics: the elastic lever below the floor (tokens per progressing game, 0.5) needs a game that progresses, and at one level per game there is nothing to compound. For Inception: speed and sampling are real on program-writing; they do not convert into play. §354",
+   "where": "§354"
+  },
+  {
+   "id": "mercury3-reason-128k",
+   "name": "Does a larger reasoning budget change the deliverability failure? Mercury 3 reasoning ON, max_tokens 131,072, five cells (sp80:L2, ar25:L1, tn36:L2, bp35:L2, ka59:L6), single sample",
+   "status": "READ 2026-10-28 22:35Z: bar MET — the 16–32K reads were a budget artefact",
+   "number": "reasoning on, cap 131,072, five cells: content returned on 4 of 5 cells at iteration 1 (reasoning 61K / 82K / 62K / 77K tokens; tn36 hit the cap at 131K twice and answered in between); final programs extracted on 2 of 5 (sp80:L2 held-out 6/20 vs nothing 0 — a beat; bp35 0/20); ar25 wrote 29–31K chars of content without a parsable program; per-call 17–261 s; ≈ $1.5 | PARAMETERS: no reasoning field (provider default effort), max_tokens 131,072 = the route's max_completion_tokens",
+   "read": "Mercury 3's reasoning mode delivers when given 60K–130K reasoning tokens per answer on this task, roughly 3–6× Sol's 20K median; at 16K and 32K it returns nothing. The claim in the paper and the note changes from \"does not deliver\" to \"needs 60K–130K tokens per answer, and returns nothing below that unless stopped\": a cost statement and a control request, not a defect. §355a",
+   "where": "§355a"
+  },
+  {
+   "id": "astra-corpus",
+   "name": "GPT-6 Astra on the wider replay corpus used to build lane D's training units (laneD-full-astra-compact 113 cells; laneD-pass2-astra-compact 104 cells)",
+   "status": "READ (2026-10-2x; row filed 10-28 for the writeup's [astra-corpus] tag)",
+   "number": "beats nothing-changes by >= 20 points: 93/113 + 81/104 = 174/217; mean held-out exactness 54.6% (113) / 51.5% (104); 13 + 13 perfect cells",
+   "read": "The probe's ceiling on this corpus: a frontier model clears four cells in five. §347",
+   "where": "§347"
+  },
+  {
+   "id": "draw8-v6-truncated",
+   "name": "Draw 8: v6 (competition-first detection + the serve deltas), fired 00:07Z 10-27 via the API route (ref 57682554)",
+   "status": "READ 2026-10-27",
+   "number": "14.51 public; the competition branch ran (zero class closed); the run ended at <= 4h40m of a 9.5-h healthy run (truncation class); fired inside the box-mortality window; the deltas are the prime suspect (§345, §352)",
+   "read": "The only hidden flight of the deltas truncated; the stock serve is 4 for 4 full-length. v8 (deltas) flies 10-29 as the test with the switch rule. §344 §345 §352",
+   "where": "§344 §345 §352"
+  },
+  {
+   "id": "cards-same-day-pair",
+   "name": "The headline's decisive same-day test, at the shape that produced it: own-run cards ON (B1b base) vs OFF (ARC3_CROSS_GAME=0), 25 games × 4 passes each (100 sessions per pod), two pods launched the same hour — the +5.5 came from a 4-pass job; a 4-pass same-day pair resolves ≈ ±3 RHAE, the 1-pass shape only ±5",
+   "status": "READ 2026-10-29 14:45Z: MISS (bar +4 and > 1 s.e.; runner read, composer reproduced on rhae_pair_read.py)",
+   "number": "same day, 4-pass, capped 25: carda (cards) RHAE 44.98 vs cardc (none) 45.28 = −0.30 ± 2.34 (up 10 / down 10 / tied 5); per-game four-pass level means 100.25 vs 100.25; mechanism verified (cards in 12/12 carda pass-1 openers, 0 in cardc; cross_game_cards.jsonl 464 lines in carda, none in cardc); 100/100 game-runs both; ≈ $60",
+   "read": "The channel is not established. Pooled with B1b (+5.53 ± 2.67, cross-day): +2.2 ± 1.8; the two reads differ by 5.8 ± 3.6 (1.6 s.e.), consistent with noise. The paper moves to the null with the lean stated: an effect near +2 stays open, +5 is excluded. The four-pass pair resolved ±2.3 (3.5 predicted). §364",
+   "where": "§361 §364"
+  },
+  {
+   "id": "budget-pair-2x",
+   "name": "The budget law's third point: capped 158K stock vs capped 316K stock (2x), two pods the same day — breaks the two-point fit (1x vs 3.7x) and reads curvature",
+   "status": "READ 2026-10-29 05:45Z: CONVERTS (band [+8.3, +26.5] and elasticity 0.3–0.8 on the step, filed §361; runner read, composer reproduced)",
+   "number": "same day, stock, capped 25: b2x (2× cap) RHAE 52.74 vs b1x (1×) 33.48 = +19.25 ± 5.41 (up 17 / down 6 / tied 2); levels 120 vs 84; completion tokens 6.81M vs 3.94M per run (1.73× by means; medians 316.5K vs 159.6K per game); elasticity 0.83 [0.63, 1.01] in RHAE, 0.65 in levels; ≈ $25",
+   "read": "A second same-day ratio on the budget law: with the 3.7× pair (0.53 [0.37, 0.75]) the curve is concave, returns diminishing; both inside their pre-filed bands. §364",
+   "where": "§361 §364"
+  },
+  {
+   "id": "w3-prose-format-2",
+   "name": "Second same-day pair of the format control (prose vs cards), to pool with the first (−4.73 ± 6.24) and resolve the lean",
+   "status": "READ 2026-11-01 02:16Z (runner; composer reproduced 2026-11-01 08:14Z): INCONCLUSIVE on the pooled bar",
+   "number": "fmta22 (prose) vs fmtc22 (cards), same day, 25 games: RHAE 41.50 vs 43.69 = −2.19 ± 6.12 (up 12 / down 7 / tied 6); levels 98 vs 102. Pooled with w3-prose-format (−4.73 ± 6.24): −3.4 ± 4.4.",
+   "read": "The prose rendering leans worse on both days and resolves on neither; the format clause stays a lean (0.8 s.e.). §377",
+   "where": "§361"
+  },
+  {
+   "id": "cards-family-estimate",
+   "name": "The card effect across every live-card 4-pass job (b1 10-06, b1b 10-07, b1c-v20 10-08, b1e 10-09, b1r 10-10) against the two stock 4-pass controls (c4, d4, 10-05), per-game means, game-clustered bootstrap — the number the writeup can defend",
+   "status": "READ, then CORRECTED 2026-10-29 02:02Z: the five \"jobs\" are not replicates of one form",
+   "number": "family +1.78 RHAE, 90% [−1.61, +5.38], 95% [−2.23, +6.13]; per job: b1 +1.52, b1b +5.53, b1c +1.58, b1e +0.85, b1r −0.58 (job means 46.0 / 50.0 / 46.1 / 45.4 / 43.9 vs controls 44.4 / 44.6; sd of arm job means 2.0); all cross-day vs the 10-05 controls; within-job splits +3.0 [−11, +16.5] and −1.5 [−10.5, +8.5]; hidden +1.5, s.e. 2.3",
+   "read": "CORRECTION §363: b1r (10-11) is the B1b split job (half the sessions read cards, half do not), b1c and b1e are different card variants (bigger blocks, policy mixes) and b1 the first version; the \"family\" mean therefore averages variants and a half-control job, and \"best of five draws\" was the wrong frame. B1b is the form; its own reads: +5.5 ± 2.7 (four-pass per-game means vs c4/d4; the pod's capped controls show no between-day component, sd 2.85 across seven reads vs 3.07 expected from per-game noise), within-job split +3.0 [−11, +16.5] at one-pass resolution, a second split on a starved host −1.5 [−10.5, +8.5], hidden +1.5 s.e. 2.3; the variants 0 to +1.6 over the same controls. The decisive same-day four-pass pair stays the decisive run. §362 §363",
+   "where": "§362"
+  },
+  {
+   "id": "pod-day-effect-decomposed",
+   "name": "Is there a between-day component on pod pairs? Seven capped cards-on stock controls over five days (capc 10-21, ctl 10-25, budgA, m96c, r64c, fmtc, provc 10-28) vs the spread per-game sampling alone predicts",
+   "status": "READ 2026-10-29 02:02Z (runner's resolution_arithmetic.py; reproduced by the composer)",
+   "number": "RHAE means 39.8 / 33.4 / 35.7 / 38.0 / 37.3 / 42.6 / 40.5: sd 2.85 across runs; expected sd of a 25-game mean from per-game noise 3.07 (per-game sd 15.4); null pair c4 vs d4: −0.18 ± 3.53 at four passes, +0.21 ± 6.67 at one pass; B1b per pass +6.35 / +5.33 / +6.14 / +4.32 (± 4.1–5.3), four-pass +5.53 ± 2.67",
+   "read": "On the pod at the capped shape there is no measurable between-day component: the spread of stock controls is per-game sampling. The ±10-level swing of §333 was capc 98 vs ctl 87, a two-s.e. event, and the Kaggle box's own variance is separate. Same-day pairing stays the law as hygiene; a one-pass pair's s.e. is 5–7 RHAE, a four-pass pair's 3.5; B1b's cross-day read carries no day penalty. §363",
+   "where": "§363"
+  },
+  {
+   "id": "draw10-v8-deltas",
+   "name": "Draw 10: v8 (stock + serve deltas MEMFRAC 0.97 / Mamba 66 / 12 streams) on the hidden box",
+   "where": "§352 §364",
+   "status": "READ 2026-10-29 16:22Z: 0.00 COMPLETE, ref 57767547; class open (§365)",
+   "number": "bar (§352 switch rule, filed before the submit): ≥ 28 keep v8 for the remaining slots, short → v7 (stock serve + cards). Result 0.00; draw 9 (stock) 24.95; draw 8 (deltas) 14.51 truncated.",
+   "read": "CORRECTION WITHDRAWN 2026-10-29 22:5xZ (composer, §365): the quota ledger (runs/lib/quota-ledger.jsonl) shows time_used_s = 42,328 constant from 10-28 08:14Z through 10-29 14:54Z, a span that contains draw 9's healthy 9.5-hour run (24.95). Scoring reruns do not burn the weekly GPU counter at all, so an unmoved counter says nothing about draw 10. Its class (placeholder vs a genuine zero vs a crash) is OPEN until the kernel log is read (the lead's click). The deltas have one hidden read (draw 8, truncated 14.51); draw 10 is neither a conviction nor an acquittal. v7 flies the remaining slots by the §352 rule (short → v7). The weekly GPU quota constrains saves, not draws; what limits draws is Kaggle's per-day submission count.",
+   "closed": "2026-10-29"
+  },
+  {
+   "id": "cards-same-day-pair-3",
+   "name": "Cards, the third four-pass same-day pair (B1b shape: cards on vs off, 25 games × 4 passes per pod, stock serve, capped)",
+   "where": "§365",
+   "status": "READ 2026-10-31 05:15Z (runner; composer reproduced 2026-10-31 16:56Z): MISS; the channel closed by the filed pooled bar",
+   "number": "same day, 4-pass, capped 25: carda (cards) RHAE 45.07 vs cardc 47.93 = −2.86 ± 1.83 (up 9 / down 13 / tied 3); levels 99.75 vs 104.0; 100/100 game-runs both; cards in the arm (cross_game_cards.jsonl 455 lines), none in the control. Pooled over the three four-pass reads (+5.53 ± 2.67, −0.30 ± 2.34, −2.86 ± 1.83): −0.21 ± 1.27, 90% [−2.3, +1.9]; the two same-day reads pool to −1.89 ± 1.44 and sit 7.4 ± 3.0 (2.4 s.e.) below the cross-day read.",
+   "read": "No effect; +2 excluded; the channel is closed on this class of model. The 10-08 cross-day read is the outlier against two same-day replications. Every text moves from 'a lean' to 'no effect'. §370"
+  },
+  {
+   "id": "budget-pair-half",
+   "name": "Budget, the downward step in the score's units: 0.5× cap (79K tokens per game) vs 1× (158K), same-day, stock, 25 games",
+   "where": "§365",
+   "status": "READ 2026-10-31 00:4xZ (runner 10-30 21:46Z; composer reproduced): the score band resolved inside, the elasticity criterion missed at the point and sits inside one s.e.",
+   "number": "b05x (0.5× cap, 79K; 10-30) vs b1x (1×, 158K; 10-29, the previous day's control: cross-day, flagged; the capped-control day band is sampling noise per §363): RHAE 22.71 vs 33.48 = −10.77 ± 5.18 (up 7 / down 13 / tied 5); levels 64 vs 84; tokens 1.97M vs 3.94M (0.501×). Pre-filed score band [−25, −8]: inside. Pre-filed elasticity criterion on the 0.5×→1× step [0.6, 1.4] in RHAE: 0.56 [0.26, 0.93], below 0.6 at the point. Levels elasticity 0.39.",
+   "read": "The downward budget step is not steeper than the upward one: 0.56 (0.5×→1×) against 0.83 (1×→1.7×) and 0.53 (1×→3.7×); the curve is steepest in the middle and flattens at both ends. The 1.1 'downward asymmetry' belonged to the reasoning cut (E1-low), not to a token-budget cut; §3 and the abstract are reworded. One pass, cross-day: the point carries ±5. §368"
+  },
+  {
+   "id": "budget-pair-mercury-2x",
+   "name": "Budget on a second model: Mercury 3 text-only, 2× cap (316K) vs 1× (158K), same hour, hosted, 25 games, cards off",
+   "where": "§365",
+   "status": "READ 2026-10-30 20:37Z (runner; composer reproduced from the hosted benchmark files): the law's condition, as pre-written",
+   "number": "Mercury 3 text-only, 25 games, hosted, same hour: 1× (158K) RHAE 2.57 vs 2× (316K) 3.4 = +0.84 ± 1.03; levels 27 vs 27; elasticity ≈ 0 (band [0.3, 0.9] not met).",
+   "read": "Doubling the budget bought nothing on a model that clears about one level per game: the budget law needs a model that converts tokens into levels, and below that competence there is nothing to buy. Stated in §3 as the law's condition, not a replication. §368"
+  },
+  {
+   "id": "cards-above-the-line",
+   "name": "Our own notes (cards) read by a model above the line: GPT-6.1 Sol in the same harness, cards on vs off, 25 games, same hour, hosted",
+   "where": "§367",
+   "status": "STAGE 1 READ 2026-10-31 22:44Z (composer, on the files): the excerpt arm is VOID (0 of 1,170 requests carried a card: nothing was delivered); the writer-fixed arm is a valid but uninformative cross-game read (cards reached 906 of 1,158 requests; the launch log counts 258 openers with three other games' cards shown and 4 without (the first four minutes, before any card existed): delivery was real from minute four) | STAGE 2 CLOSED without launch 2026-10-31 23:5xZ: the same-game read (sol-samegame-own-notes) missed its bar.",
+   "number": "writer-fixed cards-on vs cards-off, five games, one pass, same day: levels 34 vs 36 (cn04 6/6 vs 6/6, ka59 7/7 vs 7/7, lf52 9 vs 10/10, sp80 6/6 vs 6/6, wa30 6 vs 7 of 9); RHAE 78.6 vs 90.2 = -11.6 ± 6.7 (per-game sd ≈ 30 on these games; sp80 read 99 and 31 in the two cards-on arms). Three of five games are at the ceiling in the control, so the +3-level bar could not have been met by any arm. Excerpt arm 35 levels, no card delivered.",
+   "read": "NOT a read of the claim. The run tested cross-game notes (about other games) delivered mid-game to a model already at the ceiling on three of five games, one pass, with the cards absent only for the first four minutes. 'Proven from both ends' and 'prose converts nowhere' are withdrawn; the register says: cross-game notes delivered at drains did not change Sol's levels on five games where three were already complete. The claim the Lab needs, the model's own notes about THIS situation on its next attempt (the Reflexion and Agno shape, the product's recurring-person case), is untested above the line and is filed as sol-samegame-own-notes. §373"
+  },
+  {
+   "id": "budget-pair-half-sameday",
+   "name": "The half-budget point with a same-day control: 1× cap (158K) run beside the 0.5× arm on the same day, 25 games, stock",
+   "where": "§369",
+   "status": "READ 2026-11-01 02:16Z (runner; composer reproduced 2026-11-01 08:14Z): the criterion [0.6, 1.4] is MET with a same-day control",
+   "number": "b05y (0.5× cap) vs b1y (1×), same day, 25 games: RHAE 21.89 vs 41.14 = −19.25 ± 4.51 (up 3 / down 17 / tied 5); levels 65 vs 103; tokens 0.536×; elasticity on the cut 1.01 in RHAE, 0.74 in levels.",
+   "read": "The downward step is steep when read against a same-day control: elasticity ≈ 1.0 in RHAE, against 0.83 on the 1.7× step and 0.53 at 3.7×. §368's cross-day read (0.56) was the day, not the law; the pre-filed criterion is met and the 'asymmetric downward' sentence returns, now measured on a token-budget cut, not the reasoning cut. §377"
+  },
+  {
+   "id": "budget-pair-2x-replication",
+   "name": "The 1.7× step replicated: a second same-day pair, 1× vs 2× cap, 25 games, stock",
+   "where": "§369",
+   "status": "READ 2026-11-01 03:15Z (runner; composer reproduced 2026-11-01 08:14Z): CONVERTS, inside both pre-filed bands",
+   "number": "b2y (2× cap) vs b1y (1×), same day, 25 games: RHAE 54.18 vs 41.14 = +13.04 ± 5.19 (up 13 / down 9 / tied 3); levels 120 vs 103 (the 2× arm's 120 levels replicate 10-29's 120 exactly); tokens 1.772×; elasticity 0.48 in RHAE (0.27 in levels); band [+8.3, +26.5] and [0.3, 0.8]: inside.",
+   "read": "The 1.7× step replicated same-day on a second day: +19.3 (0.83) and +13.0 (0.48); the two reads pool to +16.1 ± 3.7 with elasticity between 0.5 and 0.8 depending on the day's control. 'Replicated same-day' is true on this model. §377"
+  },
+  {
+   "id": "mimo-budget-pair-2x",
+   "name": "The budget law on a second model that converts tokens: MiMo V2.6 Flash in the same harness (vision form), 1× vs 2× cap, 25 games, hosted",
+   "where": "§369",
+   "status": "FILED 2026-10-31 17:03Z for launch (re-priced from the measured MiMo 5-game run: ≈ $1.8 per 5 games, vision form → ≈ $30 for the 25-game pair at 1× and 2×; the earlier $130 was the Mercury-image estimate, wrong); runner, hosted on OpenRouter after the pod queue; LAUNCHED by the runner 2026-11-01 00:35Z (four arms, hosted, 55-min cap). HUNG at 01:17–01:18Z in all four processes: the OpenRouter stream stalled (synchronous requests.post(stream) blocked in an SSL read for 8 h; keep-alive comments reset the per-read timeout; the assembler has no stall deadline; the blocked call sits in the asyncio loop, so the periodic save and the 55-minute cap never fired). benchmark.json frozen at 01:15Z with 10–12 games still 'playing' per arm. VOID by the crashed-pair law (a 43-minute cut is not the filed 55-minute pair); no partial read taken. Composer diagnosis 2026-11-01T09:23Z; relaunch after the stream-stall patch, on the lead's word (≈ $50 for both pairs again; balance 09:17Z $106.5).; attempt 1 (00:35 local launch) void (stall), attempt 2 void (ARC3_HOSTED_CAP not carried, per the runner's journal), attempt 3 11:06Z–14:19Z READ by the composer 2026-11-01T19:11Z.",
+   "number": "bar (filed with the proposal): elasticity on the 1×→2× step in RHAE in [0.3, 0.9] and the pair > 1 s.e. = the law replicated on a second model and family; ≈ 0 = the condition again (MiMo plays 6 levels on 5 games, deeper than Mercury, shallower than Flash-Next: the result places the condition's threshold). || RESULT: 2× (316K cap) 13.46 vs 1× (158K cap) 15.01 = −1.55 ± 4.19 RHAE over 25 games (up 12 / down 6 / tied 7); levels 40 vs 48. Caps binding: 1× games 158K–170K tokens each (21 finished lines), 2× median 296K, max 323K (3 at/above 316K). Elasticity ≈ −0.1 on the 1×→2× step.",
+   "read": "≈ 0 = the condition again: MiMo does not convert thinking time (as Mercury did not); the law's shape holds only for the model that converts. Outside the filed [0.3, 0.9] band; pair not > 1 s.e."
+  },
+  {
+   "id": "cards-fourth-read-conditional",
+   "name": "A fourth four-pass same-day cards pair, conditional on the pooled estimate after three reads sitting between 1.5 and 2.5 s.e. from zero",
+   "where": "§369",
+   "status": "CLOSED 2026-10-31 without launch: the condition (pooled between 1.5 and 2.5 s.e. from zero) is not met (0.2 s.e.)",
+   "number": "bar (filed): the pooled inverse-variance estimate over four four-pass reads ≥ +3 and > 2 s.e. = established; else the lean at its pooled value, and if the pooled interval excludes +2 the channel is dead. Not launched if the third read already settles it either way.",
+   "read": "Not run; not needed."
+  },
+  {
+   "id": "v82-deltas-plus-detection",
+   "name": "v8.2: the serve deltas (MEMFRAC 0.97 / Mamba 66 / 12 streams, +7.85 ± 3.65 RHAE same-day on pods) on top of v7.1's hardened detection, for the last hidden slots",
+   "where": "§372",
+   "status": "PROPOSED 2026-10-31 18:07Z for the lead's decision; runner builds and runs the competition-sim smoke tonight; flies 11-01 10:13Z and/or 11-02 06:00Z only on the lead's word; FLOWN as draw 13 by the runner (pushed by hand as kernel version 14 after the push cron was found set 7 h late; Kaggle ref 57869718, submitted 11:11Z, COMPLETE 16:23Z); READ 2026-11-01T19:11Z from Kaggle's list.",
+   "number": "bar (filed): a full-length hidden draw ≥ 32 = the deltas transfer to the box and the 35 shot is live for the last slot; a short or zero draw with the hardened detection = the deltas convicted on the box (their first clean hidden read); the selection keeps 30.07 + 26.54 regardless. Odds, filed: v7 draw > 30.07 ≈ 24% each, ≥ 35 ≈ 3% each; deltas draw (form ≈ 31 to 32 if the pod gain carries at the usual 0.6 public→hidden) ≥ 35 ≈ 20 to 25% each, ≥ 32 ≈ 45%. || RESULT: public 14.60; wall 5.2 h vs the healthy 9.5 h = the short class. No healthy deltas draw in three flights on the box: draw 8 (10-27 v6, 14.51, truncated at ≤ 4 h 40), draw 10 (10-29 v8, 0.00, class OPEN: the quota counter is not evidence), draw 13 (11-01 v8.2, 14.60, 5.2 h, hardened detection in the flown bytes); against the pod pair +7.85 ± 3.65.",
+   "read": "The serve deltas have not produced a healthy draw on the competition box in three flights (two truncations observed, one class open); detection ruled out as the cause on draw 13. v7 (kernel version 8) flies the last slot 11-02 07:13Z per the runner's journaled session cron. Pod-to-box serving transfer is a negative result; enters the companion as such."
+  },
+  {
+   "id": "sol-samegame-own-notes",
+   "name": "The maximum demonstration: GPT-6.1 Sol replays the five screen games seeded with its OWN attempt-1 notes (key <game>-attempt1), against a second cold attempt the same hour",
+   "where": "§373",
+   "status": "READ 2026-10-31 23:48Z (composer launched 22:46Z, finalized 23:47Z): MISS on the bar (+10 RHAE paired); within ±10 = the pre-written reading applies at this resolution",
+   "number": "GPT-6.1 Sol, five screen games, attempt 2 seeded with its own attempt-1 cards (seed present in all five openers, 11 card blocks each) vs the same-day cold run: RHAE 84.3 vs 90.2 = −5.9 ± 8.9 (one pass); levels 36 vs 36. Per game (arm / cold): cn04 6/6 100 / 100; ka59 7/7 88 / 100; lf52 10/10 100 / 100; sp80 5 of 6 (gave up) 56 / 6 of 6 92; wa30 8 of 9 78 / 7 of 9 59. Three games at the ceiling in both arms; the one game with headroom (wa30) reached a level no Sol run had reached (8 of 9, +18 RHAE); sp80 swung the other way on a give-up. 1,137 requests; ≈ $51 on OpenRouter (Sol with reasoning on costs more than the $20 estimate).",
+   "read": "No measurable lift from the model's own same-game notes on a top model at one pass over five games where three are complete either way; the point estimate is negative and the interval (±9) covers +3 to −15. The pre-written reading stands as written: own notes did not carry on the same game above the line at this resolution. Stage 2 (25 games, ≈ $200) is not launched: the bar was not met. What would resolve it is a 25-game pair on games with headroom, which this week's money and days do not allow; the register holds the design. §376"
+  },
+  {
+   "id": "sol-headroom-own-notes",
+   "name": "The cell never run, as a manufacture proof: a model above the line, on games it only half-clears, re-reading its own notes in two manufactured forms. GPT-6.1 Sol on the eight public games Flash-Next finds hardest (sk48, bp35, g50t, tn36, s5i5, su15, dc22, ls20): arm 0 attempt 1 cold with the card writer on (v1 six-line notes); arm 1 attempt 2 seeded with its own attempt-1 notes as written (v1); arm 2 attempt 2 seeded with the same levels' notes re-written in the condition-bearing form (ARC3_CROSS_GAME_CARD_FORMAT=v2: LOOKS LIKE / DOES NOT APPLY WHEN / MAY vs SHOULD, header asks the reader to check the card against the board). Same day, same hour, same games, one declared change between arms 1 and 2: the form of the note.",
+   "where": "§377",
+   "status": "FILED 2026-11-01 08:14Z (two arms); AMENDED 2026-11-01 09:2xZ to three arms before any launch. On the lead's OpenRouter top-up: Sol ≈ $10 per game-run with reasoning on → ≈ $240 for 3 × 8 game-runs (balance 09:17Z $106.5 with the four MiMo arms still drawing ≈ $50); lands by 11-03, enters the companion by 11-07. The writer's v2 form is the flown A1 path (patch v39, CARD=call + FORMAT=v2 on a pod); its first use on the hosted Sol route is this run, so the mechanism row is a gate, not a formality.; RUN by the runner 2026-11-01 (arm 0 cold 08:45Z–~11:38Z, arms 1 and 2 11:50Z–13:51Z, hosted Sol via OpenRouter, ≈ $240); READ by the composer 2026-11-01T19:11Z on the artefacts (stdout finished lines, request logs, seed files).",
+   "number": "bars (filed before launch), RHAE paired over the headroom games (attempt 1 did not clear every level; a fully cleared game is excluded and reported): B1 arm 1 vs arm 0 ≥ +10 and > 1 s.e. = the model's own notes convert above the line where there is room; within ±10 = not shown at this resolution on the fourth cell too. B2 arm 2 vs arm 1 ≥ +5 and > 1 s.e. = the FORM of a manufactured note moves behaviour (the controllable lever); within ±5 = form not shown at this resolution. B3 (mechanism, read first, a gate): own notes present in every attempt-2 opener in both arms; arm 2 notes carry LOOKS LIKE and DOES NOT APPLY WHEN lines in ≥ 6 of 8 games; a game whose attempt 2 opener shows no own note voids that game in that arm. Levels reported beside RHAE; per game table; no partial read while running. || RESULT per game (cold / own notes / form notes; state levels RHAE actions): bp35 gave 8/9 39.96 1010 / won 9/9 50.59 1081 / won 9/9 87.57 737; dc22 UNFINISHED in cold (benchmark end_time absent) / won 6/6 100 / gave 5/6 71.43; g50t won 64.36 / 50.50 / 61.09; ls20 won 7/7 93.12 / gave 5/7 24.36 / gave 5/7 43.97; s5i5 100 / 99.12 / 100; sk48 91.39 / 76.38 / 80.78; su15 86.29 / 85.94 / 75.79; tn36 gave 0/7 0.00 (1730 actions on L1, par 32) / won 7/7 100 (1417 on L1, then 81,12,16,18,62,57 vs par 72,26,40,30,55,62) / gave 0/7 0.00 (1653 on L1). Pairs over the 7 finished games: own−cold +1.7 ± 19.0; form−own −5.4 ± 16.8; form−cold −3.7 ± 10.7. Headroom games (cold not won: bp35, tn36; n=2): own−cold +55.3 ± 44.7 (tn36 +100, bp35 +10.6); form−own −31.5 ± 68.5 (tn36 −100, bp35 +37.0); form−cold +23.8 ± 23.8. Levels over the 7: cold 47, own 53, form 46 of 55. Mechanism (B3): seeds 48 cards per form (tn36 one stuck card from L1; v2 file 48/48 carry LOOKS LIKE and DOES NOT APPLY WHEN); own notes shown in every attempt-2 opener (520 / 589 opener lines; tn36's opener verified in both arms); the model's own tn36 messages refer to 'my previous attempt with tn36' in both seeded arms (3 and 1 references) and in the own-notes arm reason from it ('the prior attempt tested only a small subset … resume untested settings'). Sol returns reasoning on this route.",
+   "read": "B3 met: the notes were delivered, read and reasoned with. B1 met by the letter at n=2 (+55.3 ± 44.7 = 1.24 s.e.), carried by one game at one pass (tn36 0/7 → 7/7), and the second seeded arm, given the same content with conditions added, stayed at 0/7 on that game; B2 (form) not shown (−31.5 ± 68.5). On the five games cold already won the notes were flat or worse (ls20 93 → 24 and 44 in both seeded arms). Reading: an existence demonstration of the loop above the line (write → deliver → read → reason → one conversion where there was room), not an effect size; the lean over the seven games is zero. What would settle tn36: three passes per arm on tn36 alone (≈ $90). Vocabulary: 'one game converted at one pass'; never 'the biggest card effect measured' (a per-game move, not a pair statistic). || AMENDED 2026-11-02T19:02Z: the replication (sol-tn36-ls20-replication, 11-02) did not reproduce either per-game movement (tn36 cold 3/3 won; ls20 four wins interleaved). This cell's reading is now: pairs zero over seven games, and the per-game movements were one day's draws. Not an existence demonstration of an effect; the notes were delivered and read.",
+   "tags": [
+    "cards-above-the-line",
+    "manufacture-proof",
+    "sol-headroom"
+   ]
+  },
+  {
+   "id": "sol-tn36-ls20-replication",
+   "name": "The hardening of the Sol cell at the game level: tn36 (the one conversion) and ls20 (the one fall) re-run two passes per arm, cold with the writer on vs seeded with the attempt-1 own notes (v1 form), same day same hour",
+   "where": "§380",
+   "status": "FILED 2026-11-01T20:58Z before any launch, on the lead's word and a top-up (OpenRouter $59.81 at filing; tn36 runs 1,400–1,700 actions, ≈ $12–15 per game-run; 2 games × 2 arms × 2 passes ≈ $100; tn36 alone ≈ $55); RUN by the runner 2026-11-02 08:50Z–~10:28Z (ten single-game jobs, cross-game OFF in the cold arm, the noted arm seeded with the game's own attempt-1 note only: seeds-tn36-only.jsonl / seeds-ls20-only.jsonl; bars filed ~09:1xZ before the read); READ by the composer 2026-11-02T19:02Z on the stdout finished lines and launch logs.",
+   "number": "bars (filed): tn36: own-notes arm clears level 1 in 2 of 2 passes AND cold clears it in 0 of 2 = the conversion replicated at the game level; 1 of 2 either side = variance, the anecdote stays an anecdote. ls20: both own-notes passes below both cold passes (4 of 4 ordered pairs) = the fall replicated; otherwise regression to the mean, not harm. Mechanism first: the own note present in every seeded opener (log line per game). Read as per-game pass counts, not as RHAE pairs (n too small for a pair). || RESULT tn36 (3 vs 3): cold WON 7/7 three times (RHAE 62.70, 79.45, 53.27) and noted WON 7/7 three times (64.59, 73.95, 100.00); the note was in every noted opener (1 card seeded, 'other games shown' lines 27/54/21). ls20 (2 vs 2): cold won 70.23, 51.53; noted won 100.00, 55.94; interleaved. Every one of the ten runs cleared its game.",
+   "read": "MISS on both bars. The tn36 conversion did not replicate: cold clears tn36 reliably when truly cold (3/3), so the 11-01 cold 0/7 was that day's draw (and that arm carried other games' cards; cross-game on). The ls20 fall did not replicate (four wins, interleaved). Above the line, at this resolution, the model's own note moves no outcome in either direction. The 11-01 mechanism quotes remain as readings of how a note is handled, not as an effect.",
+   "tags": [
+    "sol-headroom",
+    "manufacture-proof",
+    "cards-above-the-line",
+    "replication"
+   ]
+  },
+  {
+   "id": "sol-tn36-coverage-vs-verdict",
+   "name": "How a note acts on a search above the line: tn36, three arms, same day, one game per job, cross-game OFF: (a) cold; (b) a COVERAGE note (what was tried and that the space was not exhausted: 'N of 1,024 switch settings tested; blue clicks no effect; reset restores the code'); (c) a VERDICT note (the same facts stated as conclusions: 'exhaustive switch cycling failed; the goal is not the switches'). Three passes per arm.",
+   "where": "§382",
+   "status": "FILED 2026-11-02T18:31Z before any launch; ≈ $18 per tn36 run → 9 runs ≈ $160 (OpenRouter $59.81 at filing; top-up ≈ $100); supersedes the tn36 half of sol-tn36-ls20-replication (ls20 stays filed there). Lead's word pending.; WITHDRAWN 2026-11-02T19:02Z: its premise (cold fails tn36 without the note) failed the same-day replication (cold 3/3); no outcome difference remains to explain. Not run; stays out of the count.",
+   "number": "bars (filed): B1 coverage arm clears level 1 in ≥ 2 of 3 passes AND cold in ≤ 1 of 3 = a coverage note reopens an abandoned search (the tn36 conversion replicated with its mechanism named); B2 verdict arm clears level 1 in 0 of 3 AND coverage ≥ 2 of 3 = the SAME facts as a verdict close the winning branch (the form-arm reading replicated: 'the record warns that exhaustive switch cycling was unsuccessful; I'll look elsewhere'); B3 mechanism gate first: the note present in every seeded opener; at least one assistant message per seeded pass refers to the record. Read as per-game pass counts; one pass of each arm reads nothing.",
+   "read": "withdrawn before launch (premise falsified by sol-tn36-ls20-replication)",
+   "tags": [
+    "sol-headroom",
+    "manufacture-proof",
+    "cards-above-the-line",
+    "mechanism",
+    "coverage-vs-verdict"
+   ]
+  },
+  {
+   "id": "pod-samegame-own-notes",
+   "where": "§386",
+   "name": "Reflexion's own protocol below the line: Flash-Next on the 25 public games, attempt 2 seeded with its OWN attempt-1 notes (keys <game>-attempt1), against a same-day cold attempt; attempt 1 = a cold pass with the writer on, run the day before (its cards re-keyed as the seed)",
+   "status": "FILED 2026-11-02T22:12Z before any launch; optional, on idle RunPod money (three pod passes ≈ $45–60 at $1.69/h; PRO 6000 stock Low at filing); lead's word pending. Fills the one empty cell of the protocol map (Part IIb §4: same game, own notes, below the line).",
+   "number": "bar (filed): RHAE paired ≥ +4 and > 1 s.e. = Reflexion's protocol converts on this model where cross-game did not; within ±4 = the predicted null (filed prediction: null, as the Astra-manual same-game cell and the three cross-game reads). Delivery gate: own notes in every attempt-2 opener. Same-day law: attempt-2 and its cold control run in parallel on two pods the same day.",
+   "read": "pending",
+   "tags": [
+    "cards-same-day",
+    "reflexion-protocol",
+    "below-the-line"
+   ]
+  },
+  {
+   "id": "writer-consistency",
+   "where": "§388",
+   "name": "The writer measured without ground truth: do independent runs write the same note for the same level? Word overlap of two notes for the same game-level from different runs, against two notes from the same game at different levels (the baseline), as a ratio; the open model (11,877 cleared notes over 16 four-pass pod mirrors and the rest) against GPT-6.1 Sol (407 cleared notes, hosted)",
+   "status": "POST-HOC ANALYSIS, READ 2026-11-02T22:29Z (composer). No bar was filed before this read: it is a measurement over the existing notes corpus (runs/field/pod-mirror/*/cross_game_cards.jsonl, runs/field/local-reads/*sol*/cross_game_cards.jsonl), not a run; labelled post hoc in every text. Two similarity measures (Jaccard on content words; tf-idf cosine), 2,000-sample bootstrap on the pair sets, same-level pairs always from different runs.",
+   "number": "Flash-Next, all 256 game-levels: ratio 1.12 [90% 1.10, 1.14] Jaccard, 1.34 [1.28, 1.40] tf-idf (within 0.17 vs between 0.16; 1,392 pairs). Restricted to the 86 levels Sol also played: 1.16 [1.13, 1.20] / 1.39 [1.30, 1.49]. Sol: 2.18 [1.98, 2.37] / 2.36 [2.14, 2.61] (within 0.28 vs between 0.13; 376 pairs). Per game (tf-idf), Sol above Flash-Next on 12 of 12 shared games (e.g. sk48 1.00 vs 4.37, su15 1.16 vs 5.00, bp35 1.05 vs 2.55). Robustness: within one run, across its four passes (same form, same day), the open model's ratio is 1.08–1.18 on all 16 four-pass mirrors (mean 1.15). Example, sk48 level 1: 56 open-model runs; two notes say 'align three blocks in a row by extending the rod' and 'stack all three blocks in one slot, ordered red, blue, black'; Sol's three runs all say 'pick up the red, green and blue pieces in the shown order; up/down moves the head along the rail, right extends the arm, left pulls it back'.",
+   "read": "Below the line the writer is unreliable: the open model's notes for the same level are barely more alike than its notes for different levels (1.1 to 1.3× baseline), so the next game reads text that is, on average, not about the game. Above the line the writer is consistent (2.2 to 2.4×). Agreement is not accuracy, but disagreement bounds it: of 56 incompatible descriptions of one level at most a few can be true. Confound to test before this becomes more than a reading: the open model's side-call writer ran with thinking off, Sol's with thinking on (ARC3_CARD_THINKING=1); one pod pass with the writer's thinking on (≈ $12) says whether the gap is the model or the writer's budget. Use for the Lab: inter-run agreement is a note-reliability screen that needs no ground truth.",
+   "tags": [
+    "writer",
+    "mechanism",
+    "post-hoc",
+    "below-the-line",
+    "above-the-line"
+   ]
+  },
+  {
+   "id": "writer-thinking-consistency",
+   "where": "§389",
+   "name": "The writer's budget, separated from the model: Flash-Next in the flown B1b form with ONE declared change, the note-writer's side call with thinking on (ARC3_CARD_THINKING=1), run as TWO single-pass 25-game jobs in parallel on two pods the same day, so every cleared level has two independent thinking-on notes; read as the same-level/different-level similarity ratio (writer-consistency's measure) against the thinking-off corpus",
+   "status": "FILED 2026-11-02T22:49Z before any launch (composer); ≈ $30–35 (two RTX PRO 6000 pods × ≈ 8.4 h × $1.69/h, stock Low at filing); RunPod $88 covers it; lands ~11-03, companion by 11-07. Runner's lane on the lead's word. Note: one pass cannot read consistency (one note per level); two parallel passes give one same-condition pair per level (≈ 250 pairs).; ATTEMPT 1 launched by the runner 11-02 23:25Z/23:29Z (pods w3ucz4vq8b5q8c, xbv20j2s52tp5d), GATE-KILLED 00:18Z 11-03 (≈ $5): the delta applied clean on both (sha cf10fa97ffb3f128 verified) but at a 2048 cap the thinking span ate the budget and 72% of card calls returned 0 chars (cardt1 41 of 57, cardt2 33 of 46 fell back to excerpts); VOID for the read, PASS for the chain. ATTEMPT 2 built 2026-11-03T01:49Z: cap 8192 (delta sha 71dbad394200ccb6; runners and launcher updated); reader excludes excerpt fallbacks. Mechanism bar added: empty-note rate ≤ 10% of cleared levels on each pod within the first hour, else stop both.; ATTEMPT 2 RUN by the runner 11-03 02:48Z–10:59Z (pods pamvgf5tvt83fe, iaafusueq95u80; ≈ $44 on RunPod, balance $38.45 after): both passes complete (cardt1 13 won / 12 gave up, 140 levels; cardt2 12 / 13, 141 levels), mechanism bar passed (excerpt fallbacks 11 of 169 and 13 of 179 notes, 6.5% and 7.3%). cardt2's finalize pull died mid-way and its pod stopped; the cards file was recovered from the Mac-side snapshot (last note 10:54Z, run end 10:59Z) and placed in the mirror. READ by the composer 2026-11-03T21:57Z with runs/lib/writer_consistency_read.py.",
+   "number": "bars (filed): Jaccard ratio over the two thinking-on passes ≥ 1.6 (midway from 1.15 to Sol's 2.2) AND its 90% band above 1.3 = the gap was the writer's budget, not the model (tokens convert in the writer: a second instance of the budget law); ratio ≤ 1.3 with band below 1.6 = the writer fails below the line with the confound removed; between = unresolved at this size. Mechanism row first: the side call's thinking present (request logs), notes written per cleared level as in the mirrors. A free secondary read, not a bar: the two passes' RHAE against the B1b control of the same day (one pass each, s.e. ≈ 6; a lean at most). || RESULT (cardt1 + cardt2, thinking ON, 229 notes, 132 levels, 97 cross-run pairs): Jaccard ratio 1.04 [90% 0.98, 1.10]; tf-idf 1.24 [1.08, 1.45]. Thinking OFF baseline the same way (carda 10-29 + 10-31, 741 notes, 116 pairs): 1.12 [1.05, 1.18]; 1.22 [1.05, 1.43].",
+   "read": "Bar 'the writer fails below the line, confound removed' MET on both measures (ratios ≤ 1.3 with bands entirely below 1.6); bar 'the writer's budget was the gap' MISSED. Letting the open model's note-writer think did not make its notes for the same level agree with each other: 1.04 against 1.12 thinking off; on Jaccard the band holds 1.0 (no more alike than notes for other levels). The thinking-off confound on writer-consistency is closed; the post-hoc label stays on the original read, the confound sentence comes off the texts.",
+   "tags": [
+    "writer",
+    "mechanism",
+    "budget-law",
+    "below-the-line"
+   ]
+  },
+  {
+   "id": "mimo-writer-thinking-consistency",
+   "where": "§391",
+   "name": "The same question on a second family without a pod: MiMo V2.6 Flash hosted, the mimo-cards-on-25 arm with ONE change (the note-writer's side call thinks, ARC3_CARD_THINKING=1, cap 8192), run as two single-pass 25-game jobs (mimo-cardt1, mimo-cardt2) so every cleared level has two thinking-on notes; read with writer_consistency_read.py against MiMo's thinking-off notes",
+   "status": "FILED 2026-11-03T01:49Z before any launch; hosted on OpenRouter (≈ $12 per 25-game pass → ≈ $25 for both; balance ≈ $113); ≈ 3 h; no patch needed (the local tree carries the switch; cap raised to 8192 when thinking); runner's lane on the lead's word.; RUN by the runner 11-02 18:47Z (two hosted single-pass jobs, 0 and 1 empty calls of 86 cleared levels; ≈ $25); READ by the runner 10:34Z and reproduced by the composer 2026-11-03T21:57Z.; DEFECT NOTED 2026-11-04T08:40Z: on both hosted thinking-on runs, games whose opener never received a usable response (vc33, wa30 in both; tr87, tu93 partly) were re-sent about once per 0.7 s for the whole 55-minute cap, each attempt logged with its full history: 27 GB of request logs holding no play (vc33 4.3 GB at 0 actions). The read is unaffected (zero-action games wrote no notes; the player's responses carry no reasoning; cap 55 min per game as the twin), but the request-log size is not evidence of play. The harness's HTTP retry on the opener needs a backoff and a logging cap (runner's lane).",
+   "number": "baseline (thinking off, computed on the existing 316 MiMo notes over 9 runs): Jaccard 1.23 [90% 1.20, 1.26], tf-idf 1.46 [1.38, 1.55]. Bars: Jaccard ratio ≥ 1.6 with band above 1.3 = the writer's budget was the gap on this family; ≤ 1.3 with band below 1.6 = the writer fails below the line with the confound removed; between = unresolved. Mechanism gate first: empty-note rate ≤ 10% of cleared levels (the 11-03 pod attempt failed this at a 2048 cap); notes per cleared level ≈ 1 as in the thinking-off runs. || RESULT (mimo-cardt1 + mimo-cardt2, thinking ON, 85 notes, 48 levels, 33 pairs): Jaccard 1.17 [90% 1.04, 1.31]; tf-idf 1.30 [1.02, 1.67]. Thinking OFF baseline (nine runs, 314 notes): 1.21 [1.18, 1.24]; 1.48 [1.39, 1.56].",
+   "read": "On Jaccard the 'writer fails, confound removed' bar is met by the letter (1.17, band below 1.6); on tf-idf the band reaches 1.67, unresolved. Small: MiMo clears few levels, 33 pairs. Direction agrees with Flash-Next: thinking did not raise agreement (1.17 vs 1.21).",
+   "tags": [
+    "writer",
+    "mechanism",
+    "budget-law",
+    "below-the-line",
+    "mimo"
+   ]
+  },
+  {
+   "id": "screen24-terra",
+   "where": "§394",
+   "name": "The capability screen on a cheaper top-family model: openai/gpt-6.1-terra ($1/$5 per M (half of Sol)) on the replay probe's default 24 cells, reasoning effort high (Sol's setting), 4 iterations, full frames; the question is whether an affordable model sits above the line so the open above-the-line pair (notes in language on a second attempt) can be run at four passes within the paper's week",
+   "status": "FILED 2026-11-04T07:36Z before the read (composer; ≈ $1–9 by the probe's token counts, under the composer's cap); launched in the background the same minute; read when the SUMMARY line prints.; RUN and READ 2026-11-04T07:51Z (composer): 23 cells, ≈ $3.40 by the probe's token counts (2.47M prompt, 0.19M completion).",
+   "number": "bar (the screen's, §224.F / screen23): ≥ 8 of 23 cells beat nothing-changes by ≥ 20 points = above the line (Sol 16, Astra 174/217; open models 0–4); 5–7 = the line itself, not usable; ≤ 4 = below. A pass makes the model the candidate for the pre-registered four-pass 25-game same-day pair (cold vs own notes), priced at its token rate; a 5-game play screen (≥ the Flash-Next control's 23 levels) precedes any pair. || RESULT: 20 of 23 cells beat nothing-changes by ≥ 20 points (Sol 16, Astra 174/217 on the wider set; open models 0–4); median held-out exact 65% (Sol's median on the same cells was lower); train exact 20/20 on every cell; most cells in 1–2 iterations.",
+   "read": "PASS, well above the line, at half Sol's price ($1/$5 per M). Terra becomes the candidate reader for the open above-the-line pair. Next gate before any pair: the 5-game play screen (row terra-play-screen).",
+   "tags": [
+    "screen",
+    "above-the-line",
+    "certifier"
+   ]
+  },
+  {
+   "id": "screen24-luna",
+   "where": "§394",
+   "name": "The capability screen on a cheaper top-family model: openai/gpt-6-luna ($0.10/$0.50 per M (a twentieth of Sol)) on the replay probe's default 24 cells, reasoning effort high (Sol's setting), 4 iterations, full frames; the question is whether an affordable model sits above the line so the open above-the-line pair (notes in language on a second attempt) can be run at four passes within the paper's week",
+   "status": "FILED 2026-11-04T07:36Z before the read (composer; ≈ $1–9 by the probe's token counts, under the composer's cap); launched in the background the same minute; read when the SUMMARY line prints.; RUN and READ 2026-11-04T08:21Z: 23 cells, ≈ $0.93 (5.77M prompt at $0.10/M, 0.70M completion at $0.50/M).; VOID BY INSTRUMENT 2026-11-04T08:35Z: with OR_REASONING_EFFORT=high and the probe's 8,000-token completion cap, thinking consumed the cap (78 of 104 iterations returned 'content 0 chars, completion 8000, no code'); Terra hit it 1 of 75 times. Attempt 2 filed: the same screen with --reasoning-budget 4000 (OpenRouter reasoning.max_tokens), leaving ≥ 4,000 tokens for the deliverable; bar unchanged.; ATTEMPT 2 (--reasoning-budget 4000) STOPPED 2026-11-04T08:48Z: the providers ignore reasoning.max_tokens (Luna 11 of 13 iterations at the cap, MiniMax 56 of 56, Luna Pro 16,081 reasoning tokens on one call); VOID by instrument again. ATTEMPT 3 filed: OR_REASONING_EFFORT=low, no budget knob (the setting the provider honours), same 24 cells, same bar; the screen23 open-model convention (reasoning off) noted as the fallback if low still hits the cap.; ATTEMPT 3 RUN and READ 2026-11-04T08:55Z (OR_REASONING_EFFORT=low, no budget knob; ≈ $0.65: 5.93M prompt, 0.10M completion): 0 cap hits in 181 iterations, code in 178.",
+   "number": "bar (the screen's, §224.F / screen23): ≥ 8 of 23 cells beat nothing-changes by ≥ 20 points = above the line (Sol 16, Astra 174/217; open models 0–4); 5–7 = the line itself, not usable; ≤ 4 = below. A pass makes the model the candidate for the pre-registered four-pass 25-game same-day pair (cold vs own notes), priced at its token rate; a 5-game play screen (≥ the Flash-Next control's 23 levels) precedes any pair. || RESULT: 2 of 23 cells beat nothing-changes by ≥ 20 points; median held-out exact 0%; it used all four iterations on most cells (prompt tokens 2.3× Terra's). || RESULT attempt 3 (clean): 0 of 23 cells beat nothing-changes by ≥ 20; train exact median 0/20 (best 14/20); held-out median 0 (best 10/20).",
+   "read": "BELOW the line (0 of 23) on a clean read: with thinking bounded it writes code on 178 of 181 iterations and the code does not replay. The cheapest top-family model is not a reader.",
+   "tags": [
+    "screen",
+    "above-the-line",
+    "certifier"
+   ]
+  },
+  {
+   "id": "terra-play-screen",
+   "where": "§395",
+   "name": "GPT-6.1 Terra plays: the five screen games (sp80, wa30, lf52, ka59, cn04) in the hosted harness, cards on, 55-min per-game cap, one pass; the play half of the certificate before Terra carries the above-the-line pair",
+   "status": "FILED 2026-11-04T07:51Z before any launch; ≈ $30–40 (Sol's five-game run ≈ $60–80 at twice the price); lead's word (over the composer's cap).",
+   "number": "bar (the Sol-play-screen's): ≥ 23 levels over the five games (the Flash-Next control's 23) AND at least one level the control never clears = plays above the line; 16–22 = the line; < 16 = a writer that cannot play (the probe passes, the play does not), no pair. Mechanism row first: tool calls valid ≥ 95%, reasoning present, no http errors; cards written per cleared level ≈ 1.",
+   "read": "pending",
+   "tags": [
+    "screen",
+    "above-the-line",
+    "terra"
+   ]
+  },
+  {
+   "id": "screen24-haiku55",
+   "where": "§396",
+   "name": "The capability screen on a cheap candidate: anthropic/claude-haiku-5.5 ($0.10/$0.50 per M) on the replay probe's default 24 cells, reasoning effort high, 4 iterations, full frames; the hunt for the cheapest model above the line",
+   "status": "FILED 2026-11-04T08:13Z before the read; ≈ $0.4–1.5 each by the probe's token counts; launched in the background the same minute.; RUN and READ 2026-11-04T08:25Z: 23 cells, ≈ $1.60 (13.8M prompt at $0.10/M, 0.43M completion at $0.50/M; 5.6× Terra's prompt tokens: every iteration used, long contexts re-sent).; VOID BY INSTRUMENT 2026-11-04T08:35Z: with OR_REASONING_EFFORT=high and the probe's 8,000-token completion cap, thinking consumed the cap (28 of 156 iterations returned 'content 0 chars, completion 8000, no code'); Terra hit it 1 of 75 times. Attempt 2 filed: the same screen with --reasoning-budget 4000 (OpenRouter reasoning.max_tokens), leaving ≥ 4,000 tokens for the deliverable; bar unchanged.; ATTEMPT 2 RUN and READ 2026-11-04T08:48Z (--reasoning-budget 4000, ≈ $1.60): the budget was ignored by the provider on the first iteration (25 of 159 iterations hit the 8,000 cap, all first iterations), every later iteration produced code; read on the code it did write.",
+   "number": "bar (the screen's): ≥ 8 of 23 cells beat nothing-changes by ≥ 20 points = above the line; 5–7 = the line; ≤ 4 = below. A pass → the 5-game play screen before any pair. || RESULT: 0 of 23 cells beat nothing-changes by ≥ 20 points; median held-out exact 0%. || RESULT attempt 2: 0 of 23 cells beat nothing-changes by ≥ 20; train exact median 0/20 (best cell 14/20); held-out exact median 0 (best 10/20).",
+   "read": "BELOW the line (0 of 23), on a read where 134 of 159 iterations carried code. Same class as the open models.",
+   "tags": [
+    "screen",
+    "above-the-line",
+    "certifier",
+    "cheap"
+   ]
+  },
+  {
+   "id": "screen24-luna-pro",
+   "where": "§396",
+   "name": "The capability screen on a cheap candidate: openai/gpt-6-luna-pro ($0.10/$0.50 per M) on the replay probe's default 24 cells, reasoning effort high, 4 iterations, full frames; the hunt for the cheapest model above the line",
+   "status": "FILED 2026-11-04T08:13Z before the read; ≈ $0.4–1.5 each by the probe's token counts; launched in the background the same minute.; VOID BY INSTRUMENT 2026-11-04T08:35Z: with OR_REASONING_EFFORT=high and the probe's 8,000-token completion cap, thinking consumed the cap (0 of 30 iterations returned 'content 0 chars, completion 8000, no code'); Terra hit it 1 of 75 times. Attempt 2 filed: the same screen with --reasoning-budget 4000 (OpenRouter reasoning.max_tokens), leaving ≥ 4,000 tokens for the deliverable; bar unchanged.; ATTEMPT 2 (--reasoning-budget 4000) STOPPED 2026-11-04T08:48Z: the providers ignore reasoning.max_tokens (Luna 11 of 13 iterations at the cap, MiniMax 56 of 56, Luna Pro 16,081 reasoning tokens on one call); VOID by instrument again. ATTEMPT 3 filed: OR_REASONING_EFFORT=low, no budget knob (the setting the provider honours), same 24 cells, same bar; the screen23 open-model convention (reasoning off) noted as the fallback if low still hits the cap.; ATTEMPT 3 RUN and READ 2026-11-04T08:59Z (OR_REASONING_EFFORT=low; ≈ $1.97: 18.5M prompt at $0.10/M, 0.24M completion at $0.50/M): 0 cap hits in 182 iterations, code in 180.",
+   "number": "bar (the screen's): ≥ 8 of 23 cells beat nothing-changes by ≥ 20 points = above the line; 5–7 = the line; ≤ 4 = below. A pass → the 5-game play screen before any pair. || RESULT attempt 3 (clean): 1 of 23 cells beat nothing-changes by ≥ 20; train exact median 1/20 (best 14/20); held-out median 0 (best 10/20).",
+   "read": "BELOW the line (1 of 23) on a clean read. Same class as Luna and the open models.",
+   "tags": [
+    "screen",
+    "above-the-line",
+    "certifier",
+    "cheap"
+   ]
+  },
+  {
+   "id": "screen24-mimo-pro",
+   "where": "§396",
+   "name": "The capability screen on a cheap candidate: xiaomi/mimo-v2.6-pro ($0.43/$0.87 per M) on the replay probe's default 24 cells, reasoning effort high, 4 iterations, full frames; the hunt for the cheapest model above the line",
+   "status": "FILED 2026-11-04T08:13Z before the read; ≈ $0.4–1.5 each by the probe's token counts; launched in the background the same minute.; VOID BY INSTRUMENT 2026-11-04T08:35Z: with OR_REASONING_EFFORT=high and the probe's 8,000-token completion cap, thinking consumed the cap (19 of 21 iterations returned 'content 0 chars, completion 8000, no code'); Terra hit it 1 of 75 times. Attempt 2 filed: the same screen with --reasoning-budget 4000 (OpenRouter reasoning.max_tokens), leaving ≥ 4,000 tokens for the deliverable; bar unchanged.; ATTEMPT 2 (--reasoning-budget 4000) STOPPED 2026-11-04T08:48Z: the providers ignore reasoning.max_tokens (Luna 11 of 13 iterations at the cap, MiniMax 56 of 56, Luna Pro 16,081 reasoning tokens on one call); VOID by instrument again. ATTEMPT 3 filed: OR_REASONING_EFFORT=low, no budget knob (the setting the provider honours), same 24 cells, same bar; the screen23 open-model convention (reasoning off) noted as the fallback if low still hits the cap.; ATTEMPT 3 (effort low) STOPPED 2026-11-04T09:10Z: 12 of 12 iterations at the cap (the provider ignores effort); ATTEMPT 4 filed with reasoning disabled (OR_REASONING_EFFORT=none).; ATTEMPT 4 (reasoning disabled) RUN and READ 2026-11-04T09:43Z (≈ $3.1: 6.6M prompt at $0.43/M, 0.30M completion at $0.87/M): reasoning 0 on every call, 17 of 155 iterations still hit the 8,000 cap with plain content (long answers), code in 128 iterations.",
+   "number": "bar (the screen's): ≥ 8 of 23 cells beat nothing-changes by ≥ 20 points = above the line; 5–7 = the line; ≤ 4 = below. A pass → the 5-game play screen before any pair. || RESULT attempt 4 (clean enough): 1 of 23 cells beat nothing-changes by ≥ 20; train exact median 0/20 (best 20/20 on one cell); held-out median 0 (best 10/20).",
+   "read": "BELOW the line (1 of 23) with reasoning off; its one exact cell did not generalise. Same class as MiMo Flash (4 of 23).",
+   "tags": [
+    "screen",
+    "above-the-line",
+    "certifier",
+    "cheap"
+   ]
+  },
+  {
+   "id": "screen24-minimax-m31",
+   "where": "§396",
+   "name": "The capability screen on a cheap candidate: minimax/minimax-m3.1-flash ($0.15/$0.60 per M) on the replay probe's default 24 cells, reasoning effort high, 4 iterations, full frames; the hunt for the cheapest model above the line",
+   "status": "FILED 2026-11-04T08:13Z before the read; ≈ $0.4–1.5 each by the probe's token counts; launched in the background the same minute.; VOID BY INSTRUMENT 2026-11-04T08:35Z: with OR_REASONING_EFFORT=high and the probe's 8,000-token completion cap, thinking consumed the cap (92 of 92 iterations returned 'content 0 chars, completion 8000, no code'); Terra hit it 1 of 75 times. Attempt 2 filed: the same screen with --reasoning-budget 4000 (OpenRouter reasoning.max_tokens), leaving ≥ 4,000 tokens for the deliverable; bar unchanged.; ATTEMPT 2 (--reasoning-budget 4000) STOPPED 2026-11-04T08:48Z: the providers ignore reasoning.max_tokens (Luna 11 of 13 iterations at the cap, MiniMax 56 of 56, Luna Pro 16,081 reasoning tokens on one call); VOID by instrument again. ATTEMPT 3 filed: OR_REASONING_EFFORT=low, no budget knob (the setting the provider honours), same 24 cells, same bar; the screen23 open-model convention (reasoning off) noted as the fallback if low still hits the cap.; ATTEMPT 3 (effort low) RUN 2026-11-04T09:10Z: the provider ignores the effort too (74 of 110 iterations at the 8,000 cap with 7,999 reasoning tokens; code in 36 iterations, best train exact 5/20, held-out best 8/20, 0 cells pass): VOID by instrument for the capability read. ATTEMPT 4 filed: reasoning disabled (OR_REASONING_EFFORT=none), the screen23 open-model convention; same bar.; ATTEMPT 4 (reasoning none) 2026-11-04T09:11Z: HTTP 400 on every call, 'Reasoning is mandatory for this endpoint and cannot be disabled' ($0): VOID. ATTEMPT 5 filed: effort high with the probe's completion cap raised to 24,000 (new --max-tokens flag, default unchanged at 8,000); the model thinks ≈ 8K regardless of effort or budget, so the deliverable needs room after it.; ATTEMPT 5 (cap 24,000) STOPPED 2026-11-04T09:46Z at 11 cells: 42 of 46 iterations consumed the whole 24,000 as reasoning (23,999 tokens) and returned no code; ≈ $1 more.",
+   "number": "bar (the screen's): ≥ 8 of 23 cells beat nothing-changes by ≥ 20 points = above the line; 5–7 = the line; ≤ 4 = below. A pass → the 5-game play screen before any pair.",
+   "read": "UNSCREENABLE on this probe: mandatory reasoning that fills any cap (8K and 24K), effort and budget ignored, reasoning-off refused (400). Not a reader we could use; no capability number.",
+   "tags": [
+    "screen",
+    "above-the-line",
+    "certifier",
+    "cheap"
+   ]
+  },
+  {
+   "id": "screen24-glm53",
+   "where": "§398",
+   "name": "The capability screen on a mid-price candidate: z-ai/glm-5.3 ($0.08/$3.60 per M) on the replay probe's default 24 cells, reasoning effort high, completion cap 24,000 (room for mandatory thinking), 4 iterations, full frames",
+   "status": "FILED 2026-11-04T09:45Z before the read; ≈ $1.5–5 each by the probe's token counts; launched in the background the same minute.; ATTEMPT 1 (effort high, cap 24,000) STOPPED 2026-11-04T11:18Z at 19 cells: 76 of 76 iterations filled the 24,000 cap with reasoning and returned no code: VOID by instrument. ATTEMPT 2 filed: OR_REASONING_EFFORT=low at the same cap; stopped early if the first three cells still hit the cap (then reasoning off, or 'unscreenable' as MiniMax M3.1).; ATTEMPT 2 (effort low) STOPPED 2026-11-04T11:56Z by the early-stop rule: 27 of 29 iterations still filled the 24,000 cap (effort ignored). ATTEMPT 3 filed: reasoning disabled (OR_REASONING_EFFORT=none); a 400 'reasoning mandatory' closes the row as unscreenable.; ATTEMPT 3 (reasoning off) 2026-11-04T11:58Z: HTTP 400 'Reasoning is mandatory for this endpoint' on all 23 cells ($0).",
+   "number": "bar (the screen's): ≥ 8 of 23 cells beat nothing-changes by ≥ 20 points = above the line; 5–7 = the line; ≤ 4 = below. Cap hits and no-code iterations reported with the read (the 11-04 lesson). A pass → the 5-game play screen before any pair.",
+   "read": "UNSCREENABLE on this probe: fills the 8K and 24K caps with reasoning, ignores effort, refuses reasoning off. No capability number; not a usable reader at this cap.",
+   "tags": [
+    "screen",
+    "above-the-line",
+    "certifier",
+    "mid-price"
+   ]
+  },
+  {
+   "id": "screen24-dsv4pro",
+   "where": "§398",
+   "name": "The capability screen on a mid-price candidate: deepseek/deepseek-v4-pro-0813 ($0.11/$4.60 per M) on the replay probe's default 24 cells, reasoning effort high, completion cap 24,000 (room for mandatory thinking), 4 iterations, full frames",
+   "status": "FILED 2026-11-04T09:45Z before the read; ≈ $1.5–5 each by the probe's token counts; launched in the background the same minute.; ATTEMPT 1 RUN and READ 2026-11-04T11:18Z (≈ $9.2: 7.8M prompt at $0.11/M, 1.80M completion at $4.60/M): 47 of 122 iterations hit the 24,000 cap (≈ 21K reasoning) and 62 returned no code: a partly cut read. ATTEMPT 2 filed: OR_REASONING_EFFORT=low at the same 24K cap (if the provider honours effort), to read the model on code it finishes.; ATTEMPT 2 (effort low, cap 24K) RUN and READ 2026-11-04T12:34Z (≈ $8.5): effort ignored (41 of 132 iterations at the cap, 48 without code). ATTEMPT 3 filed: reasoning off (a 400 closes it).; ATTEMPT 3 (reasoning off) RUN and READ 2026-11-04T12:51Z (≈ $2.9): accepted; 10 of 174 iterations at the cap, code in 164.",
+   "number": "bar (the screen's): ≥ 8 of 23 cells beat nothing-changes by ≥ 20 points = above the line; 5–7 = the line; ≤ 4 = below. Cap hits and no-code iterations reported with the read (the 11-04 lesson). A pass → the 5-game play screen before any pair. || RESULT attempt 1 (partly cut): 2 of 23 cells beat nothing-changes by ≥ 20; best cell 18/20 held-out exact; median 0. || RESULT attempt 2 (partly cut, same as attempt 1): 2 of 23 cells beat nothing-changes by ≥ 20; one cell 20/20 held-out exact; median 0. || RESULT attempt 3 (clean, reasoning off): 0 of 23; train exact best 4/20; held-out best 7/20.",
+   "read": "BELOW the line. With reasoning it reaches 2 of 23 (one perfect cell) but a third of its iterations are cut at 24K; without reasoning 0 of 23. Not a reader at any setting we can run; the best of the sub-Terra tier.",
+   "tags": [
+    "screen",
+    "above-the-line",
+    "certifier",
+    "mid-price"
+   ]
+  },
+  {
+   "id": "screen24-kimi26",
+   "where": "§398",
+   "name": "The capability screen on a mid-price candidate: moonshotai/kimi-k2.6 ($0.65/$3.41 per M) on the replay probe's default 24 cells, reasoning effort high, completion cap 24,000 (room for mandatory thinking), 4 iterations, full frames",
+   "status": "FILED 2026-11-04T09:45Z before the read; ≈ $1.5–5 each by the probe's token counts; launched in the background the same minute.; ATTEMPT 1 (effort high, cap 24,000) STOPPED 2026-11-04T11:18Z at 10 cells: 39 of 40 iterations filled the 24,000 cap with reasoning and returned no code: VOID by instrument. ATTEMPT 2 filed: OR_REASONING_EFFORT=low at the same cap; stopped early if the first three cells still hit the cap (then reasoning off, or 'unscreenable' as MiniMax M3.1).; ATTEMPT 2 (effort low) STOPPED 2026-11-04T11:56Z by the early-stop rule: 16 of 16 iterations still filled the 24,000 cap (effort ignored). ATTEMPT 3 filed: reasoning disabled (OR_REASONING_EFFORT=none); a 400 'reasoning mandatory' closes the row as unscreenable.; ATTEMPT 3 (reasoning off) STOPPED 2026-11-04T12:51Z at 6 cells: it writes 80,000-character answers that hit the 24K cap on 18 of 47 iterations; train exact best 3/20, 0 cells passing; stopped for cost (≈ $4 spent).",
+   "number": "bar (the screen's): ≥ 8 of 23 cells beat nothing-changes by ≥ 20 points = above the line; 5–7 = the line; ≤ 4 = below. Cap hits and no-code iterations reported with the read (the 11-04 lesson). A pass → the 5-game play screen before any pair.",
+   "read": "PARTIAL, not read against the bar: 6 of 23 cells, none passing, 24K cap filled in most iterations; 0 of 6 cannot establish ≤ 4 of 23 (corrected 2026-11-06 from 'BELOW on a partial read'). Not screenable at this cap.",
+   "tags": [
+    "screen",
+    "above-the-line",
+    "certifier",
+    "mid-price"
+   ]
+  },
+  {
+   "id": "screen24-mimo25pro",
+   "where": "§398",
+   "name": "The capability screen on a mid-price candidate: xiaomi/mimo-v2.5-pro ($0.48/$1.80 per M) on the replay probe's default 24 cells, reasoning effort high, completion cap 24,000 (room for mandatory thinking), 4 iterations, full frames",
+   "status": "FILED 2026-11-04T09:45Z before the read; ≈ $1.5–5 each by the probe's token counts; launched in the background the same minute.; STOPPED 2026-11-04T12:51Z at 7 cells after 2.5 h (slow provider): 13 of 37 iterations at the cap, train exact best 1/20, 0 cells passing (≈ $3 spent).",
+   "number": "bar (the screen's): ≥ 8 of 23 cells beat nothing-changes by ≥ 20 points = above the line; 5–7 = the line; ≤ 4 = below. Cap hits and no-code iterations reported with the read (the 11-04 lesson). A pass → the 5-game play screen before any pair.",
+   "read": "PARTIAL, not read against the bar: 7 of 23 cells, none passing, 13 of 37 iterations at the cap (≈ $3); 0 of 7 cannot establish ≤ 4 of 23 (corrected 2026-11-06 from 'BELOW on a partial read'). Same cap class as MiMo Pro and MiMo Flash.",
+   "tags": [
+    "screen",
+    "above-the-line",
+    "certifier",
+    "mid-price"
+   ]
+  },
+  {
+   "id": "screen24-step37",
+   "where": "§398",
+   "name": "The capability screen on a mid-price candidate: stepfun/step-3.7-flash ($0.20/$1.15 per M) on the replay probe's default 24 cells, reasoning effort high, completion cap 24,000 (room for mandatory thinking), 4 iterations, full frames",
+   "status": "FILED 2026-11-04T09:45Z before the read; ≈ $1.5–5 each by the probe's token counts; launched in the background the same minute.; ATTEMPT 1 (effort high, cap 24,000) STOPPED 2026-11-04T11:18Z at 9 cells: 36 of 36 iterations filled the 24,000 cap with reasoning and returned no code: VOID by instrument. ATTEMPT 2 filed: OR_REASONING_EFFORT=low at the same cap; stopped early if the first three cells still hit the cap (then reasoning off, or 'unscreenable' as MiniMax M3.1).; ATTEMPT 2 (effort low) STOPPED 2026-11-04T11:56Z by the early-stop rule: 17 of 23 iterations still filled the 24,000 cap (effort ignored). ATTEMPT 3 filed: reasoning disabled (OR_REASONING_EFFORT=none); a 400 'reasoning mandatory' closes the row as unscreenable.; ATTEMPT 3 (reasoning off) 2026-11-04T11:58Z: HTTP 400 'Reasoning is mandatory' on all 23 cells ($0).",
+   "number": "bar (the screen's): ≥ 8 of 23 cells beat nothing-changes by ≥ 20 points = above the line; 5–7 = the line; ≤ 4 = below. Cap hits and no-code iterations reported with the read (the 11-04 lesson). A pass → the 5-game play screen before any pair.",
+   "read": "UNSCREENABLE on this probe: fills the 8K and 24K caps with reasoning, ignores effort, refuses reasoning off. No capability number; not a usable reader at this cap.",
+   "tags": [
+    "screen",
+    "above-the-line",
+    "certifier",
+    "mid-price"
+   ]
+  },
+  {
+   "id": "screen24-minimax-m3",
+   "where": "§398",
+   "name": "The capability screen on a mid-price candidate: minimax/minimax-m3 ($0.30/$1.20 per M) on the replay probe's default 24 cells, reasoning effort high, completion cap 24,000 (room for mandatory thinking), 4 iterations, full frames",
+   "status": "FILED 2026-11-04T09:45Z before the read; ≈ $1.5–5 each by the probe's token counts; launched in the background the same minute.; ATTEMPT 1 (effort high, cap 24,000) STOPPED 2026-11-04T11:18Z at 14 cells: 52 of 58 iterations filled the 24,000 cap with reasoning and returned no code: VOID by instrument. ATTEMPT 2 filed: OR_REASONING_EFFORT=low at the same cap; stopped early if the first three cells still hit the cap (then reasoning off, or 'unscreenable' as MiniMax M3.1).; ATTEMPT 2 (effort low) STOPPED 2026-11-04T11:56Z by the early-stop rule: 24 of 24 iterations still filled the 24,000 cap (effort ignored). ATTEMPT 3 filed: reasoning disabled (OR_REASONING_EFFORT=none); a 400 'reasoning mandatory' closes the row as unscreenable.; ATTEMPT 3 (reasoning off) STOPPED 2026-11-04T12:34Z at 9 cells: 24 of 48 iterations still filled the 24K cap with no code.",
+   "number": "bar (the screen's): ≥ 8 of 23 cells beat nothing-changes by ≥ 20 points = above the line; 5–7 = the line; ≤ 4 = below. Cap hits and no-code iterations reported with the read (the 11-04 lesson). A pass → the 5-game play screen before any pair.",
+   "read": "UNSCREENABLE on this probe (as MiniMax M3.1): fills any cap, effort ignored, 'off' not honoured. No capability number.",
+   "tags": [
+    "screen",
+    "above-the-line",
+    "certifier",
+    "mid-price"
+   ]
+  },
+  {
+   "id": "screen24-grok43",
+   "where": "§398",
+   "name": "The capability screen, second wave of the $1–5 tier: x-ai/grok-4.3 ($1.25/$2.50 per M) on the replay probe's default 24 cells, reasoning effort high, completion cap 24,000, 4 iterations, full frames",
+   "status": "FILED 2026-11-04T09:46Z before the read (the lead's 'do all of them'); ≈ $5–13 each by the probe's token counts; grok-4.3 and glm-5.1 launched first, the other two after the first wave lands (OpenRouter $50.85 at filing).; RUN and READ 2026-11-04T10:17Z (≈ $7.6: 5.07M prompt at $1.25/M, 0.49M completion at $2.50/M): 0 cap hits in 153 iterations (24K cap), code in 122, first iterations reason ≈ 16K tokens then settle.",
+   "number": "bar (the screen's): ≥ 8 of 23 cells beat nothing-changes by ≥ 20 points = above the line; 5–7 = the line; ≤ 4 = below. Cap hits and no-code iterations reported with the read. || RESULT (clean): 1 of 23 cells beat nothing-changes by ≥ 20; median held-out exact 0%.",
+   "read": "BELOW the line (1 of 23) on a clean read at $2.50/M out.",
+   "tags": [
+    "screen",
+    "above-the-line",
+    "certifier",
+    "mid-price"
+   ]
+  },
+  {
+   "id": "screen24-glm51",
+   "where": "§398",
+   "name": "The capability screen, second wave of the $1–5 tier: z-ai/glm-5.1 ($1.40/$4.40 per M) on the replay probe's default 24 cells, reasoning effort high, completion cap 24,000, 4 iterations, full frames",
+   "status": "FILED 2026-11-04T09:46Z before the read (the lead's 'do all of them'); ≈ $5–13 each by the probe's token counts; grok-4.3 and glm-5.1 launched first, the other two after the first wave lands (OpenRouter $50.85 at filing).; ATTEMPT 1 (effort high, cap 24,000) STOPPED 2026-11-04T11:18Z at 6 cells: 17 of 24 iterations filled the 24,000 cap with reasoning and returned no code: VOID by instrument. ATTEMPT 2 filed: OR_REASONING_EFFORT=low at the same cap; stopped early if the first three cells still hit the cap (then reasoning off, or 'unscreenable' as MiniMax M3.1).; ATTEMPT 2 (effort low) STOPPED 2026-11-04T11:56Z by the early-stop rule: 16 of 16 iterations still filled the 24,000 cap (effort ignored). ATTEMPT 3 filed: reasoning disabled (OR_REASONING_EFFORT=none); a 400 'reasoning mandatory' closes the row as unscreenable.; ATTEMPT 3 (reasoning off) RUN and READ 2026-11-04T12:34Z (≈ $3): accepted; 0 cap hits in 174 iterations, code in 164.",
+   "number": "bar (the screen's): ≥ 8 of 23 cells beat nothing-changes by ≥ 20 points = above the line; 5–7 = the line; ≤ 4 = below. Cap hits and no-code iterations reported with the read. || RESULT attempt 3 (clean, reasoning off): 0 of 23 cells beat nothing-changes by ≥ 20; train exact best 9/20; held-out best 5/20.",
+   "read": "BELOW the line (0 of 23) with reasoning off; with reasoning on it cannot be measured at this cap. Not a reader.",
+   "tags": [
+    "screen",
+    "above-the-line",
+    "certifier",
+    "mid-price"
+   ]
+  },
+  {
+   "id": "screen24-kimi-k2-thinking",
+   "where": "§398",
+   "name": "The capability screen, second wave of the $1–5 tier: moonshotai/kimi-k2-thinking ($0.60/$2.50 per M) on the replay probe's default 24 cells, reasoning effort high, completion cap 24,000, 4 iterations, full frames",
+   "status": "FILED 2026-11-04T09:46Z before the read (the lead's 'do all of them'); ≈ $5–13 each by the probe's token counts; grok-4.3 and glm-5.1 launched first, the other two after the first wave lands (OpenRouter $50.85 at filing).; RUN and READ 2026-11-04T11:56Z (≈ $6.1: 6.37M prompt at $0.60/M, 0.92M completion at $2.50/M): 0 cap hits in 130 iterations, code in 76.",
+   "number": "bar (the screen's): ≥ 8 of 23 cells beat nothing-changes by ≥ 20 points = above the line; 5–7 = the line; ≤ 4 = below. Cap hits and no-code iterations reported with the read. || RESULT (clean): 0 of 23 cells beat nothing-changes by ≥ 20; best cell 5/20 held-out.",
+   "read": "BELOW the line (0 of 23) on a clean read at $2.50/M out.",
+   "tags": [
+    "screen",
+    "above-the-line",
+    "certifier",
+    "mid-price"
+   ]
+  },
+  {
+   "id": "screen24-mistral-large-4",
+   "where": "§398",
+   "name": "The capability screen, second wave of the $1–5 tier: mistralai/mistral-large-4-0 ($0.70/$2.10 per M) on the replay probe's default 24 cells, reasoning effort high, completion cap 24,000, 4 iterations, full frames",
+   "status": "FILED 2026-11-04T09:46Z before the read (the lead's 'do all of them'); ≈ $5–13 each by the probe's token counts; grok-4.3 and glm-5.1 launched first, the other two after the first wave lands (OpenRouter $50.85 at filing).; ATTEMPT 1 (effort high, cap 24,000) STOPPED 2026-11-04T11:18Z at 10 cells: 24 of 47 iterations filled the 24,000 cap with reasoning and returned no code: VOID by instrument. ATTEMPT 2 filed: OR_REASONING_EFFORT=low at the same cap; stopped early if the first three cells still hit the cap (then reasoning off, or 'unscreenable' as MiniMax M3.1).; ATTEMPT 2 (effort low) STOPPED 2026-11-04T11:56Z by the early-stop rule: 20 of 32 iterations still filled the 24,000 cap (effort ignored). ATTEMPT 3 filed: reasoning disabled (OR_REASONING_EFFORT=none); a 400 'reasoning mandatory' closes the row as unscreenable.; ATTEMPT 3 (reasoning off) 2026-11-04T11:58Z: HTTP 400 'Provider returned error' on all 23 cells with reasoning off ($0).",
+   "number": "bar (the screen's): ≥ 8 of 23 cells beat nothing-changes by ≥ 20 points = above the line; 5–7 = the line; ≤ 4 = below. Cap hits and no-code iterations reported with the read.",
+   "read": "UNSCREENABLE on this probe: fills the 8K and 24K caps with reasoning, ignores effort, refuses reasoning off. No capability number; not a usable reader at this cap.",
+   "tags": [
+    "screen",
+    "above-the-line",
+    "certifier",
+    "mid-price"
+   ]
+  },
+  {
+   "id": "screen24-dsv4pro-48k",
+   "where": "§399",
+   "name": "DeepSeek V4 Pro at a completion cap of 48,000 (its reasoning ran ≈ 21K; two reads at 24K were a third cut): the one open cell in the mid tier",
+   "status": "FILED 2026-11-04T20:46Z before any launch (the 11-04 review: the hunt's two open cells); ≈ $20–40 (completion at $4.60/M dominates); OpenRouter $21.92 at filing, so on the lead's word and a top-up.; RUN and READ 2026-11-05T21:01Z (≈ $6.8: 3.75M prompt at $0.10/M, 1.56M completion at $4.11/M): 18 of 78 iterations still filled the 48,000 cap (reasoning ran past 35K on the first iteration), 21 without code.; CORRECTION 2026-11-05T21:12Z (composer): the read filed at 21:0xZ is VOID BY NETWORK. A local DNS failure ('nodename nor servname provided') hit 13 of 23 cells; 11 cells ended after ONE iteration instead of four (iters_used: 4 on 9 cells, 3 on 3, 1 on 11). 'Open cell closed' is withdrawn. Rerun launched the same minute, same settings.; RERUN RUN and READ 2026-11-05T23:33Z (network clean: 0 error cells, every cell at its full iterations; ≈ $15.6: 8.5M prompt at $0.10/M, 3.58M completion at $4.11/M): 47 of 128 iterations still filled the 48,000 cap, 52 without code.",
+   "number": "bar (the screen's): ≥ 8 of 23 cells beat nothing-changes by ≥ 20 points = above the line; 5–7 = the line; ≤ 4 = below. Cap hits and no-code iterations reported with the read. || RESULT: 0 of 23 cells beat nothing-changes by ≥ 20; one cell exact on its shown transitions (20/20 train) and 4/20 held-out; median 0. || RESULT rerun (valid, partly cut): 3 of 23 cells beat nothing-changes by ≥ 20; one cell 20/20 held-out; median 0.",
+   "read": "BELOW the line (3 of 23; bar 8, 'the line' 5–7). With reasoning its reads are 2, 2 and 3 across caps of 24K, 24K and 48K, a third of iterations cut each time; with reasoning off 0. More room buys one cell; its reasoning fills any cap we tried. The open cell is closed: not a reader at a deployable cap.",
+   "tags": [
+    "screen",
+    "above-the-line",
+    "certifier",
+    "open-cell"
+   ]
+  },
+  {
+   "id": "screen24-kimi-k27-code",
+   "where": "§399",
+   "name": "Kimi K2.7 Code ($0.60/$3.50 per M), a code-tuned mid-price model the price-sorted hunt did not include; effort high, cap 24,000, early stop on cap hits",
+   "status": "FILED 2026-11-04T20:46Z before any launch (the 11-04 review: the hunt's two open cells); ≈ $5–8; OpenRouter $21.92 at filing, so on the lead's word and a top-up.; RUN 2026-11-05T21:12Z: VOID BY NETWORK AND CAP: the same DNS failure hit 17 of 23 cells (15 cells ended after one iteration), and 24 of 49 iterations filled the 24,000 cap with reasoning (≈ $3.7 spent). Rerun launched, same settings; a partly cut read is expected and will be reported with its counts.; RERUN STOPPED 2026-11-05T23:33Z at 17 cells by the early-stop rule (network clean): 65 of 70 iterations filled the 24,000 cap with reasoning and returned no code; ≈ $5.5.",
+   "number": "bar (the screen's): ≥ 8 of 23 cells beat nothing-changes by ≥ 20 points = above the line; 5–7 = the line; ≤ 4 = below. Cap hits and no-code iterations reported with the read.",
+   "read": "UNSCREENABLE at this cap: reasoning mandatory in effect and unbounded (as GLM-5.3, Step 3.7, Mistral Large 4, MiniMax M3 and M3.1). No capability number.",
+   "tags": [
+    "screen",
+    "above-the-line",
+    "certifier",
+    "open-cell"
+   ]
+  },
+  {
+   "id": "screen24-grok-build",
+   "where": "§399",
+   "name": "Grok Build 0.1 ($1/$2 per M), a code-tuned mid-price model; effort high, cap 24,000, early stop on cap hits",
+   "status": "FILED 2026-11-04T20:46Z before any launch (the 11-04 review: the hunt's two open cells); ≈ $5–8; OpenRouter $21.92 at filing, so on the lead's word and a top-up.; RUN and READ 2026-11-05T20:34Z (≈ $7.7: 4.82M prompt at $1/M, 1.44M completion at $2/M): 0 cap hits in 130 iterations at the 24K cap, code in 89.",
+   "number": "bar (the screen's): ≥ 8 of 23 cells beat nothing-changes by ≥ 20 points = above the line; 5–7 = the line; ≤ 4 = below. Cap hits and no-code iterations reported with the read. || RESULT (clean): 0 of 23 cells beat nothing-changes by ≥ 20; train exact best 17/20; held-out best 12/20 (one cell close, none over the bar). || NETWORK NOTE: the DNS failure touched 3 of its 23 cells (two at three iterations, one at one); 20 cells ran all four iterations and none passed, so even three passes would leave it at 3 of 23.",
+   "read": "BELOW the line (0 of 23) on a clean read. A code-tuned mid-price model does not occupy the middle either; its best cell reached 12 of 20 held-out.",
+   "tags": [
+    "screen",
+    "above-the-line",
+    "certifier",
+    "open-cell"
+   ]
+  },
+  {
+   "id": "mercury-line-bo10-control",
+   "where": "§400",
+   "name": "Written rules at the line, on Mercury's native usage: the replay probe, 23 cells, reasoning off, best-of-10 per iteration selected on shown-transition replay (the setting that put Mercury 3 at 8 of 23), re-run the same day as the control for the two arms below",
+   "status": "FILED 2026-11-05T18:55Z before any launch; ≈ $5 per arm (the 10-28 best-of-10 cost ≈ $5: 10.3M output tokens at $0.35/M); three arms the same hour ≈ $15; the lead's word.",
+   "number": "control: expected ≈ 8 of 23 (10-28: 8); a control outside 6–10 voids the trio's comparison (day effect on the instrument). Mechanism row: 23 of 23 cells produce programs; the rulebook text present in the prompt of every cell of the handed arms; output tokens per arm reported (the 14× of the control).",
+   "read": "VOID 2026-11-06 by the trio's own filed band: 0 beats of 23 (outside the filed 6-10). The byte-identical shape read 8 of 23 on 10-27; completion tokens 10.3M -> 5.6M; median held-out 5% -> 0%. The endpoint moved under the label or:inception/mercury-3 over nine days. The trio's comparison is unreadable as filed. Programs 21/23. Approx $8.5 for the trio (OpenRouter 27.67 -> 19.18).",
+   "tags": [
+    "mercury",
+    "at-the-line",
+    "rules",
+    "probe"
+   ]
+  },
+  {
+   "id": "mercury-line-rules-handed",
+   "where": "§400",
+   "name": "The same best-of-10 probe with a stronger writer's rulebook handed per cell (--rulebook-from Astra's probe output, as r2-rules-handed did at single sample: 2 vs 3 beats): do handed rules pay for a model that sampling puts on the line?",
+   "status": "FILED 2026-11-05T18:55Z before any launch; ≈ $5 per arm (the 10-28 best-of-10 cost ≈ $5: 10.3M output tokens at $0.35/M); three arms the same hour ≈ $15; the lead's word.",
+   "number": "bar: ≥ control + 4 cells (≈ 12 of 23) = handed rules pay at the line; within ±3 of the control = not shown; ≤ control − 4 = handed rules cost. Mechanism row: 23 of 23 cells produce programs; the rulebook text present in the prompt of every cell of the handed arms; output tokens per arm reported (the 14× of the control).",
+   "read": "VOID 2026-11-06 (control outside the filed band): 2 beats of 23 against a broken zero control; not a read. Mechanism row clean: 104-cell rulebook covered all 23 cells, programs 21/23 (tn36:L2, ka59:L6 lost code on the final iteration - the pre-existing last-iteration-overwrites rule), sampling live in every cell log.",
+   "tags": [
+    "mercury",
+    "at-the-line",
+    "rules",
+    "probe"
+   ]
+  },
+  {
+   "id": "mercury-line-own-rules",
+   "where": "§400",
+   "name": "The same best-of-10 probe with Mercury's OWN world model from its earlier best-of-10 attempt handed back per cell (--rulebook-from mercury3-replay-bo10.jsonl): Reflexion's protocol on the probe, where every answer is verified by replay",
+   "status": "FILED 2026-11-05T18:55Z before any launch; ≈ $5 per arm (the 10-28 best-of-10 cost ≈ $5: 10.3M output tokens at $0.35/M); three arms the same hour ≈ $15; the lead's word.",
+   "number": "bar: ≥ control + 4 cells = its own rules pay on a second attempt at the line; within ±3 = not shown; ≤ control − 4 = cost. Mechanism row: 23 of 23 cells produce programs; the rulebook text present in the prompt of every cell of the handed arms; output tokens per arm reported (the 14× of the control).",
+   "read": "VOID 2026-11-06 (control outside the filed band): 3 beats of 23 against a broken zero control; not a read. Mechanism: rulebook present 22/23 (lp85:L1's own final_text was 209 chars of mid-revision chatter, correctly refused by the loader's 400-char floor - that cell ran as de-facto control and scored identically across all three arms, an internal consistency check); programs 22/23 (lf52:L3 final-iteration no-code).",
+   "tags": [
+    "mercury",
+    "at-the-line",
+    "rules",
+    "probe"
+   ]
+  }
+ ],
+ "facts": [
+  {
+   "game": "tn36",
+   "level": 1,
+   "fact": "the ball click animates and runs the program",
+   "card": "yes"
+  },
+  {
+   "game": "s5i5",
+   "level": 2,
+   "fact": "each control's effect on the bars",
+   "card": "yes"
+  },
+  {
+   "game": "s5i5",
+   "level": 3,
+   "fact": "the controls no run clicked in 73 turns",
+   "card": "yes"
+  },
+  {
+   "game": "dc22",
+   "level": 5,
+   "fact": "the strip buttons move the red piece",
+   "card": "yes (full sweep; missed at a cap of 16)"
+  },
+  {
+   "game": "bp35",
+   "level": 3,
+   "fact": "clicking an X rebuilds a block",
+   "card": "yes"
+  },
+  {
+   "game": "cd82",
+   "level": 3,
+   "fact": "the bottle is clickable",
+   "card": "yes"
+  },
+  {
+   "game": "fl01",
+   "level": 1,
+   "fact": "a click beside the endpoint paints a cell",
+   "card": "yes, with the beside-click"
+  },
+  {
+   "game": "lw02",
+   "level": 1,
+   "fact": "a click beside the head extends the path",
+   "card": "yes, with the beside-click"
+  },
+  {
+   "game": "sk48",
+   "level": 2,
+   "fact": "the legend marks flip on and off",
+   "card": "no: needs two actions in sequence"
+  }
+ ],
+ "errata": [
+  "Level counts from events missed the last level of won games (two days). Levels now come from benchmark.json only.",
+  "The ledger's score formula was wrong (cap on the ratio, not on the square): control 11 read 44.4, is 36.9. Fixed.",
+  "'32.2M prefill tokens per run' was three launches in one log; the per-run figure is 10.4-10.6M.",
+  "Supply plan sized at +4.5 hidden on a downward elasticity; measured upward it is about +1.",
+  "First wall-arm bar (six games >= 14) sat inside the noise; replaced before launch using nine same-form runs.",
+  "'Actions are spare' was wrong for cleared levels: +10 probe actions on every cleared level costs 4.5 public points.",
+  "Aimed two arms at the four games nobody opens; the points that move are in ten swing games (83% of run-to-run variance).",
+  "The prober re-showed its card after a history trim without saying it was a repeat; the model took it for a second sweep.",
+  "Judged arms on one or two runs when a run's sd is 3.4 public points.",
+  "Set the clean form's bar on eight replicates as if independent; replicates in one job share a token pool. Restated on jobs before any result existed.",
+  "'Deeper drain: void' was left on the board without saying what it is or that the switch to test it now exists.",
+  "Said within-job replicates were tightly coupled from one job's spread of 0.94; two more jobs spread 4.7 and 7.2. Withdrawn.",
+  "2026-10-09: raw pass parity is not a fair A/B split inside a job (odd passes earned 4-18% more tokens in unsplit jobs); the split gate uses a balanced per-game assignment, and its null check on six unsplit jobs reads halves differing by -12 to +9 levels per 25 games, so one split job resolves about +8 public, not +5.",
+  "2026-10-12: §179.A throughput rule promoted the diet to the Kaggle form on a public read; hidden draw 17.53. New law §185.5: the Kaggle form changes only on a levels read plus a confirming hidden draw.",
+  "2026-10-12: §181.D 'best of 18 draws 32.6' was public-board arithmetic; the final is the other half, a fresh draw: best of two selections of a 27.3/2.9 form is about 29 (§187).",
+  "2026-10-12 §192: hidden-draw sd is 3.93 (Son Pham's copy distribution, n hundreds), not 2.9; draw 5 is a 2.1-sd event; B1b's hidden card effect +1.5 ± 2.3 is not established; best-of-two adds +2.2.",
+  "2026-10-12 §194: B9 effect ledger rebuilt H1/E-OBS (09-23/09-27), a measured null; §193 re-proposed training already run (1.36 vs 7.55). Law: grep the record before building.",
+  "2026-10-12 §195: §194.3 called the ledger 'two prior reads, flat'; the data shows a mechanism probe with no level read (H1) and one underpowered positive pair (E-OBS). Reopened; L1 back to §190.B.",
+  "2026-10-13 §207: §203.3 stop rule 1 had no clean denominator and stopped L1 at hour 3 on an artefact; withdrawn; liveness = FAILED >= 10 and >= 1/3 followed by a changed action.",
+  "2026-10-13 §210: split_read's per-session-mean 'levels per million' (24.6 vs 20.5) is skewed by small-token sessions; the aggregate (15.13 vs 15.14) is the read.",
+  "2026-10-13 §214: the register row 'SFT lane POINTLESS 1.36 vs 7.55' reported slot_policy's expected value as a measurement; the Flash-Next run was HELD (§94), never read; the 27B run was a like-for-like null on 200 units.",
+  "2026-10-14 §221: rhae_read capped before squaring and lacked the completion cap (+22%); split_read/writeup_numbers score_of used equal level weights (67.8 vs 44.4). The 'public 52/66' of §214/§216 and 'ceiling 32-33' of §181/§213-216 are wrong: 32-33 is the 2x-budget figure; unlimited ≈ 37-41 hidden.",
+  "2026-10-14 §221c: drain_cost_read's first version placed the drain in request units; corrected read 1.08/1.12 (was 1.03/1.07); gate verdict unchanged. c4/d4/b1b mirrors hold 4 passes, not 2."
+ ],
+ "instrument_reads": [
+  {
+   "date": "2026-10-11",
+   "fact": "Cache read on B2 (8,300 requests): 95% of requests append-only (hit 0.96); drains 4.3% of requests but 43.3% of uncached prompt tokens (116K->51K, 6.5 per session). No harness rewrite. runs/lib/cache_miss_read.py, drain_share.py",
+   "where": "§180.B"
+  },
+  {
+   "instrument": "drain_cost_read.py",
+   "fixture": "--fixture prints 'median after/before actions ratio 2.00 ... PASS' (2026-10-13)",
+   "read": "c4+d4+b1b+l1 paired ratio 1.03 (n=27), MISS"
+  },
+  {
+   "instrument": "card_dose_read.py",
+   "fixture": "--fixture prints slope 0.56, POSITIVE (2026-10-14)",
+   "read": "real FLAT: demeaned Spearman -0.13 n=100"
+  },
+  {
+   "instrument": "rhae_read.py / split_read.score_of / writeup_numbers.score_of",
+   "fixture": "the harness's own final_score: max |instrument − final_score| = 0.000000 over 400 game runs of c4,d4,b1b,l1,e1 (2026-10-14, §221.B)",
+   "read": "c4 44.42, b1b 50.04, l1 55.35, e1 38.34 (control 61.68, arm 14.99)"
+  },
+  {
+   "instrument": "split_read.py",
+   "fixture": "runs/lib/fixtures/make_split_fixture.py → 'levels per 25 games (mean over passes): arm 12.0  control 4.0 | generated tokens +100.0% | paired by game: +8.0 per 25 games; games up 4, down 0' (2026-10-14)",
+   "read": "e1: arm 64 vs control 134, paired -70"
+  },
+  {
+   "instrument": "cache_miss_read.py",
+   "fixture": "make_split_fixture → '80 append-only cache hit mean 0.90 | 8 shrunk (drain) cache hit mean 0.00' (2026-10-14)",
+   "read": "e1: 8,614 append-only 0.96 | 368 drains 0.03"
+  },
+  {
+   "instrument": "drain_share.py",
+   "fixture": "make_split_fixture → 'drains per session median 1.0, max 1 (n=8)' (2026-10-14)",
+   "read": "b2: drains 43% of uncached prompt tokens"
+  },
+  {
+   "instrument": "serving_read.py",
+   "fixture": "make_split_fixture split vs control → 'tokens ratio 1.500 | tok_per_h ratio 1.500 | levels ratio 2.000' (2026-10-14)",
+   "read": "b1b vs c4: tok_per_h 1.055, lev_per_M 1.035"
+  },
+  {
+   "instrument": "l1_mechanism_read.py",
+   "fixture": "known-positive mirror runs/field/pod-mirror/2026-10-12-l1-mid3 → 'FAILED 62 … 55% … ALIVE' (recorded §207.4.b, 2026-10-12)",
+   "read": "l1 final: 271 FAILED, 37% changed course"
+  },
+  {
+   "instrument": "wm_replay_probe.py",
+   "fixture": "--fixture (moving-pixel game, mock model with the correct predictor): 'heldout_exact 20/20 cell_acc 1.000 baseline_nothing 0/20' (2026-10-14, §224.F)",
+   "read": "pending: flash arm 24 cells, opus arm 5 cells"
+  }
+ ]
+}

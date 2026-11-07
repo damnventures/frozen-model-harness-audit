@@ -1,0 +1,32 @@
+--- a/ARC3-Inference/inference/framework/solver.py
++++ b/ARC3-Inference/inference/framework/solver.py
+@@ module helpers (v43 §348a: staggered start, env-gated, byte-identical when unset) @@
++def _stagger_delay_s(game_id: str, index: int) -> float:
++    """§348a two-wave form without a second run: games named in ARC3_START_DELAY_GAMES (comma list of game-id
++    prefixes) or, with ARC3_START_DELAY_HALF=1, every odd index, sleep ARC3_START_DELAY_S seconds AFTER their
++    per-game wall timer has started, then play. They lose that much wall; the games already playing get the
++    throughput meanwhile; the run's end does not move. At session start they read the cards the first half wrote."""
++    try:
++        delay = float(os.environ.get("ARC3_START_DELAY_S", "0") or 0)
++    except ValueError:
++        return 0.0
++    if delay <= 0:
++        return 0.0
++    names = [g for g in os.environ.get("ARC3_START_DELAY_GAMES", "").split(",") if g]
++    if names:
++        return delay if any(str(game_id).startswith(g) for g in names) else 0.0
++    if os.environ.get("ARC3_START_DELAY_HALF", "").strip() == "1":
++        return delay if index % 2 == 1 else 0.0
++    return 0.0
++
+@@ _play_one: sleep after the session (and its wall timer) exists, before play @@
+                 stop_event=self._stop_event,
+                 viewer_data_path=viewer_data_path,
+             )
++            _delay = _stagger_delay_s(run.game_id, index)
++            if _delay > 0:
++                print(f"v43 stagger: {run.game_id} index {index} sleeps {_delay:.0f}s before play (wall timer already running)", flush=True)
++                time.sleep(_delay)
+             session.play()
+         except Exception as exc:
+             self._finish_after_error(game, exc)

@@ -1,0 +1,18 @@
+--- a/ARC3-Inference/inference/framework/solver.py
++++ b/ARC3-Inference/inference/framework/solver.py
+@@ hook: appended after _install_priority_form_from_env() @@
+ _install_priority_form_from_env()
++
++
++def _install_alloc_from_env() -> None:
++    """ARC3_ALLOC_STUCK_TOKENS=N (ours, v41 §337): park a game stuck at level <= ARC3_ALLOC_STUCK_LEVEL (2)
++    after N tokens on that level. Unset: nothing changes. Installed after D' so it wraps whichever
++    priority form is live."""
++    if not os.environ.get("ARC3_ALLOC_STUCK_TOKENS", "").strip():
++        return
++    from inference.agent import alloc_priority
++    from inference.agent import tool_agent as _tool_agent_module
++    alloc_priority.install(_tool_agent_module)
++
++
++_install_alloc_from_env()

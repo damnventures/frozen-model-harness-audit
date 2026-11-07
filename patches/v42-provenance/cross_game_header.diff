@@ -1,0 +1,10 @@
+--- a/ARC3-Inference/inference/agent/cross_game.py
++++ b/ARC3-Inference/inference/agent/cross_game.py
+@@ render_block: the header (v42 §342, env-gated, byte-identical when unset) @@
+     header = ("Other games already played in this run (your own record from OTHER games; their mechanics often recur, "
+               "so treat these as hypotheses to check cheaply here, never as facts about this game):")
++    if os.environ.get("ARC3_CROSS_GAME_PROVENANCE", "").strip().lower() == "foreign":
++        # §342 provenance arm: the SAME cards, same order, same lines — only the attribution changes.
++        header = ("Games played earlier by a different agent in a previous run (not your record; their mechanics often recur, "
++                  "so treat these as hypotheses to check cheaply here, never as facts about this game):")
+     if card_format() == "v2":
