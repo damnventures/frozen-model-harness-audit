@@ -1,0 +1,382 @@
+{"t": 1791278698.162383, "key": "vc33-5430563c", "level": 1, "levels_total": null, "rule": "", "actions": "clicks 4", "n_actions": 4}
+{"t": 1791278719.711427, "key": "tu93-0768757b", "level": 1, "levels_total": null, "rule": "", "actions": "arrows 16", "n_actions": 16}
+{"t": 1791278731.3608437, "key": "su15-1944f8ab", "level": 1, "levels_total": null, "rule": "", "actions": "clicks 4", "n_actions": 4}
+{"t": 1791278748.4519825, "key": "s5i5-18d95033", "level": 1, "levels_total": null, "rule": "", "actions": "clicks 5", "n_actions": 5}
+{"t": 1791278748.6883464, "key": "tn36-ef4dde99", "level": 1, "levels_total": null, "rule": "", "actions": "clicks 7", "n_actions": 7}
+{"t": 1791278807.4236488, "key": "vc33-5430563c", "level": 2, "levels_total": null, "rule": "", "actions": "clicks 9", "n_actions": 9}
+{"t": 1791278860.805525, "key": "sp80-589a99af", "level": 1, "levels_total": null, "rule": "", "actions": "space 1", "n_actions": 1}
+{"t": 1791278902.6194856, "key": "sc25-635fd71a", "level": 1, "levels_total": null, "rule": "", "actions": "arrows 1", "n_actions": 1}
+{"t": 1791278957.8416958, "key": "wa30-ee6fef47", "level": 1, "levels_total": null, "rule": "", "actions": "arrows 1, space 1", "n_actions": 2}
+{"t": 1791279003.881612, "key": "su15-1944f8ab", "level": 2, "levels_total": null, "rule": "", "actions": "clicks 1", "n_actions": 1}
+{"t": 1791279025.4332592, "key": "sc25-635fd71a", "level": 2, "levels_total": null, "rule": "", "actions": "arrows 1", "n_actions": 1}
+{"t": 1791279126.5847442, "key": "vc33-5430563c", "level": 3, "levels_total": null, "rule": "", "actions": "clicks 22", "n_actions": 22}
+{"t": 1791279159.9931629, "key": "tr87-cd924810", "level": 1, "levels_total": null, "rule": "", "actions": "arrows 23", "n_actions": 23}
+{"t": 1791279192.1182582, "key": "tu93-0768757b", "level": 2, "levels_total": null, "rule": "", "actions": "arrows 3", "n_actions": 3}
+{"t": 1791279322.5619752, "key": "su15-1944f8ab", "level": 3, "levels_total": null, "rule": "", "actions": "clicks 3", "n_actions": 3}
+{"t": 1791279375.200355, "key": "tu93-0768757b", "level": 3, "levels_total": null, "rule": "", "actions": "arrows 19", "n_actions": 19}
+{"t": 1791279385.5621817, "key": "s5i5-18d95033", "level": 2, "levels_total": null, "rule": "", "actions": "clicks 6", "n_actions": 6}
+{"t": 1791279477.4138746, "key": "sb26-7fbdac44", "level": 1, "levels_total": null, "rule": "", "actions": "space 1", "n_actions": 1}
+{"t": 1791279569.7906332, "key": "re86-8af5384d", "level": 1, "levels_total": null, "rule": "", "actions": "arrows 11, space 1", "n_actions": 12}
+{"t": 1791279674.1488237, "key": "tu93-0768757b", "level": 4, "levels_total": null, "rule": "", "actions": "arrows 17", "n_actions": 17}
+{"t": 1791279698.3963666, "key": "sb26-7fbdac44", "level": 2, "levels_total": null, "rule": "", "actions": "space 1", "n_actions": 1}
+{"t": 1791279717.3571873, "key": "sk48-d8078629", "level": 1, "levels_total": null, "rule": "", "actions": "arrows 3", "n_actions": 3}
+{"t": 1791279720.1497874, "key": "re86-8af5384d", "level": 2, "levels_total": null, "rule": "", "actions": "arrows 9, space 1", "n_actions": 10}
+{"t": 1791279729.6352065, "key": "tr87-cd924810", "level": 2, "levels_total": null, "rule": "", "actions": "arrows 30", "n_actions": 30}
+{"t": 1791279740.0235164, "key": "sb26-7fbdac44", "level": 3, "levels_total": null, "rule": "", "actions": "space 1", "n_actions": 1}
+{"t": 1791279779.8115757, "key": "sb26-7fbdac44", "level": 4, "levels_total": null, "rule": "", "actions": "space 1", "n_actions": 1}
+{"t": 1791279817.5957413, "key": "lp85-305b61c3", "level": 1, "levels_total": null, "rule": "", "actions": "clicks 5", "n_actions": 5}
+{"t": 1791279826.1205184, "key": "sb26-7fbdac44", "level": 5, "levels_total": null, "rule": "", "actions": "space 1", "n_actions": 1}
+{"t": 1791279861.584204, "key": "sb26-7fbdac44", "level": 6, "levels_total": null, "rule": "", "actions": "space 1", "n_actions": 1}
+{"t": 1791279876.5138867, "key": "re86-8af5384d", "level": 3, "levels_total": null, "rule": "", "actions": "arrows 15, space 1", "n_actions": 16}
+{"t": 1791279903.362028, "key": "sb26-7fbdac44", "level": 7, "levels_total": null, "rule": "", "actions": "space 1", "n_actions": 1}
+{"t": 1791279941.6980345, "key": "lf52-271a04aa", "level": 1, "levels_total": null, "rule": "", "actions": "clicks 6", "n_actions": 6}
+{"t": 1791280048.4710274, "key": "ls20-9607627b", "level": 1, "levels_total": null, "rule": "", "actions": "arrows 1", "n_actions": 1}
+{"t": 1791280055.5268986, "key": "ka59-38d34dbb", "level": 1, "levels_total": null, "rule": "", "actions": "arrows 7, clicks 1", "n_actions": 8}
+{"t": 1791280083.4064023, "key": "lp85-305b61c3", "level": 2, "levels_total": null, "rule": "", "actions": "clicks 6", "n_actions": 6}
+{"t": 1791280103.3238714, "key": "r11l-495a7899", "level": 1, "levels_total": null, "rule": "", "actions": "clicks 2", "n_actions": 2}
+{"t": 1791280160.652912, "key": "m0r0-492f87ba", "level": 1, "levels_total": null, "rule": "", "actions": "arrows 1", "n_actions": 1}
+{"t": 1791280207.7235644, "key": "re86-8af5384d", "level": 4, "levels_total": null, "rule": "", "actions": "arrows 9", "n_actions": 9}
+{"t": 1791280429.4211698, "key": "m0r0-492f87ba", "level": 2, "levels_total": null, "rule": "", "actions": "arrows 24", "n_actions": 24}
+{"t": 1791280468.3207917, "key": "ft09-0d8bbf25", "level": 1, "levels_total": null, "rule": "", "actions": "clicks 1", "n_actions": 1}
+{"t": 1791280481.7468424, "key": "lp85-305b61c3", "level": 3, "levels_total": null, "rule": "", "actions": "clicks 15", "n_actions": 15}
+{"t": 1791280520.0156476, "key": "ft09-0d8bbf25", "level": 2, "levels_total": null, "rule": "", "actions": "clicks 7", "n_actions": 7}
+{"t": 1791280532.6423593, "key": "dc22-fdcac232", "level": 1, "levels_total": null, "rule": "", "actions": "arrows 11, clicks 2", "n_actions": 13}
+{"t": 1791280640.865962, "key": "ft09-0d8bbf25", "level": 3, "levels_total": null, "rule": "", "actions": "clicks 13", "n_actions": 13}
+{"t": 1791280731.7762759, "key": "ka59-38d34dbb", "level": 2, "levels_total": null, "rule": "", "actions": "arrows 9, clicks 2", "n_actions": 11}
+{"t": 1791280762.36581, "key": "ft09-0d8bbf25", "level": 4, "levels_total": null, "rule": "", "actions": "clicks 10", "n_actions": 10}
+{"t": 1791280777.966857, "key": "lp85-305b61c3", "level": 4, "levels_total": null, "rule": "", "actions": "clicks 10", "n_actions": 10}
+{"t": 1791280808.4588661, "key": "cn04-2fe56bfb", "level": 1, "levels_total": null, "rule": "", "actions": "arrows 1", "n_actions": 1}
+{"t": 1791280836.8113458, "key": "dc22-fdcac232", "level": 2, "levels_total": null, "rule": "", "actions": "arrows 3", "n_actions": 3}
+{"t": 1791280911.559978, "key": "ar25-0c556536", "level": 1, "levels_total": null, "rule": "", "actions": "arrows 17", "n_actions": 17}
+{"t": 1791281019.971983, "key": "vc33-5430563c", "level": 1, "levels_total": null, "rule": "", "actions": "clicks 6", "n_actions": 6}
+{"t": 1791281021.7379553, "key": "tu93-0768757b", "level": 1, "levels_total": null, "rule": "", "actions": "arrows 16", "n_actions": 16}
+{"t": 1791281102.4105053, "key": "tr87-cd924810", "level": 1, "levels_total": null, "rule": "", "actions": "arrows 16", "n_actions": 16}
+{"t": 1791281119.0335462, "key": "tu93-0768757b", "level": 2, "levels_total": null, "rule": "", "actions": "arrows 3", "n_actions": 3}
+{"t": 1791281124.3745656, "key": "ar25-0c556536", "level": 2, "levels_total": null, "rule": "", "actions": "arrows 3", "n_actions": 3}
+{"t": 1791281158.2199736, "key": "vc33-5430563c", "level": 2, "levels_total": null, "rule": "", "actions": "clicks 2", "n_actions": 2}
+{"t": 1791281232.8373353, "key": "su15-1944f8ab", "level": 1, "levels_total": null, "rule": "", "actions": "clicks 4", "n_actions": 4}
+{"t": 1791281245.3620405, "key": "tn36-ef4dde99", "level": 1, "levels_total": null, "rule": "", "actions": "clicks 1", "n_actions": 1}
+{"t": 1791281428.4192188, "key": "tu93-0768757b", "level": 3, "levels_total": null, "rule": "", "actions": "arrows 3", "n_actions": 3}
+{"t": 1791281429.1340904, "key": "vc33-5430563c", "level": 3, "levels_total": null, "rule": "", "actions": "clicks 12", "n_actions": 12}
+{"t": 1791281492.2412193, "key": "ar25-0c556536", "level": 3, "levels_total": null, "rule": "", "actions": "arrows 8", "n_actions": 8}
+{"t": 1791281521.8202825, "key": "cd82-fb555c5d", "level": 1, "levels_total": null, "rule": "", "actions": "space 1", "n_actions": 1}
+{"t": 1791281614.801687, "key": "ar25-0c556536", "level": 4, "levels_total": null, "rule": "", "actions": "arrows 6", "n_actions": 6}
+{"t": 1791281635.2009315, "key": "wa30-ee6fef47", "level": 1, "levels_total": null, "rule": "", "actions": "arrows 5, space 1", "n_actions": 6}
+{"t": 1791281815.1956182, "key": "tr87-cd924810", "level": 2, "levels_total": null, "rule": "", "actions": "arrows 30", "n_actions": 30}
+{"t": 1791281847.6362875, "key": "sp80-589a99af", "level": 1, "levels_total": null, "rule": "", "actions": "arrows 1, space 1", "n_actions": 2}
+{"t": 1791281859.765108, "key": "tu93-0768757b", "level": 4, "levels_total": null, "rule": "", "actions": "arrows 17", "n_actions": 17}
+{"t": 1791281907.1504657, "key": "sb26-7fbdac44", "level": 1, "levels_total": null, "rule": "", "actions": "space 1", "n_actions": 1}
+{"t": 1791281929.861538, "key": "tr87-cd924810", "level": 3, "levels_total": null, "rule": "", "actions": "arrows 30", "n_actions": 30}
+{"t": 1791281965.1235468, "key": "su15-1944f8ab", "level": 2, "levels_total": null, "rule": "", "actions": "clicks 1", "n_actions": 1}
+{"t": 1791281980.4391918, "key": "re86-8af5384d", "level": 1, "levels_total": null, "rule": "", "actions": "arrows 12, space 1", "n_actions": 13}
+{"t": 1791282029.9566987, "key": "s5i5-18d95033", "level": 1, "levels_total": null, "rule": "", "actions": "clicks 6", "n_actions": 6}
+{"t": 1791282030.6900423, "key": "tr87-cd924810", "level": 4, "levels_total": null, "rule": "", "actions": "arrows 29", "n_actions": 29}
+{"t": 1791282057.6371696, "key": "r11l-495a7899", "level": 1, "levels_total": null, "rule": "", "actions": "clicks 2", "n_actions": 2}
+{"t": 1791282082.2451313, "key": "re86-8af5384d", "level": 2, "levels_total": null, "rule": "", "actions": "arrows 9, space 1", "n_actions": 10}
+{"t": 1791282243.9666386, "key": "lp85-305b61c3", "level": 1, "levels_total": null, "rule": "", "actions": "clicks 4", "n_actions": 4}
+{"t": 1791282245.096923, "key": "re86-8af5384d", "level": 3, "levels_total": null, "rule": "", "actions": "arrows 29, space 1", "n_actions": 30}
+{"t": 1791282311.2618418, "key": "sc25-635fd71a", "level": 1, "levels_total": null, "rule": "", "actions": "arrows 1", "n_actions": 1}
+{"t": 1791282358.6094725, "key": "sc25-635fd71a", "level": 2, "levels_total": null, "rule": "", "actions": "arrows 1", "n_actions": 1}
+{"t": 1791282373.9286864, "key": "sk48-d8078629", "level": 1, "levels_total": null, "rule": "", "actions": "arrows 8", "n_actions": 8}
+{"t": 1791282444.9942427, "key": "lp85-305b61c3", "level": 2, "levels_total": null, "rule": "", "actions": "clicks 8", "n_actions": 8}
+{"t": 1791282555.8581774, "key": "lp85-305b61c3", "level": 3, "levels_total": null, "rule": "", "actions": "clicks 15", "n_actions": 15}
+{"t": 1791282568.2080224, "key": "sb26-7fbdac44", "level": 2, "levels_total": null, "rule": "", "actions": "clicks 2, space 1", "n_actions": 3}
+{"t": 1791282611.3541884, "key": "sb26-7fbdac44", "level": 3, "levels_total": null, "rule": "", "actions": "space 1", "n_actions": 1}
+{"t": 1791282623.0651248, "key": "re86-8af5384d", "level": 4, "levels_total": null, "rule": "", "actions": "arrows 16, space 1", "n_actions": 17}
+{"t": 1791282652.1024299, "key": "sb26-7fbdac44", "level": 4, "levels_total": null, "rule": "", "actions": "space 1", "n_actions": 1}
+{"t": 1791282717.9901214, "key": "sb26-7fbdac44", "level": 5, "levels_total": null, "rule": "", "actions": "space 1", "n_actions": 1}
+{"t": 1791282733.2207177, "key": "m0r0-492f87ba", "level": 1, "levels_total": null, "rule": "", "actions": "arrows 2", "n_actions": 2}
+{"t": 1791282760.7463996, "key": "sb26-7fbdac44", "level": 6, "levels_total": null, "rule": "", "actions": "space 1", "n_actions": 1}
+{"t": 1791282794.062958, "key": "lf52-271a04aa", "level": 1, "levels_total": null, "rule": "", "actions": "clicks 1", "n_actions": 1}
+{"t": 1791282860.2287047, "key": "lp85-305b61c3", "level": 4, "levels_total": null, "rule": "", "actions": "clicks 6", "n_actions": 6}
+{"t": 1791282946.2260275, "key": "ft09-0d8bbf25", "level": 1, "levels_total": null, "rule": "", "actions": "clicks 3", "n_actions": 3}
+{"t": 1791282988.518927, "key": "ft09-0d8bbf25", "level": 2, "levels_total": null, "rule": "", "actions": "clicks 6", "n_actions": 6}
+{"t": 1791283023.99213, "key": "lp85-305b61c3", "level": 5, "levels_total": null, "rule": "", "actions": "clicks 2", "n_actions": 2}
+{"t": 1791283061.5709133, "key": "r11l-495a7899", "level": 2, "levels_total": null, "rule": "", "actions": "clicks 2", "n_actions": 2}
+{"t": 1791283155.9593136, "key": "ft09-0d8bbf25", "level": 3, "levels_total": null, "rule": "", "actions": "clicks 13", "n_actions": 13}
+{"t": 1791283189.6953013, "key": "ar25-0c556536", "level": 1, "levels_total": null, "rule": "", "actions": "arrows 4", "n_actions": 4}
+{"t": 1791283274.9645398, "key": "ft09-0d8bbf25", "level": 4, "levels_total": null, "rule": "", "actions": "clicks 21", "n_actions": 21}
+{"t": 1791283286.2749507, "key": "ka59-38d34dbb", "level": 1, "levels_total": null, "rule": "", "actions": "arrows 2, clicks 1", "n_actions": 3}
+{"t": 1791283389.2819376, "key": "cn04-2fe56bfb", "level": 1, "levels_total": null, "rule": "", "actions": "arrows 3", "n_actions": 3}
+{"t": 1791283431.9956, "key": "cd82-fb555c5d", "level": 1, "levels_total": null, "rule": "", "actions": "clicks 1, space 1", "n_actions": 2}
+{"t": 1791283508.8858137, "key": "wa30-ee6fef47", "level": 1, "levels_total": null, "rule": "", "actions": "arrows 3, space 1", "n_actions": 4}
+{"t": 1791283540.043755, "key": "ar25-0c556536", "level": 2, "levels_total": null, "rule": "", "actions": "arrows 8, space 1", "n_actions": 9}
+{"t": 1791283578.0527027, "key": "g50t-5849a774", "level": 1, "levels_total": null, "rule": "", "actions": "arrows 7", "n_actions": 7}
+{"t": 1791283601.6865811, "key": "dc22-fdcac232", "level": 1, "levels_total": null, "rule": "", "actions": "arrows 9", "n_actions": 9}
+{"t": 1791283654.1416953, "key": "cd82-fb555c5d", "level": 2, "levels_total": null, "rule": "", "actions": "arrows 6, space 2, clicks 1", "n_actions": 9}
+{"t": 1791283725.706505, "key": "bp35-0a0ad940", "level": 1, "levels_total": null, "rule": "", "actions": "arrows 2", "n_actions": 2}
+{"t": 1791283771.611594, "key": "vc33-5430563c", "level": 1, "levels_total": null, "rule": "", "actions": "clicks 6", "n_actions": 6}
+{"t": 1791283812.0249252, "key": "ar25-0c556536", "level": 3, "levels_total": null, "rule": "", "actions": "arrows 7", "n_actions": 7}
+{"t": 1791283884.6157696, "key": "cd82-fb555c5d", "level": 3, "levels_total": null, "rule": "", "actions": "clicks 1", "n_actions": 1}
+{"t": 1791283972.643057, "key": "tu93-0768757b", "level": 1, "levels_total": null, "rule": "", "actions": "arrows 16", "n_actions": 16}
+{"t": 1791283988.4636018, "key": "cd82-fb555c5d", "level": 4, "levels_total": null, "rule": "", "actions": "clicks 2", "n_actions": 2}
+{"t": 1791284070.004873, "key": "dc22-fdcac232", "level": 2, "levels_total": null, "rule": "", "actions": "arrows 23, clicks 1", "n_actions": 24}
+{"t": 1791284163.638262, "key": "vc33-5430563c", "level": 2, "levels_total": null, "rule": "", "actions": "clicks 1", "n_actions": 1}
+{"t": 1791284251.1800988, "key": "sb26-7fbdac44", "level": 1, "levels_total": null, "rule": "", "actions": "space 1", "n_actions": 1}
+{"t": 1791284256.2637327, "key": "sp80-589a99af", "level": 1, "levels_total": null, "rule": "", "actions": "arrows 2, space 1", "n_actions": 3}
+{"t": 1791284311.9805572, "key": "tu93-0768757b", "level": 2, "levels_total": null, "rule": "", "actions": "arrows 3", "n_actions": 3}
+{"t": 1791284373.3486576, "key": "su15-1944f8ab", "level": 1, "levels_total": null, "rule": "", "actions": "clicks 1", "n_actions": 1}
+{"t": 1791284414.552495, "key": "tn36-ef4dde99", "level": 1, "levels_total": null, "rule": "Now I understand the mechanic: the 5 glyphs are a program, and clicking the blue ball runs it (cursor sweeps glyphs, piece moves). Evidence: (bar,stem)=(B,B)\u2192DOWN, (w,B)\u2192RIGHT, (w,w)\u2192no-op. The plug must drop 5 tiles into the U-socket, so all 5 glyphs should be (B,B).", "actions": "clicks 1", "n_actions": 1}
+{"t": 1791284430.2639222, "key": "s5i5-18d95033", "level": 1, "levels_total": null, "rule": "", "actions": "clicks 9", "n_actions": 9}
+{"t": 1791284448.8846462, "key": "vc33-5430563c", "level": 3, "levels_total": null, "rule": "", "actions": "clicks 14", "n_actions": 14}
+{"t": 1791284514.4598145, "key": "tu93-0768757b", "level": 3, "levels_total": null, "rule": "", "actions": "arrows 13", "n_actions": 13}
+{"t": 1791284548.6182363, "key": "sc25-635fd71a", "level": 1, "levels_total": null, "rule": "", "actions": "arrows 1", "n_actions": 1}
+{"t": 1791284602.259582, "key": "tr87-cd924810", "level": 1, "levels_total": null, "rule": "", "actions": "arrows 18", "n_actions": 18}
+{"t": 1791284614.5090675, "key": "sc25-635fd71a", "level": 2, "levels_total": null, "rule": "", "actions": "arrows 1", "n_actions": 1}
+{"t": 1791284646.5126956, "key": "re86-8af5384d", "level": 1, "levels_total": null, "rule": "", "actions": "arrows 12, space 1", "n_actions": 13}
+{"t": 1791284785.3342354, "key": "re86-8af5384d", "level": 2, "levels_total": null, "rule": "", "actions": "arrows 13, space 1", "n_actions": 14}
+{"t": 1791284814.1751282, "key": "sc25-635fd71a", "level": 3, "levels_total": null, "rule": "", "actions": "arrows 1", "n_actions": 1}
+{"t": 1791284924.0585723, "key": "tr87-cd924810", "level": 2, "levels_total": null, "rule": "", "actions": "arrows 19", "n_actions": 19}
+{"t": 1791285020.565791, "key": "tr87-cd924810", "level": 3, "levels_total": null, "rule": "", "actions": "arrows 30", "n_actions": 30}
+{"t": 1791285129.2133214, "key": "lp85-305b61c3", "level": 1, "levels_total": null, "rule": "", "actions": "clicks 5", "n_actions": 5}
+{"t": 1791285199.1140888, "key": "r11l-495a7899", "level": 1, "levels_total": null, "rule": "", "actions": "clicks 3", "n_actions": 3}
+{"t": 1791285241.972362, "key": "re86-8af5384d", "level": 3, "levels_total": null, "rule": "", "actions": "arrows 15", "n_actions": 15}
+{"t": 1791285290.5692883, "key": "m0r0-492f87ba", "level": 1, "levels_total": null, "rule": "", "actions": "arrows 2", "n_actions": 2}
+{"t": 1791285331.9504635, "key": "lp85-305b61c3", "level": 2, "levels_total": null, "rule": "", "actions": "clicks 8", "n_actions": 8}
+{"t": 1791285354.8660753, "key": "lf52-271a04aa", "level": 1, "levels_total": null, "rule": "", "actions": "clicks 7", "n_actions": 7}
+{"t": 1791285445.6504974, "key": "ls20-9607627b", "level": 1, "levels_total": null, "rule": "", "actions": "arrows 5", "n_actions": 5}
+{"t": 1791285589.8002644, "key": "lp85-305b61c3", "level": 3, "levels_total": null, "rule": "", "actions": "clicks 15", "n_actions": 15}
+{"t": 1791285601.150337, "key": "cn04-2fe56bfb", "level": 1, "levels_total": null, "rule": "", "actions": "arrows 4", "n_actions": 4}
+{"t": 1791285604.8791864, "key": "ft09-0d8bbf25", "level": 1, "levels_total": null, "rule": "", "actions": "clicks 4", "n_actions": 4}
+{"t": 1791285681.1750493, "key": "ft09-0d8bbf25", "level": 2, "levels_total": null, "rule": "", "actions": "clicks 7", "n_actions": 7}
+{"t": 1791285782.6053004, "key": "lp85-305b61c3", "level": 4, "levels_total": null, "rule": "", "actions": "clicks 11", "n_actions": 11}
+{"t": 1791285839.2812195, "key": "m0r0-492f87ba", "level": 2, "levels_total": null, "rule": "", "actions": "arrows 6", "n_actions": 6}
+{"t": 1791285861.0637958, "key": "ka59-38d34dbb", "level": 1, "levels_total": null, "rule": "", "actions": "arrows 7, clicks 1", "n_actions": 8}
+{"t": 1791285936.2347984, "key": "lp85-305b61c3", "level": 5, "levels_total": null, "rule": "", "actions": "clicks 9", "n_actions": 9}
+{"t": 1791285948.0595486, "key": "dc22-fdcac232", "level": 1, "levels_total": null, "rule": "", "actions": "arrows 5", "n_actions": 5}
+{"t": 1791286097.8428655, "key": "ar25-0c556536", "level": 1, "levels_total": null, "rule": "", "actions": "arrows 8", "n_actions": 8}
+{"t": 1791286181.1853948, "key": "cn04-2fe56bfb", "level": 2, "levels_total": null, "rule": "", "actions": "arrows 6", "n_actions": 6}
+{"t": 1791286218.9053411, "key": "ft09-0d8bbf25", "level": 3, "levels_total": null, "rule": "", "actions": "clicks 1", "n_actions": 1}
+{"t": 1791286323.8727725, "key": "ar25-0c556536", "level": 2, "levels_total": null, "rule": "", "actions": "arrows 9, space 1", "n_actions": 10}
+{"t": 1791286342.3893323, "key": "wa30-ee6fef47", "level": 1, "levels_total": null, "rule": "", "actions": "arrows 5, space 2", "n_actions": 7}
+{"t": 1791286343.1284418, "key": "vc33-5430563c", "level": 1, "levels_total": null, "rule": "", "actions": "clicks 3", "n_actions": 3}
+{"t": 1791286386.984331, "key": "g50t-5849a774", "level": 1, "levels_total": null, "rule": "", "actions": "arrows 12", "n_actions": 12}
+{"t": 1791286479.9653723, "key": "tu93-0768757b", "level": 1, "levels_total": null, "rule": "", "actions": "arrows 5", "n_actions": 5}
+{"t": 1791286504.1710513, "key": "ar25-0c556536", "level": 3, "levels_total": null, "rule": "", "actions": "arrows 6", "n_actions": 6}
+{"t": 1791286520.4923913, "key": "vc33-5430563c", "level": 2, "levels_total": null, "rule": "", "actions": "clicks 3", "n_actions": 3}
+{"t": 1791286583.6698778, "key": "ft09-0d8bbf25", "level": 4, "levels_total": null, "rule": "", "actions": "clicks 1", "n_actions": 1}
+{"t": 1791286615.2247684, "key": "ar25-0c556536", "level": 4, "levels_total": null, "rule": "", "actions": "arrows 13, space 1", "n_actions": 14}
+{"t": 1791286649.3904169, "key": "cd82-fb555c5d", "level": 1, "levels_total": null, "rule": "", "actions": "arrows 2, clicks 1, space 1", "n_actions": 4}
+{"t": 1791286666.7153525, "key": "tn36-ef4dde99", "level": 1, "levels_total": null, "rule": "", "actions": "clicks 1", "n_actions": 1}
+{"t": 1791286716.9431944, "key": "sp80-589a99af", "level": 1, "levels_total": null, "rule": "", "actions": "space 1", "n_actions": 1}
+{"t": 1791286752.3114817, "key": "bp35-0a0ad940", "level": 1, "levels_total": null, "rule": "", "actions": "arrows 1", "n_actions": 1}
+{"t": 1791286775.1477034, "key": "vc33-5430563c", "level": 3, "levels_total": null, "rule": "", "actions": "clicks 15", "n_actions": 15}
+{"t": 1791286783.1534064, "key": "su15-1944f8ab", "level": 1, "levels_total": null, "rule": "", "actions": "clicks 5", "n_actions": 5}
+{"t": 1791286800.1435041, "key": "tu93-0768757b", "level": 2, "levels_total": null, "rule": "", "actions": "arrows 3", "n_actions": 3}
+{"t": 1791286900.7907164, "key": "tr87-cd924810", "level": 1, "levels_total": null, "rule": "", "actions": "arrows 28", "n_actions": 28}
+{"t": 1791286999.6910443, "key": "tu93-0768757b", "level": 3, "levels_total": null, "rule": "", "actions": "arrows 19", "n_actions": 19}
+{"t": 1791287022.3200462, "key": "sb26-7fbdac44", "level": 1, "levels_total": null, "rule": "", "actions": "space 1", "n_actions": 1}
+{"t": 1791287145.331036, "key": "sk48-d8078629", "level": 1, "levels_total": null, "rule": "", "actions": "arrows 1", "n_actions": 1}
+{"t": 1791287201.1375875, "key": "tr87-cd924810", "level": 2, "levels_total": null, "rule": "", "actions": "arrows 30", "n_actions": 30}
+{"t": 1791287222.4188297, "key": "tu93-0768757b", "level": 4, "levels_total": null, "rule": "", "actions": "arrows 17", "n_actions": 17}
+{"t": 1791287241.3761005, "key": "su15-1944f8ab", "level": 2, "levels_total": null, "rule": "", "actions": "clicks 1", "n_actions": 1}
+{"t": 1791287242.2232, "key": "re86-8af5384d", "level": 1, "levels_total": null, "rule": "", "actions": "arrows 10, space 1", "n_actions": 11}
+{"t": 1791287280.765215, "key": "sb26-7fbdac44", "level": 2, "levels_total": null, "rule": "", "actions": "space 1", "n_actions": 1}
+{"t": 1791287302.2685523, "key": "tr87-cd924810", "level": 3, "levels_total": null, "rule": "", "actions": "arrows 30", "n_actions": 30}
+{"t": 1791287328.511324, "key": "sb26-7fbdac44", "level": 3, "levels_total": null, "rule": "", "actions": "space 1", "n_actions": 1}
+{"t": 1791287341.91724, "key": "sc25-635fd71a", "level": 1, "levels_total": null, "rule": "", "actions": "arrows 3", "n_actions": 3}
+{"t": 1791287363.1388297, "key": "s5i5-18d95033", "level": 1, "levels_total": null, "rule": "", "actions": "clicks 1", "n_actions": 1}
+{"t": 1791287389.7890763, "key": "tr87-cd924810", "level": 4, "levels_total": null, "rule": "", "actions": "arrows 29", "n_actions": 29}
+{"t": 1791287406.6355221, "key": "sc25-635fd71a", "level": 2, "levels_total": null, "rule": "", "actions": "arrows 2", "n_actions": 2}
+{"t": 1791287419.529094, "key": "sb26-7fbdac44", "level": 4, "levels_total": null, "rule": "", "actions": "clicks 12, space 1", "n_actions": 13}
+{"t": 1791287428.055615, "key": "re86-8af5384d", "level": 2, "levels_total": null, "rule": "", "actions": "arrows 28, space 2", "n_actions": 30}
+{"t": 1791287445.2050552, "key": "tu93-0768757b", "level": 5, "levels_total": null, "rule": "", "actions": "arrows 19", "n_actions": 19}
+{"t": 1791287544.4128094, "key": "sc25-635fd71a", "level": 3, "levels_total": null, "rule": "", "actions": "arrows 9", "n_actions": 9}
+{"t": 1791287556.0781147, "key": "sb26-7fbdac44", "level": 5, "levels_total": null, "rule": "", "actions": "space 1", "n_actions": 1}
+{"t": 1791287558.0803874, "key": "su15-1944f8ab", "level": 3, "levels_total": null, "rule": "", "actions": "clicks 4", "n_actions": 4}
+{"t": 1791287609.5531611, "key": "sb26-7fbdac44", "level": 6, "levels_total": null, "rule": "", "actions": "space 1", "n_actions": 1}
+{"t": 1791287653.6422336, "key": "r11l-495a7899", "level": 1, "levels_total": null, "rule": "", "actions": "clicks 1", "n_actions": 1}
+{"t": 1791287663.254435, "key": "re86-8af5384d", "level": 3, "levels_total": null, "rule": "", "actions": "arrows 14, space 1", "n_actions": 15}
+{"t": 1791287793.976346, "key": "lp85-305b61c3", "level": 1, "levels_total": null, "rule": "", "actions": "clicks 5", "n_actions": 5}
+{"t": 1791287993.3432143, "key": "lp85-305b61c3", "level": 2, "levels_total": null, "rule": "", "actions": "clicks 9", "n_actions": 9}
+{"t": 1791288011.282492, "key": "lf52-271a04aa", "level": 1, "levels_total": null, "rule": "", "actions": "clicks 6", "n_actions": 6}
+{"t": 1791288029.184133, "key": "ka59-38d34dbb", "level": 1, "levels_total": null, "rule": "", "actions": "arrows 7, clicks 1", "n_actions": 8}
+{"t": 1791288033.0861192, "key": "re86-8af5384d", "level": 4, "levels_total": null, "rule": "", "actions": "arrows 9", "n_actions": 9}
+{"t": 1791288144.798375, "key": "ft09-0d8bbf25", "level": 1, "levels_total": null, "rule": "", "actions": "clicks 3", "n_actions": 3}
+{"t": 1791288159.5429232, "key": "m0r0-492f87ba", "level": 1, "levels_total": null, "rule": "", "actions": "arrows 1", "n_actions": 1}
+{"t": 1791288204.1677008, "key": "ft09-0d8bbf25", "level": 2, "levels_total": null, "rule": "", "actions": "clicks 6", "n_actions": 6}
+{"t": 1791288322.4471676, "key": "lp85-305b61c3", "level": 3, "levels_total": null, "rule": "", "actions": "clicks 5", "n_actions": 5}
+{"t": 1791288339.7784462, "key": "ft09-0d8bbf25", "level": 3, "levels_total": null, "rule": "", "actions": "clicks 1", "n_actions": 1}
+{"t": 1791288349.1351662, "key": "ls20-9607627b", "level": 1, "levels_total": null, "rule": "", "actions": "arrows 7", "n_actions": 7}
+{"t": 1791288385.201617, "key": "r11l-495a7899", "level": 2, "levels_total": null, "rule": "", "actions": "clicks 10", "n_actions": 10}
+{"t": 1791288488.8041108, "key": "lp85-305b61c3", "level": 4, "levels_total": null, "rule": "", "actions": "clicks 12", "n_actions": 12}
+{"t": 1791288510.6525984, "key": "ft09-0d8bbf25", "level": 4, "levels_total": null, "rule": "", "actions": "clicks 16", "n_actions": 16}
+{"t": 1791288577.8988695, "key": "lf52-271a04aa", "level": 2, "levels_total": null, "rule": "", "actions": "clicks 1", "n_actions": 1}
+{"t": 1791288614.755621, "key": "cn04-2fe56bfb", "level": 1, "levels_total": null, "rule": "", "actions": "arrows 1", "n_actions": 1}
+{"t": 1791288648.4602969, "key": "dc22-fdcac232", "level": 1, "levels_total": null, "rule": "", "actions": "arrows 5, clicks 1", "n_actions": 6}
+{"t": 1791288691.1027744, "key": "ls20-9607627b", "level": 2, "levels_total": null, "rule": "", "actions": "arrows 1", "n_actions": 1}
+{"t": 1791288782.8939927, "key": "ar25-0c556536", "level": 1, "levels_total": null, "rule": "", "actions": "arrows 10", "n_actions": 10}
+{"t": 1791288950.5522015, "key": "ar25-0c556536", "level": 2, "levels_total": null, "rule": "", "actions": "arrows 8", "n_actions": 8}
+{"t": 1791288999.0872867, "key": "dc22-fdcac232", "level": 2, "levels_total": null, "rule": "", "actions": "arrows 8", "n_actions": 8}
+{"t": 1791289135.17925, "key": "cd82-fb555c5d", "level": 1, "levels_total": null, "rule": "", "actions": "space 1", "n_actions": 1}
+{"t": 1791289138.794044, "key": "tr87-cd924810", "level": 5, "levels_total": null, "rule": "", "actions": "arrows 4", "n_actions": 4}
+{"t": 1791289225.8959363, "key": "tr87-cd924810", "level": 4, "levels_total": null, "rule": "", "actions": "arrows 29", "n_actions": 29}
+{"t": 1791289245.0708828, "key": "cd82-fb555c5d", "level": 2, "levels_total": null, "rule": "", "actions": "arrows 3, clicks 1, space 1", "n_actions": 5}
+{"t": 1791289263.4487815, "key": "ar25-0c556536", "level": 3, "levels_total": null, "rule": "", "actions": "arrows 7", "n_actions": 7}
+{"t": 1791289320.7721498, "key": "ft09-0d8bbf25", "level": 5, "levels_total": null, "rule": "", "actions": "clicks 9", "n_actions": 9}
+{"t": 1791289377.8678744, "key": "ar25-0c556536", "level": 4, "levels_total": null, "rule": "", "actions": "arrows 6", "n_actions": 6}
+{"t": 1791289413.1064856, "key": "ft09-0d8bbf25", "level": 5, "levels_total": null, "rule": "", "actions": "clicks 17", "n_actions": 17}
+{"t": 1791289476.6171124, "key": "bp35-0a0ad940", "level": 1, "levels_total": null, "rule": "", "actions": "arrows 2", "n_actions": 2}
+{"t": 1791289582.5468874, "key": "tr87-cd924810", "level": 5, "levels_total": null, "rule": "", "actions": "arrows 14", "n_actions": 14}
+{"t": 1791289648.543599, "key": "cd82-fb555c5d", "level": 5, "levels_total": null, "rule": "", "actions": "arrows 9, clicks 2, space 2", "n_actions": 13}
+{"t": 1791289742.506158, "key": "lp85-305b61c3", "level": 6, "levels_total": null, "rule": "", "actions": "clicks 1", "n_actions": 1}
+{"t": 1791289770.9588315, "key": "tr87-cd924810", "level": 3, "levels_total": null, "rule": "", "actions": "arrows 5", "n_actions": 5}
+{"t": 1791289816.7803748, "key": "re86-8af5384d", "level": 5, "levels_total": null, "rule": "", "actions": "arrows 23, space 1", "n_actions": 24}
+{"t": 1791289844.9462519, "key": "ar25-0c556536", "level": 5, "levels_total": null, "rule": "", "actions": "arrows 17", "n_actions": 17}
+{"t": 1791289877.2286909, "key": "lp85-305b61c3", "level": 5, "levels_total": null, "rule": "", "actions": "clicks 9", "n_actions": 9}
+{"t": 1791289912.509049, "key": "lp85-305b61c3", "level": 5, "levels_total": null, "rule": "", "actions": "clicks 9", "n_actions": 9}
+{"t": 1791289916.2657335, "key": "tr87-cd924810", "level": 4, "levels_total": null, "rule": "", "actions": "arrows 5", "n_actions": 5}
+{"t": 1791289968.9753623, "key": "r11l-495a7899", "level": 3, "levels_total": null, "rule": "", "actions": "clicks 11", "n_actions": 11}
+{"t": 1791290020.180009, "key": "dc22-fdcac232", "level": 3, "levels_total": null, "rule": "", "actions": "arrows 16, clicks 1", "n_actions": 17}
+{"t": 1791290084.4937358, "key": "r11l-495a7899", "level": 3, "levels_total": null, "rule": "", "actions": "clicks 10", "n_actions": 10}
+{"t": 1791290169.5522203, "key": "tr87-cd924810", "level": 5, "levels_total": null, "rule": "", "actions": "arrows 12", "n_actions": 12}
+{"t": 1791290235.1327152, "key": "ar25-0c556536", "level": 6, "levels_total": null, "rule": "", "actions": "arrows 19, space 1", "n_actions": 20}
+{"t": 1791290309.657317, "key": "r11l-495a7899", "level": 4, "levels_total": null, "rule": "", "actions": "clicks 13", "n_actions": 13}
+{"t": 1791290313.2407424, "key": "r11l-495a7899", "level": 4, "levels_total": null, "rule": "", "actions": "clicks 17", "n_actions": 17}
+{"t": 1791290315.1618989, "key": "lp85-305b61c3", "level": 6, "levels_total": null, "rule": "", "actions": "clicks 18", "n_actions": 18}
+{"t": 1791290367.9554884, "key": "ar25-0c556536", "level": 5, "levels_total": null, "rule": "", "actions": "arrows 5", "n_actions": 5}
+{"t": 1791290436.580148, "key": "lp85-305b61c3", "level": 7, "levels_total": null, "rule": "", "actions": "clicks 5", "n_actions": 5}
+{"t": 1791290462.0561316, "key": "ar25-0c556536", "level": 5, "levels_total": null, "rule": "", "actions": "arrows 9, space 2", "n_actions": 11}
+{"t": 1791290520.476427, "key": "ar25-0c556536", "level": 7, "levels_total": null, "rule": "", "actions": "arrows 23, space 2", "n_actions": 25}
+{"t": 1791290624.5490143, "key": "r11l-495a7899", "level": 5, "levels_total": null, "rule": "", "actions": "clicks 21", "n_actions": 21}
+{"t": 1791290662.6754622, "key": "ar25-0c556536", "level": 6, "levels_total": null, "rule": "", "actions": "arrows 19, space 1", "n_actions": 20}
+{"t": 1791290696.3332431, "key": "dc22-fdcac232", "level": 3, "levels_total": null, "rule": "", "actions": "arrows 14, clicks 1", "n_actions": 15}
+{"t": 1791290830.302525, "key": "ls20-9607627b", "level": 3, "levels_total": null, "rule": "", "actions": "arrows 28", "n_actions": 28}
+{"t": 1791291033.3327491, "key": "lp85-305b61c3", "level": 7, "levels_total": null, "rule": "", "actions": "clicks 6", "n_actions": 6}
+{"t": 1791291136.3858085, "key": "tu93-0768757b", "level": 5, "levels_total": null, "rule": "", "actions": "arrows 16", "n_actions": 16}
+{"t": 1791291287.213231, "key": "ar25-0c556536", "level": 7, "levels_total": null, "rule": "", "actions": "arrows 9", "n_actions": 9}
+{"t": 1791291358.5453918, "key": "r11l-495a7899", "level": 5, "levels_total": null, "rule": "", "actions": "clicks 16", "n_actions": 16}
+{"t": 1791291442.5587945, "key": "re86-8af5384d", "level": 5, "levels_total": null, "rule": "", "actions": "arrows 21, space 1", "n_actions": 22}
+{"t": 1791291512.7660103, "key": "tu93-0768757b", "level": 6, "levels_total": null, "rule": "", "actions": "arrows 23", "n_actions": 23}
+{"t": 1791291640.0414426, "key": "g50t-5849a774", "level": 2, "levels_total": null, "rule": "", "actions": "arrows 21, space 1", "n_actions": 22}
+{"t": 1791291653.6486166, "key": "cd82-fb555c5d", "level": 3, "levels_total": null, "rule": "", "actions": "clicks 2, arrows 1", "n_actions": 3}
+{"t": 1791291715.7605126, "key": "tu93-0768757b", "level": 7, "levels_total": null, "rule": "", "actions": "arrows 4", "n_actions": 4}
+{"t": 1791291799.138593, "key": "cd82-fb555c5d", "level": 4, "levels_total": null, "rule": "", "actions": "clicks 2", "n_actions": 2}
+{"t": 1791291894.8258553, "key": "cd82-fb555c5d", "level": 5, "levels_total": null, "rule": "", "actions": "arrows 5, clicks 3, space 1", "n_actions": 9}
+{"t": 1791292098.3672838, "key": "tu93-0768757b", "level": 6, "levels_total": null, "rule": "", "actions": "arrows 28", "n_actions": 28}
+{"t": 1791292131.4848094, "key": "cd82-fb555c5d", "level": 2, "levels_total": null, "rule": "", "actions": "arrows 3, clicks 1, space 1", "n_actions": 5}
+{"t": 1791292133.3315213, "key": "dc22-fdcac232", "level": 4, "levels_total": null, "rule": "", "actions": "arrows 10, clicks 4", "n_actions": 14}
+{"t": 1791292352.9338932, "key": "cd82-fb555c5d", "level": 3, "levels_total": null, "rule": "", "actions": "clicks 1", "n_actions": 1}
+{"t": 1791292376.6715562, "key": "sc25-635fd71a", "level": 4, "levels_total": null, "rule": "", "actions": "arrows 4", "n_actions": 4}
+{"t": 1791292493.0941937, "key": "cd82-fb555c5d", "level": 4, "levels_total": null, "rule": "", "actions": "clicks 1", "n_actions": 1}
+{"t": 1791292571.1339257, "key": "tu93-0768757b", "level": 7, "levels_total": null, "rule": "", "actions": "arrows 4", "n_actions": 4}
+{"t": 1791292591.910277, "key": "cd82-fb555c5d", "level": 2, "levels_total": null, "rule": "", "actions": "space 1", "n_actions": 1}
+{"t": 1791292613.9585073, "key": "cd82-fb555c5d", "level": 5, "levels_total": null, "rule": "", "actions": "arrows 3, clicks 2", "n_actions": 5}
+{"t": 1791292623.168949, "key": "m0r0-492f87ba", "level": 3, "levels_total": null, "rule": "", "actions": "arrows 25, clicks 1", "n_actions": 26}
+{"t": 1791292775.2356296, "key": "ar25-0c556536", "level": 4, "levels_total": null, "rule": "", "actions": "arrows 6, space 1", "n_actions": 7}
+{"t": 1791292798.9222994, "key": "vc33-5430563c", "level": 4, "levels_total": null, "rule": "", "actions": "clicks 21", "n_actions": 21}
+{"t": 1791292956.690552, "key": "su15-1944f8ab", "level": 3, "levels_total": null, "rule": "", "actions": "clicks 7", "n_actions": 7}
+{"t": 1791292977.0657988, "key": "cd82-fb555c5d", "level": 3, "levels_total": null, "rule": "", "actions": "clicks 1", "n_actions": 1}
+{"t": 1791292998.7274456, "key": "m0r0-492f87ba", "level": 4, "levels_total": null, "rule": "", "actions": "arrows 12", "n_actions": 12}
+{"t": 1791293037.0574687, "key": "sc25-635fd71a", "level": 3, "levels_total": null, "rule": "", "actions": "arrows 1", "n_actions": 1}
+{"t": 1791293158.4389899, "key": "cd82-fb555c5d", "level": 4, "levels_total": null, "rule": "", "actions": "clicks 2", "n_actions": 2}
+{"t": 1791293176.2971172, "key": "ar25-0c556536", "level": 5, "levels_total": null, "rule": "", "actions": "arrows 10", "n_actions": 10}
+{"t": 1791293380.260776, "key": "sc25-635fd71a", "level": 4, "levels_total": null, "rule": "", "actions": "arrows 12", "n_actions": 12}
+{"t": 1791293417.538644, "key": "vc33-5430563c", "level": 5, "levels_total": null, "rule": "", "actions": "clicks 10", "n_actions": 10}
+{"t": 1791293456.976898, "key": "vc33-5430563c", "level": 4, "levels_total": null, "rule": "", "actions": "clicks 5", "n_actions": 5}
+{"t": 1791293507.368491, "key": "m0r0-492f87ba", "level": 2, "levels_total": null, "rule": "", "actions": "arrows 1", "n_actions": 1}
+{"t": 1791293679.0900939, "key": "lp85-305b61c3", "level": 6, "levels_total": null, "rule": "", "actions": "clicks 1", "n_actions": 1}
+{"t": 1791293682.0951164, "key": "vc33-5430563c", "level": 6, "levels_total": null, "rule": "", "actions": "clicks 20", "n_actions": 20}
+{"t": 1791293760.3668463, "key": "cd82-fb555c5d", "level": 5, "levels_total": null, "rule": "", "actions": "arrows 3, clicks 2", "n_actions": 5}
+{"t": 1791293926.953299, "key": "lp85-305b61c3", "level": 7, "levels_total": null, "rule": "", "actions": "clicks 6", "n_actions": 6}
+{"t": 1791294044.5479903, "key": "ar25-0c556536", "level": 6, "levels_total": null, "rule": "", "actions": "arrows 10", "n_actions": 10}
+{"t": 1791294219.7913358, "key": "lp85-305b61c3", "level": 6, "levels_total": null, "rule": "", "actions": "clicks 1", "n_actions": 1}
+{"t": 1791294268.2528565, "key": "g50t-5849a774", "level": 2, "levels_total": null, "rule": "", "actions": "arrows 17, space 1", "n_actions": 18}
+{"t": 1791294312.3501785, "key": "sb26-7fbdac44", "level": 7, "levels_total": null, "rule": "", "actions": "space 1", "n_actions": 1}
+{"t": 1791294358.9597263, "key": "lp85-305b61c3", "level": 7, "levels_total": null, "rule": "", "actions": "clicks 5", "n_actions": 5}
+{"t": 1791294468.9146376, "key": "tu93-0768757b", "level": 8, "levels_total": null, "rule": "", "actions": "arrows 9", "n_actions": 9}
+{"t": 1791294512.6902812, "key": "tu93-0768757b", "level": 5, "levels_total": null, "rule": "", "actions": "arrows 16", "n_actions": 16}
+{"t": 1791294619.2409608, "key": "m0r0-492f87ba", "level": 5, "levels_total": null, "rule": "", "actions": "arrows 6", "n_actions": 6}
+{"t": 1791294646.6483681, "key": "su15-1944f8ab", "level": 4, "levels_total": null, "rule": "", "actions": "clicks 6", "n_actions": 6}
+{"t": 1791294882.7811136, "key": "re86-8af5384d", "level": 4, "levels_total": null, "rule": "", "actions": "arrows 7", "n_actions": 7}
+{"t": 1791295023.972376, "key": "dc22-fdcac232", "level": 2, "levels_total": null, "rule": "", "actions": "arrows 18", "n_actions": 18}
+{"t": 1791295132.483848, "key": "r11l-495a7899", "level": 2, "levels_total": null, "rule": "", "actions": "clicks 6", "n_actions": 6}
+{"t": 1791295256.6935995, "key": "re86-8af5384d", "level": 5, "levels_total": null, "rule": "", "actions": "arrows 4", "n_actions": 4}
+{"t": 1791295380.4420702, "key": "bp35-0a0ad940", "level": 2, "levels_total": null, "rule": "", "actions": "arrows 3, clicks 1", "n_actions": 4}
+{"t": 1791295558.1711702, "key": "ka59-38d34dbb", "level": 2, "levels_total": null, "rule": "", "actions": "arrows 7, clicks 1", "n_actions": 8}
+{"t": 1791295599.9662306, "key": "sc25-635fd71a", "level": 3, "levels_total": null, "rule": "", "actions": "arrows 1", "n_actions": 1}
+{"t": 1791295618.4098284, "key": "g50t-5849a774", "level": 3, "levels_total": null, "rule": "", "actions": "arrows 30", "n_actions": 30}
+{"t": 1791295646.6298172, "key": "m0r0-492f87ba", "level": 3, "levels_total": null, "rule": "", "actions": "arrows 1", "n_actions": 1}
+{"t": 1791295738.517673, "key": "r11l-495a7899", "level": 3, "levels_total": null, "rule": "", "actions": "clicks 18", "n_actions": 18}
+{"t": 1791295937.0071123, "key": "sc25-635fd71a", "level": 4, "levels_total": null, "rule": "", "actions": "arrows 8", "n_actions": 8}
+{"t": 1791295937.082614, "key": "r11l-495a7899", "level": 4, "levels_total": null, "rule": "", "actions": "clicks 14", "n_actions": 14}
+{"t": 1791296075.079013, "key": "vc33-5430563c", "level": 4, "levels_total": null, "rule": "", "actions": "clicks 10", "n_actions": 10}
+{"t": 1791296205.879553, "key": "ka59-38d34dbb", "level": 3, "levels_total": null, "rule": "", "actions": "arrows 3", "n_actions": 3}
+{"t": 1791296292.6191137, "key": "vc33-5430563c", "level": 5, "levels_total": null, "rule": "", "actions": "clicks 22", "n_actions": 22}
+{"t": 1791296384.2694054, "key": "r11l-495a7899", "level": 5, "levels_total": null, "rule": "", "actions": "clicks 17", "n_actions": 17}
+{"t": 1791296486.8087406, "key": "vc33-5430563c", "level": 6, "levels_total": null, "rule": "", "actions": "clicks 7", "n_actions": 7}
+{"t": 1791296557.4897788, "key": "bp35-0a0ad940", "level": 3, "levels_total": null, "rule": "", "actions": "arrows 3, clicks 1", "n_actions": 4}
+{"t": 1791296650.4130604, "key": "g50t-5849a774", "level": 3, "levels_total": null, "rule": "", "actions": "arrows 30", "n_actions": 30}
+{"t": 1791296839.9908965, "key": "su15-1944f8ab", "level": 4, "levels_total": null, "rule": "", "actions": "clicks 1", "n_actions": 1}
+{"t": 1791296890.428588, "key": "sc25-635fd71a", "level": 4, "levels_total": null, "rule": "", "actions": "arrows 12", "n_actions": 12}
+{"t": 1791296937.5445914, "key": "r11l-495a7899", "level": 2, "levels_total": null, "rule": "", "actions": "clicks 5", "n_actions": 5}
+{"t": 1791297067.9592857, "key": "m0r0-492f87ba", "level": 2, "levels_total": null, "rule": "", "actions": "arrows 1", "n_actions": 1}
+{"t": 1791297247.6697977, "key": "re86-8af5384d", "level": 5, "levels_total": null, "rule": "", "actions": "arrows 14", "n_actions": 14}
+{"t": 1791297257.05995, "key": "ka59-38d34dbb", "level": 4, "levels_total": null, "rule": "", "actions": "arrows 8", "n_actions": 8}
+{"t": 1791297301.7478876, "key": "dc22-fdcac232", "level": 3, "levels_total": null, "rule": "", "actions": "arrows 14, clicks 1", "n_actions": 15}
+{"t": 1791297439.259321, "key": "ka59-38d34dbb", "level": 5, "levels_total": null, "rule": "", "actions": "arrows 12", "n_actions": 12}
+{"t": 1791297548.4231339, "key": "bp35-0a0ad940", "level": 4, "levels_total": null, "rule": "", "actions": "clicks 1", "n_actions": 1}
+{"t": 1791297826.7251165, "key": "su15-1944f8ab", "level": 5, "levels_total": null, "rule": "", "actions": "clicks 6", "n_actions": 6}
+{"t": 1791297968.7602186, "key": "g50t-5849a774", "level": 4, "levels_total": null, "rule": "", "actions": "arrows 3", "n_actions": 3}
+{"t": 1791297970.3684843, "key": "ar25-0c556536", "level": 6, "levels_total": null, "rule": "", "actions": "arrows 1", "n_actions": 1}
+{"t": 1791298018.2098336, "key": "m0r0-492f87ba", "level": 4, "levels_total": null, "rule": "", "actions": "arrows 1", "n_actions": 1}
+{"t": 1791298073.6209812, "key": "su15-1944f8ab", "level": 6, "levels_total": null, "rule": "", "actions": "clicks 1", "n_actions": 1}
+{"t": 1791298120.616296, "key": "ka59-38d34dbb", "level": 2, "levels_total": null, "rule": "", "actions": "arrows 7, clicks 2", "n_actions": 9}
+{"t": 1791298120.693394, "key": "tr87-cd924810", "level": 5, "levels_total": null, "rule": "", "actions": "arrows 20", "n_actions": 20}
+{"t": 1791298167.3395069, "key": "su15-1944f8ab", "level": 7, "levels_total": null, "rule": "", "actions": "clicks 1", "n_actions": 1}
+{"t": 1791298324.2578661, "key": "r11l-495a7899", "level": 3, "levels_total": null, "rule": "", "actions": "clicks 5", "n_actions": 5}
+{"t": 1791298348.4735162, "key": "ar25-0c556536", "level": 7, "levels_total": null, "rule": "", "actions": "arrows 9", "n_actions": 9}
+{"t": 1791298394.442653, "key": "tu93-0768757b", "level": 6, "levels_total": null, "rule": "", "actions": "arrows 12", "n_actions": 12}
+{"t": 1791298474.4338088, "key": "tu93-0768757b", "level": 7, "levels_total": null, "rule": "", "actions": "arrows 14", "n_actions": 14}
+{"t": 1791298565.0603373, "key": "ka59-38d34dbb", "level": 3, "levels_total": null, "rule": "", "actions": "arrows 9", "n_actions": 9}
+{"t": 1791298681.5758576, "key": "r11l-495a7899", "level": 4, "levels_total": null, "rule": "", "actions": "clicks 6", "n_actions": 6}
+{"t": 1791298789.3091547, "key": "dc22-fdcac232", "level": 4, "levels_total": null, "rule": "", "actions": "arrows 13, clicks 3", "n_actions": 16}
+{"t": 1791298790.192268, "key": "lf52-271a04aa", "level": 2, "levels_total": null, "rule": "", "actions": "clicks 1", "n_actions": 1}
+{"t": 1791298881.0457833, "key": "su15-1944f8ab", "level": 2, "levels_total": null, "rule": "", "actions": "clicks 2", "n_actions": 2}
+{"t": 1791299012.9317, "key": "su15-1944f8ab", "level": 3, "levels_total": null, "rule": "", "actions": "clicks 1", "n_actions": 1}
+{"t": 1791299013.8143492, "key": "ka59-38d34dbb", "level": 4, "levels_total": null, "rule": "", "actions": "arrows 1", "n_actions": 1}
+{"t": 1791299173.1802971, "key": "ka59-38d34dbb", "level": 5, "levels_total": null, "rule": "", "actions": "arrows 9", "n_actions": 9}
+{"t": 1791299255.305267, "key": "r11l-495a7899", "level": 5, "levels_total": null, "rule": "", "actions": "clicks 6", "n_actions": 6}
+{"t": 1791299493.5493143, "key": "cn04-2fe56bfb", "level": 2, "levels_total": null, "rule": "", "actions": "arrows 7", "n_actions": 7}
+{"t": 1791299505.2643282, "key": "su15-1944f8ab", "level": 4, "levels_total": null, "rule": "", "actions": "clicks 4", "n_actions": 4}
+{"t": 1791299640.066434, "key": "sp80-589a99af", "level": 2, "levels_total": null, "rule": "", "actions": "space 1", "n_actions": 1}
+{"t": 1791299645.402033, "key": "tu93-0768757b", "level": 8, "levels_total": null, "rule": "", "actions": "arrows 18", "n_actions": 18}
+{"t": 1791299816.8168614, "key": "lf52-271a04aa", "level": 2, "levels_total": null, "rule": "", "actions": "clicks 1", "n_actions": 1}
+{"t": 1791299869.2733319, "key": "su15-1944f8ab", "level": 5, "levels_total": null, "rule": "", "actions": "clicks 3", "n_actions": 3}
+{"t": 1791299957.3773856, "key": "dc22-fdcac232", "level": 4, "levels_total": null, "rule": "", "actions": "arrows 10", "n_actions": 10}
+{"t": 1791300144.5564413, "key": "cn04-2fe56bfb", "level": 3, "levels_total": null, "rule": "", "actions": "space 3, clicks 1, arrows 1", "n_actions": 5}
+{"t": 1791300407.4318109, "key": "ar25-0c556536", "level": 7, "levels_total": null, "rule": "", "actions": "arrows 9, clicks 1", "n_actions": 10}
+{"t": 1791300455.5731728, "key": "cn04-2fe56bfb", "level": 4, "levels_total": null, "rule": "", "actions": "arrows 5, clicks 1, space 1", "n_actions": 7}
+{"t": 1791300797.743697, "key": "m0r0-492f87ba", "level": 3, "levels_total": null, "rule": "", "actions": "arrows 1", "n_actions": 1}
+{"t": 1791300853.0520797, "key": "tu93-0768757b", "level": 8, "levels_total": null, "rule": "", "actions": "arrows 14", "n_actions": 14}
+{"t": 1791301065.7268243, "key": "cn04-2fe56bfb", "level": 5, "levels_total": null, "rule": "", "actions": "arrows 12, space 3, clicks 1", "n_actions": 16}
+{"t": 1791301107.9998968, "key": "sb26-7fbdac44", "level": 7, "levels_total": null, "rule": "", "actions": "space 1", "n_actions": 1}
+{"t": 1791301374.0021834, "key": "cn04-2fe56bfb", "level": 2, "levels_total": null, "rule": "", "actions": "arrows 2", "n_actions": 2}
+{"t": 1791301375.349651, "key": "lf52-271a04aa", "level": 3, "levels_total": null, "rule": "", "actions": "clicks 2", "n_actions": 2}
+{"t": 1791301640.054004, "key": "vc33-5430563c", "level": 5, "levels_total": null, "rule": "", "actions": "clicks 22", "n_actions": 22}
+{"t": 1791301874.6596398, "key": "m0r0-492f87ba", "level": 4, "levels_total": null, "rule": "", "actions": "arrows 1", "n_actions": 1}
+{"t": 1791301943.6041374, "key": "vc33-5430563c", "level": 6, "levels_total": null, "rule": "", "actions": "clicks 7", "n_actions": 7}
+{"t": 1791301962.6664584, "key": "wa30-ee6fef47", "level": 2, "levels_total": null, "rule": "", "actions": "arrows 9", "n_actions": 9}
+{"t": 1791302328.4656777, "key": "bp35-0a0ad940", "level": 5, "levels_total": null, "rule": "", "actions": "arrows 11, clicks 3", "n_actions": 14}
+{"t": 1791302558.3094304, "key": "lf52-271a04aa", "level": 3, "levels_total": null, "rule": "Board D is now empty and ferry 2 carries the last peg. Now driving ferry 2 back to board C.", "actions": "clicks 2", "n_actions": 2}
+{"t": 1791302813.39723, "key": "sc25-635fd71a", "level": 5, "levels_total": null, "rule": "", "actions": "arrows 2", "n_actions": 2}
+{"t": 1791303410.1913192, "key": "dc22-fdcac232", "level": 3, "levels_total": null, "rule": "", "actions": "arrows 16, clicks 1", "n_actions": 17}
+{"t": 1791303834.253422, "key": "bp35-0a0ad940", "level": 2, "levels_total": null, "rule": "", "actions": "clicks 1", "n_actions": 1}
+{"t": 1791303956.3234234, "key": "cn04-2fe56bfb", "level": 3, "levels_total": null, "rule": "", "actions": "space 3, arrows 2, clicks 1", "n_actions": 6}
+{"t": 1791304086.5397532, "key": "sc25-635fd71a", "level": 5, "levels_total": null, "rule": "", "actions": "arrows 6", "n_actions": 6}
+{"t": 1791304370.1063228, "key": "cn04-2fe56bfb", "level": 4, "levels_total": null, "rule": "", "actions": "arrows 10", "n_actions": 10}
+{"t": 1791304488.1477635, "key": "dc22-fdcac232", "level": 4, "levels_total": null, "rule": "", "actions": "arrows 9", "n_actions": 9}
+{"t": 1791304764.715169, "key": "s5i5-18d95033", "level": 2, "levels_total": null, "rule": "", "actions": "clicks 10", "n_actions": 10}
+{"t": 1791305274.7471883, "key": "m0r0-492f87ba", "level": 5, "levels_total": null, "rule": "", "actions": "arrows 1", "n_actions": 1}
+{"t": 1791305743.968438, "key": "s5i5-18d95033", "level": 3, "levels_total": null, "rule": "", "actions": "clicks 10", "n_actions": 10}
+{"t": 1791305971.84789, "key": "s5i5-18d95033", "level": 2, "levels_total": null, "rule": "", "actions": "clicks 6", "n_actions": 6}
+{"t": 1791306204.3072855, "key": "sb26-7fbdac44", "level": 2, "levels_total": null, "rule": "", "actions": "clicks 4, space 1", "n_actions": 5}
+{"t": 1791306272.3643403, "key": "sb26-7fbdac44", "level": 3, "levels_total": null, "rule": "", "actions": "space 1", "n_actions": 1}
+{"t": 1791306274.3496227, "key": "bp35-0a0ad940", "level": 1, "levels_total": null, "rule": "", "actions": "arrows 2", "n_actions": 2}
+{"t": 1791306330.7237158, "key": "sb26-7fbdac44", "level": 4, "levels_total": null, "rule": "", "actions": "space 1", "n_actions": 1}
+{"t": 1791306393.0078158, "key": "sb26-7fbdac44", "level": 5, "levels_total": null, "rule": "", "actions": "space 1", "n_actions": 1}
+{"t": 1791306430.0549302, "key": "sb26-7fbdac44", "level": 6, "levels_total": null, "rule": "", "actions": "clicks 12, space 1", "n_actions": 13}
+{"t": 1791306544.926638, "key": "sb26-7fbdac44", "level": 7, "levels_total": null, "rule": "", "actions": "clicks 12, space 1", "n_actions": 13}
+{"t": 1791306735.0663722, "key": "cn04-2fe56bfb", "level": 3, "levels_total": null, "rule": "", "actions": "arrows 11, clicks 2", "n_actions": 13}
+{"t": 1791307291.7285178, "key": "s5i5-18d95033", "level": 3, "levels_total": null, "rule": "", "actions": "clicks 10", "n_actions": 10}
+{"t": 1791307303.6253576, "key": "cn04-2fe56bfb", "level": 4, "levels_total": null, "rule": "", "actions": "arrows 21, space 5, clicks 3", "n_actions": 29}

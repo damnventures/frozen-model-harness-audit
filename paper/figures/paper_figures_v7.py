@@ -175,8 +175,8 @@ if PAPER:
 else:
     ax.set_xlabel("cells beating nothing-changes by ≥ 20 pts, of 23 (90% bootstrap)\n"
                   "$10 and one hour per model; bar 8 of 23.\n"
-                  "* Astra scaled from 217 cells (174/217 ≈ 19 [17, 20]). Six mid-price models could not be\n"
-                  "measured at a fixed cap (reasoning mandatory and unbounded); two more were stopped for cost before a read; none drawn.")
+                  "* Astra scaled from 217 cells (174/217 ≈ 19 [17, 20]). Not drawn: six mid-price models\n"
+                  "unmeasurable at a fixed cap (unbounded reasoning); two stopped for cost before a read.")
     ax.set_title("F4  The floor, measured: who can write a replay-exact simulator", loc="left")
 save(fig, "F4", "F4-discriminator")
 
@@ -190,7 +190,7 @@ openx = [0, 1, 1, 3, 3, 4]                        # Qwen 0, Nemotron 1, Flash-Ne
 openy = [0.0, 0.6, -0.5, 0.3, -0.3, 0.2]          # structure effect ~ 0 (R1 0; mercury +0.6; rest null)
 ax.scatter(openx, openy, color=GREY, s=34, zorder=5)
 ax.scatter([1], [-0.2], color=GREY, s=70, zorder=6)                    # own cards on Flash-Next: three four-pass reads pooled -0.2 ± 1.3
-ax.annotate("own notes: no effect (−0.2 ± 1.3 pooled; ±1.7 over three families)", (1, -0.2), xytext=(12, 10), textcoords="offset points",
+ax.annotate("own notes: no effect\n(−0.2 ± 1.3 pooled; ±1.7 over three families)", (1, -0.2), xytext=(4, 14), textcoords="offset points",
             fontsize=7.5, color=GREY)
 ax.scatter([20], [1.9], color=GREY, s=42, zorder=5, marker="D")        # GPT-6.1 Sol own notes: +1.9 ± 6.6 (open); x = Terra/Sol probe band
 ax.annotate("own notes above the floor:\n+1.9 ± 6.6, open", (20, 1.9), xytext=(-10, -30), textcoords="offset points", fontsize=7.5, color=GREY, ha="right")
@@ -199,15 +199,15 @@ for lab, fx, fy in front:
     ax.scatter(fx, fy, color=GREY, s=42, zorder=5)
 ax.annotate("Memento 3 = 100", (19, 100), xytext=(0, 10), textcoords="offset points", fontsize=7.5, ha="center")
 ax.annotate("Tycho / Twin / Kepler: 93–100", (17.4, 93.3), xytext=(6, -13), textcoords="offset points", fontsize=7.5, color="#3f4a45")
-ax.axvspan(-0.8, 10, color="#f4f6f5", zorder=0); ax.axvspan(10, 21.2, color="#eef3f0", zorder=0)
-ax.axvline(10, color=GREY, lw=0.9, ls="--")
-ax.text(10, 106, "the floor (the probe places a model in one hour)", fontsize=7.5, color="#3f4a45", ha="center")
+ax.axvspan(-0.8, 8, color="#f4f6f5", zorder=0); ax.axvspan(8, 21.2, color="#eef3f0", zorder=0)
+ax.axvline(8, color=GREY, lw=0.9, ls="--")
+ax.text(8, 106, "the floor: bar 8 of 23 (the probe places a model in one hour)", fontsize=7.5, color="#3f4a45", ha="center")
 ax.axhline(0, color="k", lw=0.8)
-ax.text(4.6, 62, "below the floor: nothing delivered\nconverts; thinking time does", fontsize=8, ha="center", va="top",
+ax.text(3.8, 62, "below the floor: nothing delivered\nconverts; thinking time does", fontsize=8, ha="center", va="top",
         color="#3f4a45", linespacing=1.5)
-ax.text(17.2, 62, "above the floor: structure is used\n(the ceiling papers)", fontsize=8, ha="center", va="top",
+ax.text(15.2, 62, "above the floor: structure is used\n(the ceiling papers)", fontsize=8, ha="center", va="top",
         color="#3f4a45", linespacing=1.5)
-ax.text(4.2, -16, "handed structure reads null:\nrulebooks, manuals, tools, verified facts", fontsize=7.5,
+ax.text(3.4, -16, "handed structure reads null:\nrulebooks, manuals, tools, facts", fontsize=7.5,
         color=GREY, ha="center", va="top", style="italic", linespacing=1.5)
 ax.set_xlim(-0.8, 21.2); ax.set_ylim(-30, 110)
 ax.set_xlabel("probe score (cells beating nothing-changes, of 23)" if PAPER else
