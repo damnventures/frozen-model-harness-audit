@@ -1,6 +1,6 @@
 # Data
 
-Assembled 2026-11-07 by runs/lib/build_release.py from the campaign tree (no history).
+Assembled 2026-11-08 by runs/lib/build_release.py from the campaign tree (no history).
 
 - paper/: the writeup, the companion (PDF + markdown), references, figures and the figure script's output.
 - register/: bets.json (every pre-registered experiment with its bar, number and read), the pre-registration log, the private-board forecast filed before the reveal.

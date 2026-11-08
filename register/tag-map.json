@@ -50,5 +50,6 @@
  "sol-rep": "sol-tn36-ls20-replication",
  "cards-family": "cards-family-estimate",
  "writer-consistency": "writer-consistency",
- "writer-thinking-consistency": "writer-thinking-consistency"
+ "writer-thinking-consistency": "writer-thinking-consistency",
+ "mercury-line-bo10-control": "mercury-line-bo10-control"
 }
