@@ -35,7 +35,7 @@ The replay probe: from 20 shown transitions of a level the model writes a progra
 ## 5. The evaluator: testing our own result
 A learning can overfit; so can the audit. Seven capped controls over five days spread sd 2.9 RHAE [day-effect], so every experiment is read against its own control; a four-pass pair reads to ± 2.3 [cards-same-day]. Every experiment is a falsifiable prediction, the criterion filed before the run (Appendix B); misses stay in the register; the three budget bands resolved inside. Leaderboard values are best-of-N (Singh et al., 2025); a private-board forecast is filed before the reveal [board-forecast].
 
-## 6. The flown submission: nothing carried
+## 6. The flown submission: the loop starts empty on the hidden games
 franzen-b1b v1 (30.07): Franzen's Milestone 2 notebook with its loop unchanged (the board rendered as text each turn, the action read from the reply, the oldest messages evicted at the context cap; 110 hidden games under a 9.5-hour wall), plus the model's own notes, written on the hidden games as they are played and compiled into the context at session start and at context drains; no note from any public game is carried in. Serve deltas (+7.85 ± 3.65 on a pod) gave no healthy draw on the box. The last slots flew the stock serve with notes: seven healthy draws, mean 25.7.
 
 ## 7. Scope and release
