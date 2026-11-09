@@ -32,7 +32,7 @@ Allowed to think longer, the same model scored 33, then 53 (1.7× tokens), then 
 ## 4. The gate: the reader's capability (F3)
 The replay probe: from 20 shown transitions of a level the model writes a program that predicts the next board, scored on 20 held-out transitions against the nothing-changes baseline; a cell counts when the program beats the baseline by 20 points; the bar is 8 of 23 cells. GPT-6.1 Sol beats it on 16 [12, 20], GPT-6.1 Terra on 20 at half Sol's price [screen24-terra]; the open model on 0 to 1; with reasoning off, seven open models write programs on 18 to 23 cells and generalise on 0 to 4 [screen23]. Of more than twenty models from $0.10 to $10 per million output tokens, nothing under $5 passes. Handing a model the cell's rulebook does not help (1 and 2 beats [R2]): the line is executable-writing. The screen sorts classes, not models within one (MiMo 4 of 23 plays 6 levels, Flash-Next 1 plays 23), and the line replicates on a diffusion architecture (Mercury 3: 3 of 23) [mercury3].
 
-## 5. The evaluator: testing our own result
+## 5. The evaluator: checking our own measuring
 A learning can overfit; so can the audit. Seven capped controls over five days spread sd 2.9 RHAE [day-effect], so every experiment is read against its own control; a four-pass pair reads to ± 2.3 [cards-same-day]. Every experiment is a falsifiable prediction, the criterion filed before the run (Appendix B); misses stay in the register; the three budget bands resolved inside. Leaderboard values are best-of-N (Singh et al., 2025); a private-board forecast is filed before the reveal [board-forecast].
 
 ## 6. The flown submission: the loop starts empty on the hidden games
