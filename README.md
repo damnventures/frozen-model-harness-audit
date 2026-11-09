@@ -1,6 +1,6 @@
-# What a Frozen Model Takes From Its Harness
+# Improving a Frozen Model's In-Context Learning: No Human, No Overfitting
 
-An audit of in-context learning on ARC-AGI-3. Entry to the ARC Prize 2026 Paper Track (Kaggle), Cultured Computer, November 2026.
+A loop that tests the note and the reader before trusting either, run pre-registered on ARC-AGI-3. Entry to the ARC Prize 2026 Paper Track (Kaggle), Cultured Computer, November 2026.
 
 Handed structure multiplies a frontier model's ARC-AGI-3 score. This audit asks what it does for a frozen open model (Qwen3.8-Flash-Next, W4A16) offline on one 96 GB GPU, the Kaggle setting, in the public Duck/Franzen harness: 179 pre-registered experiments, each a declared change with its acceptance criterion filed before the run. Below the capability line nothing delivered converts, handed or the model's own notes; what converts is the token budget, at a measured and diminishing rate. The line itself is measured by a one-hour probe that places any model on one side or the other, and the reason the model's own notes do not convert is measurable without ground truth: its notes about one level are barely more alike than its notes about different levels.
 
