@@ -56,7 +56,7 @@ axR.axvline(1, color="k", lw=0.8); axR.set_xlim(0.8, 4.3); axR.set_ylim(-0.6, le
 axR.set_xlabel("how much more alike same-level notes are\nthan different-level notes (ratio, 90%)", fontsize=8.5)
 axR.set_title("Does the model carry its note forward?", loc="left", fontsize=9.5)
 axR.legend(loc="upper left", fontsize=7.5, frameon=False, bbox_to_anchor=(0.45, 1.0))
-if not PAPER: fig.suptitle("Fig. 1  The two gates of note learning: notes move the score only where the writer carries its note", x=0.01, y=1.06, ha="left", fontsize=10)
+if not PAPER: fig.suptitle("Fig. 2  The two gates of note learning: notes move the score only where the writer carries its note", x=0.01, y=1.06, ha="left", fontsize=10)
 save(fig, "F1", "F1-notes-at-work")
 
 # ---------------------------------------------------------------- F3 (v9): the budget as a dose-response plot
@@ -79,7 +79,7 @@ ax.set_xscale("log"); ax.set_xticks([0.54, 1, 1.73, 3.68]); ax.set_xticklabels([
 ax.xaxis.set_minor_formatter(plt.NullFormatter()); ax.set_xlim(0.42, 5.2); ax.set_ylim(-32, 50)
 ax.set_xlabel("generated tokens per game, as a multiple of the base budget (log)")
 ax.set_ylabel("change in RHAE vs the same-day control (90%)")
-if not PAPER: ax.set_title("Fig. 2  What converts below the line: thinking time, four same-day pairs", loc="left", pad=16)
+if not PAPER: ax.set_title("Fig. 3  What converts below the line: thinking time, four same-day pairs", loc="left", pad=16)
 save(fig, "F3", "F3-budget-curve")
 
 # ---------------------------------------------------------------- F4: the discriminator, standalone
@@ -122,8 +122,8 @@ if PAPER:
     ax.set_xlabel("cells beating nothing-changes (of 23)")
 else:
     ax.set_xlabel("cells where the model's program beats the no-change baseline (of 23, 90% interval)")
-    ax.set_title("Fig. 3  The gate: who can write a replay-exact simulator of a level", loc="left", pad=16)
-ax.text(0.0, -0.155, "* scaled from a 217-cell probe corpus", transform=ax.transAxes, fontsize=7, ha="left", color="#3f4a45")
+    ax.set_title("Fig. 4  The gate: who can write a replay-exact simulator of a level", loc="left", pad=16)
+ax.text(0.0, -0.155, "* scaled from a 217-cell corpus", transform=ax.transAxes, fontsize=7, ha="left", color="#3f4a45")
 save(fig, "F4", "F4-discriminator")
 
 # ---------------------------------------------------------------- F4 (v9.1): the loop, minimal research style
@@ -148,11 +148,11 @@ ax.plot([xs[4], xs[4], xs[0]], [71.5, 82, 82], color="#6b7772", lw=1.0)
 arrow(xs[0], 82, xs[0], 73.5)
 ax.text(50, 85.5, "the read decides what returns", ha="center", va="center", fontsize=7.6, color=SOFT, style="italic")
 ax.text(xs[0], 24, "writer test: the same note twice, compared", ha="center", va="center", fontsize=7.6, color=GREEN)
-ax.text(xs[3], 24, "certifier: a short probe sorts the model", ha="center", va="center", fontsize=7.6, color=GREEN)
+ax.text(xs[3], 24, "certifier: a short test sorts the model", ha="center", va="center", fontsize=7.6, color=GREEN)
 arrow(xs[0], 28, xs[0], 46, GREEN); arrow(xs[3], 28, xs[3], 46, GREEN)
 ax.text(50, 6, "fully automatic; every note written at test time, on the game being played; every read pre-registered",
         ha="center", va="center", fontsize=7.6, color=SOFT, style="italic")
-if not PAPER: ax.set_title("Fig. 4  The loop: machinery for automated in-context continual learning", loc="left", fontsize=10, pad=16)
+if not PAPER: ax.set_title("Fig. 1  The loop: machinery for automated in-context continual learning", loc="left", fontsize=10, pad=16)
 save(fig, "F4", "F4-the-loop")
 
 print(f"figures written to {OUT}:", sorted(f for f in os.listdir(OUT) if f.endswith(".png")))
